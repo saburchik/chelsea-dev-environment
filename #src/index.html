@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Healthy Food Restaurant</title>
+    <title>Chelsea</title>
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-            <div class="header__menu">
+            <div class="navigation">
                 <div class="logo">
                     <img src="img/logo.png" alt="">
                 </div>
-                <div class="navigation">
-                    <a href="" class="nav__link">Home</a>
-                    <a href="" class="nav__link">Events</a>
-                    <a href="" class="nav__link">About US</a>
-                    <a href="" class="nav__link">Join US</a>
-                    <a href="" class="nav__link">Contacts</a>
-                </div>
+                <nav class="menu">
+                    <a class="nav__link" href="">Home</a>
+                    <a class="nav__link" href="">Events</a>
+                    <a class="nav__link" href="">About US</a>
+                    <a class="nav__link" href="">Join US</a>
+                    <a class="nav__link" href="">Contacts</a>
+                </nav>
             </div>
         </div>
     </header>
@@ -43,14 +43,40 @@
                 <h1 class="title title__events">Next Games</h1>
                 <div class="cards__events">
                     <div class="card">
-                        <div class="logo__events">
-                            <img src="img/logo__events/chelsea.png" alt="">
-                            <h4 class="versus">VS</h4>
-                            <img src="img/logo__events/burney.png" alt="">
+                        <div class="container">
+                            <div class="logo__events">
+                                <img src="img/logo__events/chelsea.png" alt="">
+                                <h4 class="versus">VS</h4>
+                                <img src="img/logo__events/burney.png" alt="">
+                            </div>
+                            <p class="description description__events">Premier League - 21. Matchday <br>
+                                Sun, Jan 31, 2021</p>
+                            <button class="button button__events">FORECATS</button>
                         </div>
-                        <p class="description description__events">Premier League - 21. Matchday <br>
-                            Sun, Jan 31, 2021</p>
-                        <button class="button button__events">FORECATS</button>
+                    </div>
+                    <div class="card second">
+                        <div class="container">
+                            <div class="logo__events">
+                                <img src="img/logo__events/chelsea.png" alt="">
+                                <h4 class="versus">VS</h4>
+                                <img src="img/logo__events/burney.png" alt="">
+                            </div>
+                            <p class="description description__events">Premier League - 21. Matchday <br>
+                                Sun, Jan 31, 2021</p>
+                            <button class="button button__events">FORECATS</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="container">
+                            <div class="logo__events">
+                                <img src="img/logo__events/chelsea.png" alt="">
+                                <h4 class="versus">VS</h4>
+                                <img src="img/logo__events/burney.png" alt="">
+                            </div>
+                            <p class="description description__events">Premier League - 21. Matchday <br>
+                                Sun, Jan 31, 2021</p>
+                            <button class="button button__events">FORECATS</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,6 +97,85 @@
                 </div>
             </div>
         </section>
+
+        <section class="sponsors">
+            <div class="container">
+                <ul class="content content__sponsors">
+                    <li class="sponsor__item">
+                        <img class="sponsor__image" src="img/sponsors/carabao_-_footer.png" alt="">
+                    </li>
+                    <li class="sponsor__item">
+                        <img class="sponsor__image" src="img/sponsors/millennium_-_footer_-_trans.png" alt="">
+                    </li>
+                    <li class="sponsor__item">
+                        <img class="sponsor__image" src="img/sponsors/hyundai_-_footer.png" alt="">
+                    </li>
+                    <li class="sponsor__item">
+                        <img class="sponsor__image" src="img/sponsors/ea.png" alt="">
+                    </li>
+                    <li class="sponsor__item">
+                        <img class="sponsor__image" src="img/sponsors/MSC_-_footer_-_trans.png" alt="">
+                    </li>
+                    <li class="sponsor__item">
+                        <img class="sponsor__image" src="img/sponsors/yokohama-footer.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="registration">
+            <div class="container">
+                <h1 class="title title__registration">Over 1000 fans are using ...</h1>
+                <form class="form" action="">
+                    <input class="name" type="text" placeholder="YOUR NAME">
+                    <input class="email" type="text" placeholder="YOUR EMAIL">
+                    <input class="password" type="text" placeholder="YOUR PASSWORD">
+                </form>
+                <button class="button button__registration">JOIN US</button>
+                <p class="description description__registration">By Signing up you agree to our
+                    <a class="terms" href="">terms & Services</a>.
+                </p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="logo logo__footer">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="content content__footer">
+                    <div class="footer__item">
+                        <h3 class="title title__footer">ADDRESS</h3>
+                        <p class="description description__footer">
+                            Chelsea Football Club
+                            Stamford Bridge
+                            Fulham Road
+                            London
+                            SW6 1HS
+                        </p>
+                    </div>
+                    <div class="footer__item">
+                        <h3 class="title title__footer">ABOUT</h3>
+                        <a class="footer__link" href="">Our Team</a>
+                        <a class="footer__link" href="">History</a>
+                        <a class="footer__link" href="">Achievement</a>
+                    </div>
+                    <div class="footer__item">
+                        <h3 class="title title__footer">SERVICES</h3>
+                        <a class="footer__link" href="">Official site</a>
+                        <a class="footer__link" href="">Help Center</a>
+                        <a class="footer__link" href="">Privacy Policy</a>
+                        <a class="footer__link" href="">Other</a>
+                    </div>
+                    <div class="footer__item">
+                        <h3 class="title title__footer">SOCIAL MEDIA</h3>
+
+                    </div>
+                </div>
+                <div class="footer__text">© 2021 Chelsea FC. All rights reserved. No part of this site may be reproduced
+                    without our written permission.</div>
+            </div>
+        </footer>
     </main>
 
     <script src="js/script.min.js"></script>
