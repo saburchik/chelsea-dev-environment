@@ -174,11 +174,11 @@ picture {
 .events {
   width: 100%;
   height: auto;
-  min-height: 650px;
-  background: url("../img/events-BG.jpg");
+  background: url("../img/background-line.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-bottom: 50px;
 }
 
 .title__events {
@@ -272,6 +272,65 @@ picture {
   transition: background .1s linear;
 }
 
+.window {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto 50px;
+}
+
+.photo {
+  width: 55%;
+}
+
+.window__image {
+  width: 100%;
+}
+
+.title__about {
+  color: #000;
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 50px;
+}
+
+.description__about {
+  color: #000;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.button__about {
+  height: 55px;
+  padding: 0 40px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .2px;
+  color: #fff;
+  background-color: #0E3AB1;
+  border-radius: 28px;
+  -webkit-transition: all 250ms;
+  -o-transition: all 250ms;
+  transition: all 250ms;
+  margin-bottom: 50px;
+}
+
+.button__about:hover {
+  background-color: #072168;
+  border: 4px solid white;
+  -webkit-transition: background .1s linear;
+  -o-transition: background .1s linear;
+  transition: background .1s linear;
+}
+
 .webp .intro { background: url(../img/intro-BG.webp); }
 
-.webp .events { background: url(../img/events-BG.webp); }
+.webp .events { background: url(../img/background-line.webp); }
