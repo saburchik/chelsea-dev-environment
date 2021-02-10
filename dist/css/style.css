@@ -42,7 +42,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background-color: #e3ecc2;
+  background-color: #0C1149;
 }
 
 *,
@@ -50,6 +50,12 @@ body {
 *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -60,6 +66,65 @@ h5,
 h6,
 p {
   margin: 0;
+}
+
+.button {
+  height: 55px;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 35px;
+  border: 4px solid #F3B31D;
+  -webkit-transition: all 250ms;
+  -o-transition: all 250ms;
+  transition: all 250ms;
+  outline: none;
+  cursor: pointer;
+  padding: 0 70px;
+}
+
+.button__intro {
+  color: #fff;
+  background-color: #0E3AB1;
+}
+
+.button__intro:hover {
+  background-color: #072168;
+  border: 4px solid white;
+}
+
+.button__events {
+  width: 100%;
+  padding: 0;
+  margin: 0 0 50px;
+}
+
+.button__events:hover {
+  color: #fff;
+  background-color: #0E3AB1;
+}
+
+.button__about {
+  width: 65%;
+  max-width: 75%;
+  color: #fff;
+  background-color: #0E3AB1;
+  padding: 0;
+}
+
+.button__about:hover {
+  background-color: #072168;
+  border: 4px solid white;
+}
+
+.button__registration {
+  color: #fff;
+  background-color: #0E3AB1;
+  margin: 0 0 30px;
+}
+
+.button__registration:hover {
+  color: #0E3AB1;
+  background-color: #fff;
 }
 
 picture {
@@ -148,29 +213,6 @@ picture {
   max-width: 400px;
 }
 
-.button {
-  border-radius: 35px;
-  border: 4px solid #F3B31D;
-  outline: none;
-  cursor: pointer;
-}
-
-.button__intro {
-  color: #fff;
-  background-color: #0E3AB1;
-  font-size: 24px;
-  font-weight: 700;
-  padding: 15px 100px;
-}
-
-.button__intro:hover {
-  background-color: #072168;
-  border: 4px solid white;
-  -webkit-transition: background .1s linear;
-  -o-transition: background .1s linear;
-  transition: background .1s linear;
-}
-
 .events {
   width: 100%;
   height: auto;
@@ -197,7 +239,6 @@ picture {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 100px;
 }
 
 .card {
@@ -216,10 +257,11 @@ picture {
   text-align: center;
   border: 4px solid #F3B31D;
   border-radius: 35px;
+  margin: 0 0 25px;
 }
 
 .second {
-  margin: 0 30px;
+  margin: 0 30px 25px;
 }
 
 .inside {
@@ -243,6 +285,10 @@ picture {
   margin: 0 0 50px;
 }
 
+.logo__img {
+  width: 100%;
+}
+
 .versus {
   color: #fff;
   font-size: 35px;
@@ -254,22 +300,6 @@ picture {
   font-size: 30px;
   font-weight: 400;
   line-height: 150%;
-}
-
-.button__events {
-  width: 100%;
-  font-size: 25px;
-  font-weight: 700;
-  padding: 15px 0;
-  margin: 0 0 50px;
-}
-
-.button__events:hover {
-  color: #fff;
-  background-color: #0E3AB1;
-  -webkit-transition: background .1s linear;
-  -o-transition: background .1s linear;
-  transition: background .1s linear;
 }
 
 .window {
@@ -314,25 +344,6 @@ picture {
   line-height: 35px;
 }
 
-.button__about {
-  height: 55px;
-  padding: 0 40px;
-  font-size: 24px;
-  font-weight: 700;
-  color: #fff;
-  background-color: #0E3AB1;
-  border-radius: 28px;
-  -webkit-transition: all 250ms;
-  -o-transition: all 250ms;
-  transition: all 250ms;
-  margin-bottom: 50px;
-}
-
-.button__about:hover {
-  background-color: #072168;
-  border: 4px solid white;
-}
-
 .sponsors {
   background-color: #fff;
   width: 100%;
@@ -365,6 +376,77 @@ picture {
   list-style-type: none;
 }
 
+.sponsor__image {
+  width: 100%;
+}
+
+.title__registration {
+  max-width: 70%;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0 70px;
+  margin: 0 auto;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+input {
+  color: #4F4F4F;
+  width: 430px;
+  height: 55px;
+  margin-bottom: 30px;
+  outline: none;
+  border-radius: 28px;
+  padding: 0 15px;
+  border: 4px solid white;
+}
+
+input:focus {
+  border: 4px solid #FF4747;
+}
+
+.description__registration {
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 20%;
+  text-align: center;
+  line-height: 30px;
+}
+
+.terms {
+  color: #fff;
+}
+
+@media (max-width: 990px) {
+  .logo__events {
+    padding: 50px 0 0;
+    margin: 0 0 40px;
+  }
+
+  .versus {
+    font-size: 30px;
+  }
+
+  .description__events {
+    font-size: 27px;
+    margin: 0 0 25px;
+  }
+}
+
 @media (max-width: 850px) {
   .title__about {
     margin: 25px 0;
@@ -372,6 +454,26 @@ picture {
 
   .description__about {
     font-size: 22px;
+  }
+}
+
+@media (max-width: 790px) {
+  .button__events {
+    max-width: 80%;
+  }
+
+  .cards__events {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .card {
+    width: 50%;
   }
 }
 

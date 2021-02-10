@@ -11,17 +11,24 @@
 
 @import "fonts";
 
+
 body {
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color: #e3ecc2;
+    background-color: #0C1149;
 }
 
 *,
 *:before,
 *:after {
     box-sizing: border-box;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -33,6 +40,8 @@ h6,
 p {
     margin: 0;
 }
+
+@import "_button.scss";
 
 picture {
     display: flex;
@@ -106,27 +115,6 @@ picture {
     max-width: 400px;
 }
 
-.button {
-    border-radius: 35px;
-    border: 4px solid #F3B31D;
-    outline: none;
-    cursor: pointer;
-}
-
-.button__intro {
-    color: #fff;
-    background-color: #0E3AB1;
-    font-size: 24px;
-    font-weight: 700;
-    padding: 15px 100px;
-
-    &:hover {
-        background-color: #072168;
-        border: 4px solid white;
-        transition: background .1s linear;
-    }
-}
-
 // _________________________________________________________________________________________________________________
 
 .events {
@@ -150,7 +138,12 @@ picture {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    padding-bottom: 100px;
+
+
+    @media (max-width: 790px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .card {
@@ -162,10 +155,15 @@ picture {
     text-align: center;
     border: 4px solid #F3B31D;
     border-radius: 35px;
+    margin: 0 0 25px;
+
+    @media (max-width: 790px) {
+        width: 50%;
+    }
 }
 
 .second {
-    margin: 0 30px;
+    margin: 0 30px 25px;
 }
 
 .inside {
@@ -179,6 +177,15 @@ picture {
     align-items: center;
     padding: 65px 0 0;
     margin: 0 0 50px;
+
+    @media (max-width:990px) {
+        padding: 50px 0 0;
+        margin: 0 0 40px;
+    }
+}
+
+.logo__img {
+    width: 100%;
 }
 
 .versus {
@@ -186,29 +193,24 @@ picture {
     font-size: 35px;
     font-weight: 700;
     margin: 0 20px;
+
+    @media (max-width: 990px) {
+        font-size: 30px;
+    }
 }
 
 .description__events {
     font-size: 30px;
     font-weight: 400;
     line-height: 150%;
-}
 
-.button__events {
-    width: 100%;
-    font-size: 25px;
-    font-weight: 700;
-    padding: 15px 0;
-    margin: 0 0 50px;
-
-    &:hover {
-        color: #fff;
-        background-color: #0E3AB1;
-        transition: background .1s linear;
+    @media (max-width: 990px) {
+        font-size: 27px;
+        margin: 0 0 25px;
     }
 }
 
-//
+// About
 
 .window {
     background-color: #fff;
@@ -256,24 +258,7 @@ picture {
     }
 }
 
-.button__about {
-    height: 55px;
-    padding: 0 40px;
-    font-size: 24px;
-    font-weight: 700;
-    color: #fff;
-    background-color: #0E3AB1;
-    border-radius: 28px;
-    transition: all 250ms;
-    margin-bottom: 50px;
-
-    &:hover {
-        background-color: #072168;
-        border: 4px solid white;
-    }
-}
-
-//
+// Sponsors
 
 .sponsors {
     background-color: #fff;
@@ -292,4 +277,52 @@ picture {
 
 .sponsor__item {
     list-style-type: none;
+}
+
+.sponsor__image {
+    width: 100%;
+}
+
+// registration 
+
+.title__registration {
+    max-width: 70%;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0 70px;
+    margin: 0 auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    color: #4F4F4F;
+    width: 430px;
+    height: 55px;
+    margin-bottom: 30px;
+    outline: none;
+    border-radius: 28px;
+    padding: 0 15px;
+    border: 4px solid white;
+
+    &:focus {
+        border: 4px solid #FF4747;
+    }
+}
+
+.description__registration {
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 20%;
+    text-align: center;
+    line-height: 30px;
+}
+
+.terms {
+    color: #fff;
 }
