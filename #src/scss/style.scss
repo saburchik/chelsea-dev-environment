@@ -285,6 +285,10 @@ picture {
 
 // registration 
 
+.registration {
+    margin-bottom: 100px;
+}
+
 .title__registration {
     max-width: 70%;
     color: #fff;
@@ -325,4 +329,100 @@ input {
 
 .terms {
     color: #fff;
+}
+
+// footer
+.logo__footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__img {
+    width: 100%;
+}
+
+.content__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1270px;
+    padding: 50px 0 50px;
+}
+
+.footer__item {
+    flex: -5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    margin: 0 0 20px;
+}
+
+.title__footer {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.description__footer {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+
+.footer__link {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 35px;
+    letter-spacing: 2px;
+
+    &:hover {
+        color: #FF4747;
+        text-decoration: underline;
+        transition: all 0.1;
+    }
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        background-color: #FF4747;
+    }
+}
+
+.footer__text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
 }
