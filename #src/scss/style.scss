@@ -62,15 +62,51 @@ picture {
     z-index: 1000;
 }
 
+.header.active {
+    background-color: #0C1149;
+}
+
 .navigation {
     display: flex;
     justify-content: space-between;
-    padding-top: 15px;
+    align-items: center;
+}
+
+.navigation.active {
+    display: block;
+    flex-direction: column;
+}
+
+.logo {
+    margin: 10px 0;
 }
 
 .menu {
-    display: flex;
+    display: block;
     align-items: center;
+
+    @media (max-width: 770px) {
+        display: none;
+    }
+}
+
+.menu::before {
+    display: none;
+
+    @media (max-width: 770px) {
+        display: inline-block;
+        content: "";
+        border-top: 2px solid #FF4747;
+        width: 105%;
+    }
+}
+
+.menu.active {
+    display: flex;
+
+    @media (max-width: 770px) {
+        flex-direction: column;
+    }
 }
 
 .nav__link {
@@ -79,6 +115,10 @@ picture {
     font-weight: 700;
     text-decoration: none;
     margin-left: 50px;
+
+    @media (max-width: 770px) {
+        margin: 10px 0;
+    }
 }
 
 .intro {
@@ -425,4 +465,70 @@ input {
     text-align: center;
     margin-bottom: 50px;
     letter-spacing: 1px;
+}
+
+
+.burger {
+    display: none;
+    margin: 0;
+    overflow: hidden;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 0;
+
+    @media (max-width:770px) {
+        display: block;
+    }
+}
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+    transform: rotate(180deg);
+}
+
+.line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #FF4747;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+}
+
+.ham7 .top {
+    stroke-dasharray: 40 82;
+}
+
+.ham7 .middle {
+    stroke-dasharray: 40 111;
+}
+
+.ham7 .bottom {
+    stroke-dasharray: 40 161;
+}
+
+.ham7.active .top {
+    stroke-dasharray: 17 82;
+    stroke-dashoffset: -62px;
+}
+
+.ham7.active .middle {
+    stroke-dashoffset: 23px;
+}
+
+.ham7.active .bottom {
+    stroke-dashoffset: -83px;
 }
