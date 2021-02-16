@@ -68,6 +68,23 @@ p {
   margin: 0;
 }
 
+picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.lock-scroll {
+  overflow: hidden;
+}
+
 .button {
   height: 55px;
   font-size: 24px;
@@ -88,7 +105,7 @@ p {
 }
 
 .button__intro:hover {
-  background-color: #072168;
+  background-color: #FF4747;
   border: 4px solid white;
 }
 
@@ -100,7 +117,8 @@ p {
 
 .button__events:hover {
   color: #fff;
-  background-color: #0E3AB1;
+  background-color: #FF4747;
+  border: 4px solid white;
 }
 
 .button__about {
@@ -112,8 +130,7 @@ p {
 }
 
 .button__about:hover {
-  background-color: #072168;
-  border: 4px solid white;
+  background-color: #FF4747;
 }
 
 .button__registration {
@@ -123,21 +140,8 @@ p {
 }
 
 .button__registration:hover {
-  color: #0E3AB1;
-  background-color: #fff;
-}
-
-picture {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.container {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 15px;
+  background-color: #FF4747;
+  border: 4px solid white;
 }
 
 .header {
@@ -149,6 +153,7 @@ picture {
 }
 
 .header.active {
+  position: fixed;
   background-color: #0C1149;
 }
 
@@ -199,6 +204,118 @@ picture {
   font-weight: 700;
   text-decoration: none;
   margin-left: 50px;
+}
+
+.nav__link:hover {
+  color: #FF4747;
+  -webkit-transition: all 0.1;
+  -o-transition: all 0.1;
+  transition: all 0.1;
+}
+
+.burger {
+  display: none;
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.ham {
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  -o-transition: transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.hamRotate.active {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.line {
+  fill: none;
+  -webkit-transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  -o-transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #FF4747;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.ham--effect .top {
+  stroke-dasharray: 40 82;
+}
+
+.ham--effect .middle {
+  stroke-dasharray: 40 111;
+}
+
+.ham--effect .bottom {
+  stroke-dasharray: 40 161;
+}
+
+.ham--effect.active .top {
+  stroke-dasharray: 17 82;
+  stroke-dashoffset: -62px;
+}
+
+.ham--effect.active .middle {
+  stroke-dashoffset: 23px;
+}
+
+.ham--effect.active .bottom {
+  stroke-dashoffset: -83px;
+}
+
+.effect-4 {
+  padding: 10px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.effect-4:before,
+.effect-4:after {
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #0883a4;
+}
+
+.effect-4:before {
+  bottom: 0;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.effect-4:after {
+  top: 0;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.effect-4:hover:before,
+.effect-4:hover:after {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .intro {
@@ -589,77 +706,6 @@ input:focus {
   text-align: center;
   margin-bottom: 50px;
   letter-spacing: 1px;
-}
-
-.burger {
-  display: none;
-  margin: 0;
-  overflow: hidden;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 0;
-}
-
-.ham {
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
-  -o-transition: transform 400ms;
-  transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.hamRotate.active {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.hamRotate180.active {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.line {
-  fill: none;
-  -webkit-transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  -o-transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: #FF4747;
-  stroke-width: 5.5;
-  stroke-linecap: round;
-}
-
-.ham7 .top {
-  stroke-dasharray: 40 82;
-}
-
-.ham7 .middle {
-  stroke-dasharray: 40 111;
-}
-
-.ham7 .bottom {
-  stroke-dasharray: 40 161;
-}
-
-.ham7.active .top {
-  stroke-dasharray: 17 82;
-  stroke-dashoffset: -62px;
-}
-
-.ham7.active .middle {
-  stroke-dashoffset: 23px;
-}
-
-.ham7.active .bottom {
-  stroke-dashoffset: -83px;
 }
 
 @media (max-width: 990px) {
