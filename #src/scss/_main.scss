@@ -4,14 +4,34 @@
     width: 100%;
     height: 100vh;
     min-height: 650px;
-    background: url("../img/intro-BG.jpg");
+    background: url("../img/intro-bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 .content {
     text-align: left;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.player {
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+
+    @media (max-width: 1070px) {
+        right: -50px;
+    }
+}
+
+.mount {
+    object-fit: cover;
+    width: 100%;
 }
 
 .title {
