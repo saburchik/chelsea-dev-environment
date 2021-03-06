@@ -4,26 +4,43 @@
     top: 0;
     left: 0;
     z-index: 1000;
+
+    @media (max-width: 770px) {
+        background-color: #0C1149;
+    }
 }
 
 .header.active {
     position: fixed;
-    background-color: #0C1149;
 }
 
 .navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .navigation.active {
     display: block;
     flex-direction: column;
+
+    .logo__header {
+        width: auto;
+    }
 }
 
-.logo {
-    margin: 10px 0;
+.logo__header {}
+
+.header__img {
+    cursor: pointer;
+    padding: 15px 0;
+    width: 75px;
+
+    @media (max-height:400px) {
+        padding: 5px 0;
+        width: 55px;
+    }
 }
 
 .menu {
@@ -69,6 +86,10 @@
     @media (max-width: 770px) {
         margin: 10px 0;
     }
+
+    @media (max-height:400px) {
+        margin: 0;
+    }
 }
 
 // ========== Burger
@@ -78,11 +99,21 @@
     overflow: hidden;
     cursor: pointer;
     position: absolute;
-    top: 10px;
+    top: 0;
     right: 0;
 
     @media (max-width:770px) {
         display: block;
+    }
+
+    @media (max-width:490px) {
+        top: 10px;
+        right: -20px;
+    }
+
+    @media (max-height:400px) {
+        top: -10px;
+        right: -20px;
     }
 }
 

@@ -13,8 +13,8 @@
     <header class="header" id="header">
         <div class="container">
             <div class="navigation" id="nav">
-                <div class="logo">
-                    <img src="img/logo.png" alt="">
+                <div class="logo__header">
+                    <img class="header__img" src="img/logo.png" alt="">
                 </div>
                 <nav class="menu" id="menu">
                     <a class="nav__link effect-4" href="">Home</a>
@@ -95,7 +95,10 @@
                     <h1 class="title title__events">About</h1>
                     <div class="window">
                         <div class="photo">
-                            <img class="window__image" src="img/chelsea.jpg" alt="">
+                            <picture>
+                                <source srcset="img/chelsea--white.jpg" media="(max-width:790px">
+                                <img class="window__image" src="img/chelsea.jpg" alt="">
+                            </picture>
                         </div>
                         <div class="content content__about">
                             <div class="container">

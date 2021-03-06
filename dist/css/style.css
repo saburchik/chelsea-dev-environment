@@ -154,7 +154,6 @@ picture {
 
 .header.active {
   position: fixed;
-  background-color: #0C1149;
 }
 
 .navigation {
@@ -167,6 +166,7 @@ picture {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .navigation.active {
@@ -177,8 +177,14 @@ picture {
           flex-direction: column;
 }
 
-.logo {
-  margin: 10px 0;
+.navigation.active .logo__header {
+  width: auto;
+}
+
+.header__img {
+  cursor: pointer;
+  padding: 15px 0;
+  width: 75px;
 }
 
 .menu {
@@ -219,7 +225,7 @@ picture {
   overflow: hidden;
   cursor: pointer;
   position: absolute;
-  top: 10px;
+  top: 0;
   right: 0;
 }
 
@@ -327,7 +333,7 @@ picture {
           align-items: center;
   width: 100%;
   height: 100vh;
-  min-height: 650px;
+  min-height: 580px;
   background: url("../img/backgrounds.jpg");
   background-size: cover;
   background-position: center;
@@ -341,20 +347,26 @@ picture {
 
 .title {
   color: #0E3AB1;
-  font-size: 72px;
   font-weight: 800;
-  margin-bottom: 45px;
+  padding: 30px 0 45px;
+  text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+}
+
+.title__intro {
+  width: Min(80%, 800px);
+  font-size: clamp(45px, 5vw, 100px);
+  line-height: clamp(50px, 5vw, 125px);
 }
 
 .description {
   color: #fff;
-  font-size: 24px;
   font-weight: 700;
-  margin-bottom: 50px;
+  padding-bottom: 45px;
 }
 
 .description__intro {
-  max-width: 400px;
+  width: Min(80%, 400px);
+  font-size: clamp(18px, 5vw, 25px);
 }
 
 .events {
@@ -432,7 +444,7 @@ picture {
 }
 
 .logo__img {
-  width: 100%;
+  width: 75%;
 }
 
 .versus {
@@ -556,7 +568,8 @@ picture {
 
 input {
   color: #4F4F4F;
-  width: 430px;
+  width: 100%;
+  max-width: 430px;
   height: 55px;
   margin-bottom: 30px;
   outline: none;
@@ -737,12 +750,15 @@ input:focus {
     font-size: 27px;
     margin: 0 0 25px;
   }
+
+  .description__registration {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 970px) {
-  .title {
-    font-size: 55px;
-    line-height: 55px;
+  .title__registration {
+    max-width: 100%;
   }
 }
 
@@ -783,6 +799,10 @@ input:focus {
 }
 
 @media (max-width: 770px) {
+  .header {
+    background-color: #0C1149;
+  }
+
   .menu {
     display: none;
   }
@@ -810,27 +830,22 @@ input:focus {
   }
 }
 
-@media (max-width: 700px) {
-  .title {
-    font-size: 45px;
-    line-height: 55px;
-  }
-
+@media (max-width: 640px) {
   .description__intro {
-    font-size: 20px;
-    max-width: 60%;
-  }
-}
-
-@media (max-width: 560px) {
-  .title__intro {
-    max-width: 70%;
+    width: Min(80%, 350px);
   }
 }
 
 @media (max-width: 530px) {
   .window {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 490px) {
+  .burger {
+    top: 10px;
+    right: -20px;
   }
 }
 
@@ -841,6 +856,22 @@ input:focus {
 
   .description__about {
     margin: 20px 0;
+  }
+}
+
+@media (max-height: 400px) {
+  .header__img {
+    padding: 5px 0;
+    width: 55px;
+  }
+
+  .nav__link {
+    margin: 0;
+  }
+
+  .burger {
+    top: -10px;
+    right: -20px;
   }
 }
 
