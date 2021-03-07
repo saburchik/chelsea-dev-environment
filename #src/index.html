@@ -12,20 +12,20 @@
 <body>
     <header class="header" id="header">
         <div class="container">
-            <div class="navigation" id="nav">
-                <div class="logo__header">
-                    <img class="header__img" src="img/logo.png" alt="">
+            <div class="nav" id="nav">
+                <div class="header__img">
+                    <img class="header__logo" src="img/logo.png" alt="">
                 </div>
-                <nav class="menu" id="menu">
-                    <a class="nav__link effect-4" href="">Home</a>
-                    <a class="nav__link effect-4" href="">Events</a>
-                    <a class="nav__link effect-4" href="">About US</a>
-                    <a class="nav__link effect-4" href="">Join US</a>
-                    <a class="nav__link effect-4" href="">Contacts</a>
+                <nav class="navbar" id="navbar">
+                    <a class="nav__link" href="">Home</a>
+                    <a class="nav__link" href="">Events</a>
+                    <a class="nav__link" href="">About US</a>
+                    <a class="nav__link" href="">Join US</a>
+                    <a class="nav__link" href="">Contacts</a>
                 </nav>
 
-                <div class="burger" id="burger" onclick="lockScroll();">
-                    <svg class="ham hamRotate ham--effect" viewBox="0 0 100 100" width="80"
+                <div class="burger" id="burger">
+                    <svg class="ham ham-rotate ham__effect" viewBox="0 0 100 100" width="80"
                         onclick="this.classList.toggle('active')">
                         <path class="line top"
                             d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013" />
@@ -44,7 +44,7 @@
                 <div class="content content__intro">
                     <h1 class="title title__intro">CHELSEA <br> As part of life</h1>
                     <p class="description description__intro">Join us and stay up to date with your favorite team!</p>
-                    <button class="button button__intro">JOIN US</button>
+                    <button class="btn btn__intro">JOIN US</button>
                 </div>
             </div>
         </section>
@@ -62,10 +62,10 @@
                             </div>
                             <p class="description description__events">Premier League - 21. Matchday <br>
                                 Sun, Jan 31, 2021</p>
-                            <button class="button button__events">FORECATS</button>
+                            <button class="btn btn__events">FORECATS</button>
                         </div>
                     </div>
-                    <div class="card second">
+                    <div class="card">
                         <div class="container">
                             <div class="logo__events">
                                 <img class="logo__img" src="img/logo__events/tott.png" alt="">
@@ -74,7 +74,7 @@
                             </div>
                             <p class="description description__events">Premier League - 22. Matchday <br>
                                 Thu, Feb 04, 2021 </p>
-                            <button class="button button__events">FORECATS</button>
+                            <button class="btn btn__events">FORECATS</button>
                         </div>
                     </div>
                     <div class="card">
@@ -86,13 +86,13 @@
                             </div>
                             <p class="description description__events">Premier League - 23. Matchday <br>
                                 Sat, Feb 06, 2021 </p>
-                            <button class="button button__events">FORECATS</button>
+                            <button class="btn btn__events">FORECATS</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="about">
-                    <h1 class="title title__events">About</h1>
+                    <h1 class="title title__events">About Us</h1>
                     <div class="window">
                         <div class="photo">
                             <picture>
@@ -110,7 +110,7 @@
                                     magnis
                                     dis parturient montes, nascetur ridiculus mus.
                                 </p>
-                                <button class="button button__about">READ MORE</button>
+                                <button class="btn btn__about">READ MORE</button>
                             </div>
                         </div>
                     </div>
@@ -143,15 +143,15 @@
             </div>
         </section>
 
-        <section class="registration">
+        <section class="subscription">
             <div class="container">
-                <h1 class="title title__registration">Over 1000 fans are using ...</h1>
+                <h1 class="title title__sub">Over 1000 fans are using ...</h1>
                 <form class="form" action="">
-                    <input class="name" type="text" placeholder="YOUR NAME">
-                    <input class="email" type="text" placeholder="YOUR EMAIL">
-                    <input class="password" type="text" placeholder="YOUR PASSWORD">
-                    <button class="button button__registration">JOIN US</button>
-                    <p class="description description__registration">By Signing up you agree to our
+                    <input class="input name" type="text" placeholder="YOUR NAME">
+                    <input class="input email" type="text" placeholder="YOUR EMAIL">
+                    <input class="input password" type="text" placeholder="YOUR PASSWORD">
+                    <button class="btn btn__sb">JOIN US</button>
+                    <p class="description description__terms">By Signing up you agree to our
                         <a class="terms" href="">terms & Services</a>.
                     </p>
                 </form>
@@ -160,11 +160,11 @@
 
         <footer class="footer">
             <div class="container">
-                <div class="logo logo__footer">
-                    <img class="footer__img" src="img/logo.png" alt="">
+                <div class="footer__img">
+                    <img class="footer__logo" src="img/logo.png" alt="">
                 </div>
                 <div class="content content__footer">
-                    <div class="footer__item">
+                    <div class="footer__item address">
                         <h3 class="title title__footer">ADDRESS</h3>
                         <p class="description description__footer">
                             Chelsea Football Club <br>
@@ -174,20 +174,20 @@
                             SW6 1HS
                         </p>
                     </div>
-                    <div class="footer__item">
+                    <div class="footer__item about">
                         <h3 class="title title__footer">ABOUT</h3>
                         <a class="footer__link" href="">Our Team</a>
                         <a class="footer__link" href="">History</a>
                         <a class="footer__link" href="">Achievement</a>
                     </div>
-                    <div class="footer__item">
+                    <div class="footer__item services">
                         <h3 class="title title__footer">SERVICES</h3>
                         <a class="footer__link" href="">Official site</a>
                         <a class="footer__link" href="">Help Center</a>
                         <a class="footer__link" href="">Privacy Policy</a>
                         <a class="footer__link" href="">Other</a>
                     </div>
-                    <div class="footer__item">
+                    <div class="footer__item social-media">
                         <h3 class="title title__footer">SOCIAL MEDIA</h3>
                         <div class="icon">
                             <a class="footer__icon" href=""><img src="img/icon-social/Vector.svg" alt=""></a>
@@ -197,7 +197,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="footer__text">© 2021 Chelsea FC. All rights reserved. No part of this site may be reproduced
+                <div class="footer__rights">© 2021 Chelsea FC. All rights reserved. No part of this site may be
+                    reproduced
                     without our written permission.</div>
             </div>
         </footer>

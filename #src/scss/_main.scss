@@ -1,67 +1,55 @@
+// ========== Intro ==========
 .intro {
-    display: flex;
-    align-items: center;
     width: 100%;
     height: 100vh;
     min-height: 580px;
-    background: url("../img/backgrounds.jpg");
+    display: flex;
+    align-items: center;
+    background: url("../img/backgrounds.jpg") center no-repeat;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     position: relative;
 }
 
-.content {
-    text-align: left;
-}
-
-.content__intro {}
-
-.title {
-    color: #0E3AB1;
-    font-weight: 800;
-    padding: 30px 0 45px;
-    text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+.content__intro {
+    align-items: flex-start;
+    padding: 30px 0;
 }
 
 .title__intro {
+    color: #0E3AB1;
     width: Min(80%, 800px);
     font-size: clamp(45px, 5vw, 100px);
     line-height: clamp(50px, 5vw, 125px);
-}
+    text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+    padding: 0 0 45px;
 
-.description {
-    color: #fff;
-    // font-size: 24px;
-    font-weight: 700;
-    padding-bottom: 45px;
+    @media (max-width: 560px) {
+        width: Min(80%, 330px);
+    }
 }
 
 .description__intro {
     width: Min(80%, 400px);
     font-size: clamp(18px, 5vw, 25px);
+    padding-bottom: 30px;
 
     @media (max-width: 640px) {
         width: Min(80%, 350px);
     }
 }
 
-// _________________________________________________________________________________________________________________
-
+// ========== Events ==========
 .events {
     width: 100%;
     height: auto;
-    background: url("../img/background-line.jpg");
+    background: url("../img/background-line.jpg") center no-repeat;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding-bottom: 50px;
+    padding: 50px 0;
 }
 
 .title__events {
-    padding-top: 50px;
-    color: #fff;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .cards__events {
@@ -70,6 +58,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    padding: 0 0 50px;
     margin: 0 auto;
 
     @media (max-width: 1090px) {
@@ -92,7 +81,11 @@
     text-align: center;
     border: 4px solid #F3B31D;
     border-radius: 35px;
-    margin: 0 0 25px;
+    margin: 0 0 0 25px;
+
+    &:first-child {
+        margin-left: 0;
+    }
 
     @media (max-width: 1090px) {
         width: 33%;
@@ -101,12 +94,15 @@
     @media (max-width: 790px) {
         width: 50%;
         min-width: 290px;
+        margin: 0 0 25px 0;
+
+        &:last-child {
+            margin: 0;
+        }
     }
 }
 
-.second {
-    margin: 0 15px 25px;
-}
+
 
 .inside {
     align-items: flex-end;
@@ -117,17 +113,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 65px 0 0;
-    margin: 0 0 50px;
-
-    @media (max-width:990px) {
-        padding: 50px 0 0;
-        margin: 0 0 40px;
-    }
+    padding-top: 50px;
+    margin-bottom: 30px;
 }
 
 .logo__img {
-    width: 75%;
+    width: 100%;
 }
 
 .versus {
@@ -145,23 +136,22 @@
     font-size: 30px;
     font-weight: 400;
     line-height: 150%;
+    margin-bottom: 30px;
 
     @media (max-width: 990px) {
         font-size: 27px;
-        margin: 0 0 25px;
     }
 }
 
 // About
-
 .window {
     background-color: #fff;
     display: flex;
     flex-direction: row;
     width: 100%;
     max-width: 80%;
-    height: 580px;
-    margin: 0 auto 50px;
+    height: auto;
+    margin: 0 auto;
 
     @media (max-width:900px) {
         max-width: 100%
@@ -186,7 +176,9 @@
 }
 
 .content__about {
-    width: 100%;
+    max-height: 580px;
+    justify-content: center;
+    padding: 50px 0;
 
     @media (max-width:790px) {
         margin-left: -100%;
@@ -195,13 +187,11 @@
 }
 
 .title__about {
-    color: #000;
-    font-size: 36px;
-    font-weight: 700;
-    margin: 50px 0;
+    color: #000000;
+    margin-bottom: 30px;
 
-    @media (max-width:380px) {
-        margin: 30px 0 20px 0;
+    @media (min-width:990px) {
+        font-weight: 700;
     }
 }
 
@@ -210,14 +200,11 @@
     font-size: 24px;
     font-weight: 400;
     line-height: 35px;
-
-    @media (max-width:380px) {
-        margin: 20px 0;
-    }
+    margin-bottom: 30px;
 }
 
-// Sponsors
 
+// ========== Sponsors ==========
 .sponsors {
     background-color: #fff;
     width: 100%;
@@ -227,36 +214,34 @@
 }
 
 .content__sponsors {
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
 
 .sponsor__item {
+    width: auto;
     list-style-type: none;
+
+    @media (max-width:1150px) {
+        width: 30%;
+    }
+
+    @media (max-width:690px) {
+        width: 50%;
+    }
 }
 
 .sponsor__image {
-    width: 100%;
+    max-width: 100%;
 }
 
-// registration 
-
-.registration {
-    margin-bottom: 100px;
+// ========== Subscription ==========
+.subscription {
+    padding: 50px 0;
 }
 
-.title__registration {
-    max-width: 70%;
-    color: #fff;
+.title__sub {
     text-align: center;
-    padding: 50px 0 70px;
-    margin: 0 auto;
-
-    @media (max-width:970px) {
-        max-width: 100%;
-    }
+    margin-bottom: 50px;
 }
 
 .form {
@@ -266,7 +251,7 @@
     align-items: center;
 }
 
-input {
+.input {
     color: #4F4F4F;
     width: 100%;
     max-width: 430px;
@@ -282,7 +267,7 @@ input {
     }
 }
 
-.description__registration {
+.description__terms {
     font-size: 18px;
     font-weight: 400;
     max-width: 20%;

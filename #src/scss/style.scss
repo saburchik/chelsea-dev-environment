@@ -43,6 +43,7 @@ p {
 
 picture {
     display: flex;
+    justify-content: center;
 }
 
 .container {
@@ -52,8 +53,25 @@ picture {
     padding: 0 15px;
 }
 
-.lock-scroll {
-    overflow: hidden;
+.content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.title {
+    font-size: clamp(35px, 5vw, 72px);
+    color: #FFFFFF;
+    font-weight: 800;
+}
+
+.description {
+    color: #FFFFFF;
+    font-weight: 700;
 }
 
 @import "_button.scss";

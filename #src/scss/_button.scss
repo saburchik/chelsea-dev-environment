@@ -1,4 +1,5 @@
-.button {
+.btn {
+    color: #FFFFFF;
     height: 55px;
     font-size: 24px;
     font-weight: 700;
@@ -10,51 +11,45 @@
     padding: 0 70px;
 }
 
-.button__intro {
-    color: #fff;
+.btn__intro {
     background-color: #0E3AB1;
 
     &:hover {
         background-color: #FF4747;
-        border: 4px solid white;
+        border: 4px solid #FFFFFF;
     }
 }
 
-.button__events {
+.btn__events {
+    color: #000000;
     width: 100%;
     padding: 0;
-    margin: 0 0 50px;
+    margin-bottom: 50px;
 
     &:hover {
-        color: #fff;
+        color: #FFFFFF;
         background-color: #FF4747;
-        border: 4px solid white;
-    }
-
-    @media (max-width: 790px) {
-        max-width: 80%;
+        border: 4px solid #FFFFFF;
     }
 }
 
-.button__about {
-    width: 65%;
-    max-width: 75%;
-    color: #fff;
+.btn__about {
+    width: Min(100%, 300px);
     background-color: #0E3AB1;
     padding: 0;
 
     &:hover {
         background-color: #FF4747;
+        border: 4px solid #000000;
     }
 }
 
-.button__registration {
-    color: #fff;
+.btn__sub {
     background-color: #0E3AB1;
-    margin: 0 0 30px;
+    margin: 0 0 15px;
 
     &:hover {
         background-color: #FF4747;
-        border: 4px solid white;
+        border: 4px solid #FFFFFF;
     }
 }
