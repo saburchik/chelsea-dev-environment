@@ -79,7 +79,7 @@ picture {
 
 .container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -184,6 +184,11 @@ picture {
 .header.active {
   position: fixed;
   background: rgba(12, 17, 73, 0.95);
+}
+
+.header.scroll {
+  background: rgba(12, 17, 73, 0.95);
+  position: fixed;
 }
 
 .nav {
@@ -356,12 +361,12 @@ picture {
   height: auto;
   background: url("../img/background-line.jpg") center no-repeat;
   background-size: cover;
-  padding: 50px 0;
+  padding: 0 0 70px;
 }
 
 .title__events {
   text-align: center;
-  margin-bottom: 50px;
+  padding: 70px 0 50px;
 }
 
 .cards__events {
@@ -515,7 +520,7 @@ picture {
 }
 
 .subscription {
-  padding: 50px 0;
+  padding: 70px 0;
 }
 
 .title__sub {

@@ -16,6 +16,11 @@
     background: rgba(12, 17, 73, 0.95);
 }
 
+.header.scroll {
+    background: rgba(12, 17, 73, 0.95);
+    position: fixed;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;

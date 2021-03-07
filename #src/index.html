@@ -13,15 +13,15 @@
     <header class="header" id="header">
         <div class="container">
             <div class="nav" id="nav">
-                <div class="header__img">
+                <a class="header__img" href="#intro">
                     <img class="header__logo" src="img/logo.png" alt="">
-                </div>
+                </a>
                 <nav class="navbar" id="navbar">
-                    <a class="nav__link" href="">Home</a>
-                    <a class="nav__link" href="">Events</a>
-                    <a class="nav__link" href="">About US</a>
-                    <a class="nav__link" href="">Join US</a>
-                    <a class="nav__link" href="">Contacts</a>
+                    <a class="nav__link" href="#intro">Home</a>
+                    <a class="nav__link" href="#events">Events</a>
+                    <a class="nav__link" href="#about">About US</a>
+                    <a class="nav__link" href="#join">Join US</a>
+                    <a class="nav__link" href="#contacts">Contacts</a>
                 </nav>
 
                 <div class="burger" id="burger">
@@ -39,7 +39,7 @@
     </header>
 
     <main>
-        <section class="intro">
+        <section class="intro" id="intro">
             <div class="container">
                 <div class="content content__intro">
                     <h1 class="title title__intro">CHELSEA <br> As part of life</h1>
@@ -49,7 +49,7 @@
             </div>
         </section>
 
-        <section class="events">
+        <section class="events" id="events">
             <div class="container">
                 <h1 class="title title__events">Next Games</h1>
                 <div class="cards__events">
@@ -91,7 +91,7 @@
                     </div>
                 </div>
 
-                <div class="about">
+                <div class="about" id="about">
                     <h1 class="title title__events">About Us</h1>
                     <div class="window">
                         <div class="photo">
@@ -143,14 +143,14 @@
             </div>
         </section>
 
-        <section class="subscription">
+        <section class="subscription" id="join">
             <div class="container">
                 <h1 class="title title__sub">Over 1000 fans are using ...</h1>
                 <form class="form" action="">
                     <input class="input name" type="text" placeholder="YOUR NAME">
                     <input class="input email" type="text" placeholder="YOUR EMAIL">
                     <input class="input password" type="text" placeholder="YOUR PASSWORD">
-                    <button class="btn btn__sb">JOIN US</button>
+                    <button class="btn btn__sub">JOIN US</button>
                     <p class="description description__terms">By Signing up you agree to our
                         <a class="terms" href="">terms & Services</a>.
                     </p>
@@ -158,7 +158,7 @@
             </div>
         </section>
 
-        <footer class="footer">
+        <footer class="footer" id="contacts">
             <div class="container">
                 <div class="footer__img">
                     <img class="footer__logo" src="img/logo.png" alt="">
