@@ -16,7 +16,7 @@
     background: rgba(12, 17, 73, 0.95);
 }
 
-.header.scroll {
+.header.fixed {
     background: rgba(12, 17, 73, 0.95);
     position: fixed;
 }
@@ -103,14 +103,10 @@
     cursor: pointer;
     position: absolute;
     top: 0;
-    right: -20px;
+    right: -15px;
 
     @media (max-width:770px) {
         display: block;
-    }
-
-    @media (max-width:490px) {
-        right: -20px;
     }
 }
 

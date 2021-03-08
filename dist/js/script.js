@@ -1,51 +1,48 @@
-let header = document.querySelector('#header');
-let hamburger = document.querySelector('#burger');
-let navbar = document.querySelector('#navbar');
-let nav = document.querySelector('#nav');
-let scrolling = document.querySelector("[data-scroll]");
+const header = document.querySelector('#header');
+const hamburger = document.querySelector('#burger');
+const navbar = document.querySelector('#navbar');
+const nav = document.querySelector('#nav');
+const ham = document.querySelector('#ham__effect');
 
 hamburger.addEventListener('click', function () {
     header.classList.toggle("active");
     hamburger.classList.toggle("active");
     navbar.classList.toggle('active');
     nav.classList.toggle('active');
+    ham.classList.toggle('active');
 })
 
 window.addEventListener("scroll", checkScroll);
-document.addEventListener("DOMContentLoaded", checkScroll);
 
 function checkScroll() {
-    let scrollPos = window.scrollY;
-
-    if (scrollPos > 600) {
-        header.classList.add("scroll");
+    let scrollHeight = window.scrollY;
+    if (scrollHeight > 500) {
+        header.classList.add("fixed");
     } else {
-        header.classList.remove("scroll");
-    }
+        header.classList.remove("fixed");
+    };
+
+    let scrollWidth = window.scrollX;
+    if (scrollWidth <= 770) {
+        header.classList.remove("active");
+        hamburger.classList.remove("active");
+        navbar.classList.remove('active');
+        nav.classList.remove('active');
+        ham.classList.remove('active');
+    };
 }
 
-const navbarMenu = document.querySelector(".nav .navbar");
-const navbarLinks = document.querySelectorAll(".nav a");
+const anchors = document.querySelectorAll('a[href*="#"]')
 
-for (let i = 0; i < navbarLinks.length; i++) {
-    navbarLinks[i].addEventListener("click", navbarLinkClick);
-}
+for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault()
 
-function navbarLinkClick(event) {
+        const blockID = anchor.getAttribute('href').substr(1)
 
-    smoothScroll(event); // Call the "smoothScroll" function
-
-    if (navbarMenu.classList.contains("open")) { // Close navbarMenu in smaller screens
-        navbarToggler.click();
-    }
-
-}
-
-function smoothScroll(event) {
-    event.preventDefault();
-    const targetId = event.currentTarget.getAttribute("href");
-    window.scrollTo({
-        top: targetId === "#" ? 0 : document.querySelector(targetId).offsetTop,
-        behavior: "smooth"
-    });
+        document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
 }

@@ -186,7 +186,7 @@ picture {
   background: rgba(12, 17, 73, 0.95);
 }
 
-.header.scroll {
+.header.fixed {
   background: rgba(12, 17, 73, 0.95);
   position: fixed;
 }
@@ -263,7 +263,7 @@ picture {
   cursor: pointer;
   position: absolute;
   top: 0;
-  right: -20px;
+  right: -15px;
 }
 
 .ham {
@@ -873,12 +873,6 @@ picture {
 @media (max-width: 530px) {
   .window {
     max-width: 100%;
-  }
-}
-
-@media (max-width: 490px) {
-  .burger {
-    right: -20px;
   }
 }
 
