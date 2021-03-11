@@ -191,7 +191,7 @@ picture {
   position: fixed;
 }
 
-.nav {
+.navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,7 +204,7 @@ picture {
   position: relative;
 }
 
-.nav.active {
+.navbar.active {
   display: block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -218,18 +218,18 @@ picture {
   width: 60px;
 }
 
-.navbar {
+.nav {
   display: block;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.navbar::before {
+.nav::before {
   display: none;
 }
 
-.navbar.active {
+.nav.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -819,18 +819,18 @@ picture {
     background: rgba(12, 17, 73, 0.5);
   }
 
-  .navbar {
+  .nav {
     display: none;
   }
 
-  .navbar::before {
+  .nav::before {
     display: inline-block;
     content: "";
     border-top: 2px solid #FF4747;
     width: 105%;
   }
 
-  .navbar.active {
+  .nav.active {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
