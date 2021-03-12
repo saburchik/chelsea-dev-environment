@@ -1,33 +1,18 @@
-const burger = document.getElementById('burger').onclick = function () {
-    document.querySelector('.header').classList.toggle("active");
-    document.querySelector('.navbar').classList.toggle("active");
-    document.querySelector('.nav').classList.toggle("active");
-    document.querySelector('.ham__effect').classList.toggle("active");
+// Add classes, when a burger is clicked on
+const burger = document.querySelector('#burger');
+const header = document.querySelector('#header');
+const navbar = document.querySelector('#navbar');
+const nav = document.querySelector('#nav');
+const ham = document.querySelector('#effect');
 
-    document.querySelector('.navbar nav a').onclick = function () {
-        document.getElementById('header').click();
-    }
+burger.addEventListener('click', function () {
+    header.classList.toggle('active');
+    navbar.classList.toggle('active');
+    nav.classList.toggle('active');
+    ham.classList.toggle('active');
+})
 
-    // $('.menu li a').on("click", function () {
-    //     $('#hamburger-menu').click();
-    // });
-
-    // var className = ' ' + burger.className + ' ';
-
-    // if (~className.indexOf(' active ')) {
-    //     this.className = className.replace(' active ', ' ');
-    // } else {
-    //     this.className += ' active';
-    // }
-}
-
-// document.querySelector('.header').addEventListener('click', function () {
-//     document.querySelector('.header').classList.toggle("active");
-//     document.querySelector('.navbar').classList.toggle("active");
-//     document.querySelector('.nav').classList.toggle("active");
-//     document.querySelector('.ham__effect').classList.toggle("active");
-// })
-
+// When width display > 770px - all classes for burger - DISABLE 
 onload = function () {
     toggleMenu();
 }
@@ -44,11 +29,11 @@ function toggleMenu() {
         document.getElementById('burger').classList.remove("active");
         document.getElementById('navbar').classList.remove("active");
         document.getElementById('nav').classList.remove("active");
-        document.getElementById('ham__effect').classList.remove("active");
-    } else {
+        document.getElementById('effect').classList.remove("active");
     }
 }
 
+// Fixed header
 window.addEventListener("scroll", checkScroll);
 function checkScroll() {
     let scrollHeight = window.scrollY;
@@ -61,7 +46,7 @@ function checkScroll() {
 };
 
 // Smooth scroll
-const links = document.querySelectorAll('a[href*="#"], [href*="#"]')
+const links = document.querySelectorAll('a[href*="#"], [href*="#"]');
 
 for (let link of links) {
     link.addEventListener('click', function (e) {
@@ -73,5 +58,11 @@ for (let link of links) {
             behavior: 'smooth',
             block: 'start'
         })
+
+        // Disable burger menu, when smooth scroll
+        header.classList.remove('active');
+        navbar.classList.remove('active');
+        nav.classList.remove('active');
+        ham.classList.remove('active');
     })
 }

@@ -183,11 +183,13 @@ picture {
 
 .header.active {
   position: fixed;
-  background: rgba(12, 17, 73, 0.95);
+  background: #0c1149;
 }
 
 .header.fixed {
-  background: rgba(12, 17, 73, 0.95);
+  background: #0c1149;
+  -webkit-box-shadow: 0 3px 30px #FF4747;
+          box-shadow: 0 3px 30px #FF4747;
   position: fixed;
 }
 
@@ -294,28 +296,28 @@ picture {
   stroke-linecap: round;
 }
 
-.ham__effect .top {
+.effect .top {
   stroke-dasharray: 40 82;
 }
 
-.ham__effect .middle {
+.effect .middle {
   stroke-dasharray: 40 111;
 }
 
-.ham__effect .bottom {
+.effect .bottom {
   stroke-dasharray: 40 161;
 }
 
-.ham__effect.active .top {
+.effect.active .top {
   stroke-dasharray: 17 82;
   stroke-dashoffset: -62px;
 }
 
-.ham__effect.active .middle {
+.effect.active .middle {
   stroke-dashoffset: 23px;
 }
 
-.ham__effect.active .bottom {
+.effect.active .bottom {
   stroke-dashoffset: -83px;
 }
 
