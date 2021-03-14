@@ -4,7 +4,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 99;
 
     @media (max-width: 770px) {
         background: rgba(12, 17, 73, 0.5);
