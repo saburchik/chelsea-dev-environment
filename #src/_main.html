@@ -22,12 +22,13 @@
                         </div>
                         <p class="description description__events">Premier League - 21. Matchday <br>
                             Sun, Jan 31, 2021</p>
-                        <button class="btn btn__events" data-modal-btn="my_modal1">FORECATS</button>
+                        <button id='show' onClick='showDialog()' class="btn btn__events"
+                            data-modal-btn="my_modal1">FORECATS</button>
 
                         <div class="modal" data-modal-window="my_modal1">
                             <div class="content content__modal">
                                 <div class="container">
-                                    <div class="closed__modal">&times;</div>
+                                    <div id='close' onClick='closeDialog()' class="closed__modal">&times;</div>
                                     <div class="logo__events">
                                         <img class="logo__img" src="img/logo__events/chelsea.png" alt="">
                                         <h4 class="versus">VS</h4>

@@ -6,17 +6,14 @@
 // Modal window
 
 let modalBtns = document.querySelectorAll("*[data-modal-btn]");
-const body = document.querySelectorAll('body');
-const lockPadding = document.querySelectorAll('.lock-padding');
-
-let unlock = true;
-const timeout = 800;
 
 for (let i = 0; i < modalBtns.length; i++) {
     modalBtns[i].addEventListener('click', function () {
         let name = modalBtns[i].getAttribute('data-modal-btn');
         let modal = document.querySelector("[data-modal-window='" + name + "']");
         modal.style.display = "block";
+        document.querySelector("body").classList.toggle('active');
+        document.querySelector("header").classList.toggle('padding');
 
         let close = modal.querySelector(".closed__modal");
         close.addEventListener('click', function () {
@@ -30,11 +27,25 @@ window.onclick = function (e) {
         let modals = document.querySelectorAll("*[data-modal-window]");
         for (let i = 0; i < modals.length; i++) {
             modals[i].style.display = "none";
+            document.querySelector("body").classList.remove('active');
+            document.querySelector("header").classList.remove('padding');
         }
     }
 }
 
 // To stop scroll
+
+/* when modal is opened */
+
+
+
+
+
+
+
+
+
+
 
 // function bodyLock() {
 //     const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
