@@ -74,7 +74,7 @@ body {
   overflow-y: scroll;
 }
 
-body.active {
+body.hidden {
   overflow: hidden;
   width: 100%;
 }
@@ -469,24 +469,47 @@ picture {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
-  width: 100%;
-  height: 800px;
+  width: 80%;
+  height: auto;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.6);
+  border: 3px solid #FF4747;
+  z-index: 1000;
+  padding: 100px 0;
 }
 
-.content__modal {
-  width: 80%;
-  background-color: grey;
-  border: 3px solid #FF4747;
-  margin: 100px auto 0;
-  position: relative;
-  z-index: 1000;
+.match__header {
+  background: url("../img/modal.jpg") center no-repeat;
+  padding: 15px;
+  background-size: cover;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.match__title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.match__icon {
+  margin-right: 15px;
+}
+
+.match__img {
+  width: 25px;
+  height: 25px;
 }
 
 .closed__modal {
-  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
   font-size: 55px;
   font-weight: 700;
   color: lightcoral;
@@ -933,3 +956,5 @@ picture {
 .webp .intro { background: url(../img/backgrounds.webp) center no-repeat; }
 
 .webp .events { background: url(../img/background-line.webp) center no-repeat; }
+
+.webp .match__header { background: url(../img/modal.webp) center no-repeat; }
