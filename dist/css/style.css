@@ -447,7 +447,8 @@ picture {
 }
 
 .logo__img {
-  width: 100%;
+  width: 64px;
+  height: 64px;
 }
 
 .versus {
@@ -469,21 +470,83 @@ picture {
   position: fixed;
   top: 0;
   left: 0;
-  width: 80%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.6);
-  border: 3px solid #FF4747;
   z-index: 1000;
   padding: 100px 0;
 }
 
+.modal__inner {
+  color: #fff;
+  width: 80%;
+  border: 5px solid #FF4747;
+  margin: 0 auto;
+  position: relative;
+}
+
+.teams {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+
+.teams__main {
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.team__left {
+  text-align: right;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.team__left .team__logo {
+  margin-left: 15px;
+}
+
+.team__right {
+  text-align: left;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.team__right .team__logo {
+  margin-right: 15px;
+}
+
+.team__img {
+  width: 35px;
+  height: 35px;
+}
+
 .match__header {
   background: url("../img/modal.jpg") center no-repeat;
-  padding: 15px;
   background-size: cover;
-  width: 100%;
-  margin: 0 auto;
+  padding: 15px;
 }
 
 .match__title {
@@ -508,12 +571,25 @@ picture {
 
 .closed__modal {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -15px;
+  right: -1px;
   font-size: 55px;
   font-weight: 700;
-  color: lightcoral;
+  color: #ff4747;
   cursor: pointer;
+}
+
+.match__main {
+  background-color: #F4F4F4;
+}
+
+.stat__photo {
+  -webkit-box-shadow: 0 3px 30px #ff4747;
+          box-shadow: 0 3px 30px #ff4747;
+}
+
+.stat__img {
+  width: 100%;
 }
 
 .window {
