@@ -21,9 +21,9 @@
                             <img class="logo__img" src="img/am.png" alt="">
                         </div>
                         <p class="description description__events">Champions League - Round of 16, 2nd leg</p>
-                        <button id='show' class="btn btn__events" data-modal-btn="my_modal1">FORECATS</button>
+                        <button id='show' class="btn btn__events" data-modal-btn="card-first">FORECATS</button>
 
-                        <div class="modal" data-modal-window="my_modal1">
+                        <div class="modal" data-modal-window="card-first">
                             <div class="modal__inner">
                                 <div class="match__header">
                                     <div class="match__content">
@@ -72,9 +72,9 @@
                         </div>
                         <p class="description description__events">Premier League - 22. Matchday <br>
                             Thu, Feb 04, 2021 </p>
-                        <button class="btn btn__events" data-modal-btn="my_modal2">FORECATS</button>
+                        <button class="btn btn__events" data-modal-btn="card-second">FORECATS</button>
 
-                        <div class="modal" data-modal-window="my_modal2">
+                        <div class="modal" data-modal-window="card-second">
                             <div class="modal__inner">
                                 <div class="match__header">
                                     <div class="match__content">
@@ -123,9 +123,9 @@
                         </div>
                         <p class="description description__events">Premier League - 23. Matchday <br>
                             Sat, Feb 06, 2021 </p>
-                        <button class="btn btn__events" data-modal-btn="my_modal3">FORECATS</button>
+                        <button class="btn btn__events" data-modal-btn="card-third">FORECATS</button>
 
-                        <div class="modal" data-modal-window="my_modal3">
+                        <div class="modal" data-modal-window="card-third">
                             <div class="modal__inner">
                                 <div class="match__header">
                                     <div class="match__content">
@@ -186,7 +186,7 @@
                                 magnis
                                 dis parturient montes, nascetur ridiculus mus.
                             </p>
-                            <button class="btn btn__about">READ MORE</button>
+                            <button class="btn btn__about" onclick="location.href='/about-us.html'">READ MORE</button>
                         </div>
                     </div>
                 </div>
@@ -228,9 +228,18 @@
                 <input class="input email" type="text" placeholder="YOUR EMAIL">
                 <button class="btn btn__sub">JOIN US</button>
                 <p class="description description__terms">By Signing up you agree to our
-                    <a class="terms" href="">terms & Services</a>.
+                    <a class="terms" href="#" data-modal-btn="terms">terms & Services</a>.
                 </p>
             </form>
+
+            <div class="modal" data-modal-window="terms">
+                <div class="modal__inner">
+                    <div class="closed__modal">&times;</div>
+                    <picture>
+                        <img class="terms__bg" src="img/terms&privacy.jpg" alt="">
+                    </picture>
+                </div>
+            </div>
         </div>
     </section>
 </main>

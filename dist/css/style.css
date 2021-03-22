@@ -481,9 +481,20 @@ picture {
 .modal__inner {
   color: #fff;
   width: 80%;
+  max-width: 700px;
   border: 5px solid #FF4747;
   margin: 0 auto;
   position: relative;
+}
+
+.terms__bg {
+  width: 100%;
+}
+
+.match__header {
+  background: url("../img/modal.jpg") center no-repeat;
+  background-size: cover;
+  padding: 15px;
 }
 
 .match__data {
@@ -555,12 +566,6 @@ picture {
 .team__img {
   width: 35px;
   height: 35px;
-}
-
-.match__header {
-  background: url("../img/modal.jpg") center no-repeat;
-  background-size: cover;
-  padding: 15px;
 }
 
 .match__title {
@@ -863,6 +868,12 @@ picture {
 @media (min-width: 990px) {
   .title__about {
     font-weight: 700;
+  }
+}
+
+@media (min-width: 1490px) {
+  .modal__inner {
+    width: 1280px;
   }
 }
 
