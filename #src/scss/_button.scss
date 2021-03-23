@@ -34,9 +34,9 @@
 }
 
 .btn__about {
-    width: Min(100%, 300px);
     background-color: #0E3AB1;
-    padding: 0;
+    padding: 10px 35px;
+    text-decoration: none;
 
     &:hover {
         background-color: #FF4747;

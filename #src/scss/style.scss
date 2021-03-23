@@ -90,3 +90,20 @@ picture {
 @import "_header.scss";
 @import "_main.scss";
 @import "_footer.scss";
+
+// Page About-Us
+
+.content__about-us {
+    height: auto;
+    padding: 50px 0;
+}
+
+.title__about-us {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.official-logo {
+    width: 100%;
+    margin-bottom: 50px;
+}

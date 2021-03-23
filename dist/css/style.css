@@ -164,9 +164,9 @@ picture {
 }
 
 .btn__about {
-  width: Min(100%, 300px);
   background-color: #0E3AB1;
-  padding: 0;
+  padding: 10px 35px;
+  text-decoration: none;
 }
 
 .btn__about:hover {
@@ -203,10 +203,6 @@ picture {
   -webkit-box-shadow: 0 3px 30px #FF4747;
           box-shadow: 0 3px 30px #FF4747;
   position: fixed;
-}
-
-.header.padding {
-  padding-right: 15px;
 }
 
 .navbar {
@@ -762,7 +758,7 @@ picture {
   -webkit-box-align: initial;
       -ms-flex-align: initial;
           align-items: initial;
-  padding: 50px 0;
+  padding: 50px 0 25px;
 }
 
 .footer__item {
@@ -863,6 +859,21 @@ picture {
   color: #FFFFFF;
   text-align: center;
   letter-spacing: 1px;
+}
+
+.content__about-us {
+  height: auto;
+  padding: 50px 0;
+}
+
+.title__about-us {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.official-logo {
+  width: 100%;
+  margin-bottom: 50px;
 }
 
 @media (min-width: 990px) {
