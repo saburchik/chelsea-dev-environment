@@ -14,7 +14,6 @@
 .header.active {
     position: fixed;
     background: rgba(12, 17, 73, 1);
-    padding-right: 15px;
 }
 
 .header.fixed {
@@ -22,6 +21,10 @@
     box-shadow: 0 3px 30px #FF4747;
     position: fixed;
 }
+
+// .header.padding {
+//     padding-right: 15px;
+// }
 
 .navbar {
     display: flex;

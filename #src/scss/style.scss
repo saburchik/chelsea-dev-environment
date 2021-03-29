@@ -41,18 +41,6 @@ p {
     margin: 0;
 }
 
-body {
-    margin-right: calc(-1 * (100vw - 100%));
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-
-body.hidden {
-    overflow: hidden;
-    width: 100%;
-}
-
-
 picture {
     display: flex;
     justify-content: center;

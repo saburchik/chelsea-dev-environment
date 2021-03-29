@@ -21,11 +21,32 @@
                             <img class="logo__img" src="img/am.png" alt="">
                         </div>
                         <p class="description description__events">Champions League - Round of 16, 2nd leg</p>
-                        <button id='show' class="btn btn__events" data-modal-btn="card-first">FORECATS</button>
+                        <a class="js-modal-open btn btn__events" href="#modal-1">FORECATS</a>
 
-                        <div class="modal" data-modal-window="card-first">
-                            <div class="modal__inner">
-                                <div class="match__header">
+
+                        <div class="modal modal--l" id="modal-1">
+                            <div class="modal__dialog">
+                                <div class="modal__dialog-header">
+                                    <div class="modal__dialog-header-content">
+                                        Modal Window 1
+                                    </div>
+                                    <div class="modal__dialog-header-close">
+                                        <button class="js-modal-close modal__dialog-header-close-btn">
+                                            <span>&times;</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="modal__dialog-body">
+                                    <div>modal__dialog-body</div>
+                                </div>
+                                <div class="modal__dialog-footer">
+                                    <button class="js-modal-close btn-close">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="modals fix-block">
+                            <div class="modal-overlay">
+                                <div class="match__header modal modal--1" data-target="form-popup">
                                     <div class="match__content">
                                         <div class="closed__modal">&times;</div>
                                         <strong class="match__title">
@@ -60,7 +81,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="card">
@@ -74,7 +95,7 @@
                             Thu, Feb 04, 2021 </p>
                         <button class="btn btn__events" data-modal-btn="card-second">FORECATS</button>
 
-                        <div class="modal" data-modal-window="card-second">
+                        <!-- <div class="modal" data-modal-window="card-second">
                             <div class="modal__inner">
                                 <div class="match__header">
                                     <div class="match__content">
@@ -111,7 +132,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="card">
@@ -125,7 +146,7 @@
                             Sat, Feb 06, 2021 </p>
                         <button class="btn btn__events" data-modal-btn="card-third">FORECATS</button>
 
-                        <div class="modal" data-modal-window="card-third">
+                        <!-- <div class="modal" data-modal-window="card-third">
                             <div class="modal__inner">
                                 <div class="match__header">
                                     <div class="match__content">
@@ -162,7 +183,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -186,7 +207,7 @@
                                 magnis
                                 dis parturient montes, nascetur ridiculus mus.
                             </p>
-                            <a class="btn btn__about" href="about-us.html" target="_blank">READ
+                            <a class="btn btn__about" href="about-us.html">READ
                                 MORE</a>
                         </div>
                     </div>
@@ -233,14 +254,14 @@
                 </p>
             </form>
 
-            <div class="modal" data-modal-window="terms">
+            <!-- <div class="modal" data-modal-window="terms">
                 <div class="modal__inner">
                     <div class="closed__modal">&times;</div>
                     <picture>
                         <img class="terms__bg" src="img/terms&privacy.jpg" alt="">
                     </picture>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 </main>
