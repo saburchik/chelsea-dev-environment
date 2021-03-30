@@ -11,12 +11,13 @@
 
 @import "fonts";
 
-
 body {
+    width: 100%;
+    overflow-x: hidden;
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color: #0C1149;
+    background-color: #F1F1F1;
 }
 
 *,
@@ -80,6 +81,10 @@ picture {
 @import "_footer.scss";
 
 // Page About-Us
+
+.about-us {
+    background: #0c1149;
+}
 
 .content__about-us {
     height: auto;

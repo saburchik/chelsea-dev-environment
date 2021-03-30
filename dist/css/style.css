@@ -39,10 +39,12 @@
 }
 
 body {
+  width: 100%;
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background-color: #0C1149;
+  background-color: #F1F1F1;
 }
 
 *,
@@ -184,6 +186,11 @@ picture {
 .header.active {
   position: fixed;
   background: #0c1149;
+}
+
+.header.ggg {
+  padding-right: 16px;
+  overflow: hidden;
 }
 
 .header.fixed {
@@ -725,6 +732,7 @@ picture {
 }
 
 .subscription {
+  background: #0c1149;
   padding: 70px 0;
 }
 
@@ -778,6 +786,7 @@ picture {
 }
 
 .footer {
+  background: #0c1149;
   padding: 15px 0;
 }
 
@@ -903,6 +912,10 @@ picture {
   color: #FFFFFF;
   text-align: center;
   letter-spacing: 1px;
+}
+
+.about-us {
+  background: #0c1149;
 }
 
 .content__about-us {

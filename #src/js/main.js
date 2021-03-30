@@ -3,33 +3,6 @@
 @@include('functions/adaptiveWidth.js');
 @@include('functions/smooth-scroll.js');
 
-// Modal window
-
-// let modalBtns = document.querySelectorAll("*[data-modal-btn]");
-
-// for (let i = 0; i < modalBtns.length; i++) {
-//     modalBtns[i].addEventListener('click', function () {
-//         let name = modalBtns[i].getAttribute('data-modal-btn');
-//         let modal = document.querySelector("[data-modal-window='" + name + "']");
-//         modal.style.display = "block";
-
-//         let close = modal.querySelector(".closed__modal");
-//         close.addEventListener('click', function () {
-//             modal.style.display = "none";
-//         })
-
-//     })
-// }
-
-// window.onclick = function (e) {
-//     if (e.target.hasAttribute('data-modal-window')) {
-//         let modals = document.querySelectorAll("*[data-modal-window]");
-//         for (let i = 0; i < modals.length; i++) {
-//             modals[i].style.display = "none";
-//         }
-//     }
-// }
-
 const CLASS_LIST = {
     MODAL: 'modal',
     MODAL_ACTIVE: 'modal--active',
@@ -51,7 +24,6 @@ const showScroll = (event) => {
 document.addEventListener('click', (event) => {
     // open
     if (event.target.closest(`.${CLASS_LIST.TRIGGER_OPEN}`)) {
-        console.log('open');
         event.preventDefault();
 
         const target = event.target.closest(`.${CLASS_LIST.TRIGGER_OPEN}`);
@@ -69,10 +41,9 @@ document.addEventListener('click', (event) => {
         event.target.closest(`.${CLASS_LIST.TRIGGER_CLOSE}`) ||
         event.target.classList.contains(CLASS_LIST.MODAL_ACTIVE)
     ) {
-        console.log('close');
         event.preventDefault();
 
-        const modal = event.target.closest(`.${CLASS_LIST.MODAL}`);
+        const modal = event.target.closest(`.${CLASS_LIST.MODAL}`)
 
         modal.classList.remove(CLASS_LIST.MODAL_ACTIVE);
 
