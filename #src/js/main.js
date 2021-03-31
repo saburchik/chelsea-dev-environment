@@ -3,68 +3,91 @@
 @@include('functions/adaptiveWidth.js');
 @@include('functions/smooth-scroll.js');
 
-const CLASS_LIST = {
-    MODAL: 'modal',
-    MODAL_ACTIVE: 'modal--active',
-    MODAL_HAS_SCROLL: 'modal--has-scroll',
-    MODAL_DIALOG_BODY: 'modal__dialog-body',
-    TRIGGER_OPEN: 'js-modal-open',
-    TRIGGER_CLOSE: 'js-modal-close',
-}
+const popupLinks = document.querySelectorAll('.popup-link');
+const body = document.querySelector('body');
+const lockPadding = document.querySelectorAll('.lock-padding');
 
-const showScroll = (event) => {
-    if (event.propertyName === 'transform') {
-        document.body.style.paddingRight = '';
-        document.body.style.overflow = 'visible';
+let unlock = true;
 
-        event.target.closest(`.${CLASS_LIST.MODAL}`).removeEventListener('transitionend', showScroll);
+const timeout = 800;
+
+if (popupLinks.length > 0) {
+    for (let i = 0; i < popupLinks.length; i++) {
+        const popupLink = popupLinks[i];
+        popupLink.addEventListener('click', function (e) {
+            const popupName = popupLink.getAttribute('href').replace('#', '');
+            const curentPopup = document.getElementById(popupName);
+            popupOpen(curentPopup);
+            e.preventDefault();
+        });
     }
 }
-
-document.addEventListener('click', (event) => {
-    // open
-    if (event.target.closest(`.${CLASS_LIST.TRIGGER_OPEN}`)) {
-        event.preventDefault();
-
-        const target = event.target.closest(`.${CLASS_LIST.TRIGGER_OPEN}`);
-        const modalId = target.getAttribute('href').replace('#', '');
-        const modal = document.getElementById(modalId);
-
-        document.body.style.paddingRight = `${getScrollbarWidth()}px`;
-        document.body.style.overflow = 'hidden';
-
-        modal.classList.add(CLASS_LIST.MODAL_ACTIVE);
+const popupCloseIcon = document.querySelectorAll('.close-popup');
+if (popupCloseIcon.length > 0) {
+    for (let i = 0; i < popupCloseIcon.length; i++) {
+        const el = popupCloseIcon[i];
+        el.addEventListener('click', function (e) {
+            popupClose(el.closest('.popup'));
+            e.preventDefault();
+        });
     }
+}
 
-    // close 
-    if (
-        event.target.closest(`.${CLASS_LIST.TRIGGER_CLOSE}`) ||
-        event.target.classList.contains(CLASS_LIST.MODAL_ACTIVE)
-    ) {
-        event.preventDefault();
-
-        const modal = event.target.closest(`.${CLASS_LIST.MODAL}`)
-
-        modal.classList.remove(CLASS_LIST.MODAL_ACTIVE);
-
-        modal.addEventListener('transitionend', showScroll);
+function popupOpen(curentPopup) {
+    if (curentPopup && unlock) {
+        const popupActive = document.querySelector('.popup.open');
+        if (popupActive) {
+            popupClose(popupActive, false);
+        } else {
+            bodyLock();
+        }
+        curentPopup.classList.add('open');
+        curentPopup.addEventListener('click', function (e) {
+            if (!e.target.closest('.popup__content')) {
+                popupClose(e.target.closest('.popup'));
+            }
+        });
     }
-});
+}
+function popupClose(popupActive, doUnlock = true) {
+    if (unlock) {
+        popupActive.classList.remove('open');
+        if (doUnlock) {
+            bodyUnLock();
+        }
+    }
+}
 
-const getScrollbarWidth = () => {
-    const item = document.createElement('div');
+function bodyLock() {
+    const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
 
-    item.style.position = 'absolute';
-    item.style.top = '-9999px';
-    item.style.width = '50px';
-    item.style.height = '50px';
-    item.style.overflow = 'scroll';
-    item.style.visibility = 'hidden';
+    for (let i = 0; i < lockPadding.length; i++) {
+        const el = lockPadding[i];
+        el.style.paddingRight = lockPaddingValue;
+    }
+    body.style.paddingRight = lockPaddingValue;
+    body.classList.add('lock');
 
+    unlock = false;
+    setTimeout(function () {
+        unlock = true;
+    }, timeout);
+}
 
-    document.body.appendChild(item);
-    const scrollBarWidth = item.offsetWidth - item.clientWidth;
-    document.body.removeChild(item);
+function bodyUnLock() {
+    setTimeout(function () {
+        if (lockPadding.length > 0) {
+            for (let i = 0; i < lockPadding.length; i++) {
+                const el = lockPadding[i];
+                el.style.paddingRight = '0px';
+            }
+        }
+        body.style.paddingRight = '0';
+        body.classList.remove('lock');
+    }, timeout);
 
-    return scrollBarWidth;
+    unlock = false;
+    setTimeout(function () {
+        unlock = true;
+    }, timeout);
 }
