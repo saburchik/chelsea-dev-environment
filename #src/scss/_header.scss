@@ -41,7 +41,11 @@
 
     @media (max-height:400px) {
         padding: 5px 0;
-        width: 55px;
+        width: 50px;
+    }
+
+    @media (min-width: 2000px) {
+        width: 100px;
     }
 }
 
@@ -92,6 +96,10 @@
 
     @media (max-width: 770px) {
         margin: 10px 0;
+    }
+
+    @media (min-width: 2000px) {
+        font-size: 27px;
     }
 }
 
