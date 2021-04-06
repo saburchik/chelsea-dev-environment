@@ -1,7 +1,7 @@
 
 
 let project_folder = "dist";
-let source_folder = "#src";
+let source_folder = "src";
 
 let fs = require('fs');
 
