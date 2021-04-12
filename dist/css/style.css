@@ -225,6 +225,7 @@ picture {
 .header__logo {
   cursor: pointer;
   margin: 10px 0;
+  height: 60px;
   width: 60px;
 }
 
@@ -520,6 +521,7 @@ picture {
   color: #fff;
   background: url("../img/modal.jpg") center no-repeat;
   background-size: cover;
+  text-align: center;
   padding: 15px;
 }
 
@@ -540,7 +542,6 @@ picture {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
   margin-bottom: 30px;
 }
 
@@ -919,6 +920,7 @@ picture {
   }
 
   .header__logo {
+    height: 100px;
     width: 100px;
   }
 
@@ -1137,7 +1139,14 @@ picture {
 @media (max-height: 400px) {
   .header__logo {
     padding: 5px 0;
+    height: auto;
     width: 50px;
+  }
+}
+
+@media (max-height: 2000px) {
+  .intro {
+    min-height: 890px;
   }
 }
 

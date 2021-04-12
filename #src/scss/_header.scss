@@ -37,14 +37,17 @@
 .header__logo {
     cursor: pointer;
     margin: 10px 0;
+    height: 60px;
     width: 60px;
 
     @media (max-height:400px) {
         padding: 5px 0;
+        height: auto;
         width: 50px;
     }
 
     @media (min-width: 2000px) {
+        height: 100px;
         width: 100px;
     }
 }

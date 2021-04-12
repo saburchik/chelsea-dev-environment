@@ -31,6 +31,7 @@
   "dependencies": {
     "github": "^14.0.0",
     "normalize.css": "^8.0.1",
+    "smoothscroll-polyfill": "^0.4.4",
     "webp-converter": "2.2.3"
   }
 }
