@@ -3,5 +3,3 @@
 @@include('functions/adaptiveWidth.js');
 @@include('functions/smooth-scroll.js');
 @@include('functions/modal-window.js');
-
-smoothscroll.polyfill();

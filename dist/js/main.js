@@ -62,7 +62,8 @@ for (let link of links) {
         nav.classList.remove('active');
         ham.classList.remove('active');
     })
-};
+}
+;
 const modalLinks = document.querySelectorAll('.modal-link');
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll('.lock-padding');
@@ -184,5 +185,3 @@ document.addEventListener('keydown', function (e) {
             Element.prototype.msMatchesSelector;
     }
 })();;
-
-smoothscroll.polyfill();

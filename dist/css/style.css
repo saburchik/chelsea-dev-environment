@@ -111,7 +111,7 @@ picture {
 }
 
 .title {
-  font-size: clamp(35px, 5vw, 72px);
+  font-size: clamp(40px, 5vw, 72px);
   color: #FFFFFF;
   font-weight: 800;
 }
@@ -161,6 +161,7 @@ picture {
 }
 
 .btn__about {
+  display: inline-block;
   background-color: #0E3AB1;
   padding: 10px 35px;
   text-decoration: none;
@@ -223,10 +224,10 @@ picture {
 }
 
 .header__logo {
-  cursor: pointer;
-  margin: 10px 0;
   height: 60px;
   width: 60px;
+  cursor: pointer;
+  margin: 10px 0;
 }
 
 .nav {
@@ -342,7 +343,6 @@ picture {
           align-items: center;
   background: url("../img/backgrounds.jpg") center no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .content__intro {
@@ -357,14 +357,14 @@ picture {
   width: Min(80%, 800px);
   font-size: clamp(45px, 5vw, 100px);
   line-height: clamp(50px, 5vw, 125px);
-  text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
-  padding: 0 0 45px;
+  text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, -1px 0 1px #fff, 0 -1px 1px #fff;
+  margin-bottom: 35px;
 }
 
 .description__intro {
   width: Min(80%, 400px);
   font-size: clamp(18px, 5vw, 25px);
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .event {
@@ -765,17 +765,9 @@ picture {
   padding: 15px 0;
 }
 
-.footer__img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .footer__logo {
-  width: 100%;
+  width: 100px;
+  height: 100px;
 }
 
 .content__footer {
@@ -928,6 +920,10 @@ picture {
     font-size: 27px;
   }
 
+  .intro {
+    min-height: 890px;
+  }
+
   .cards__event {
     max-width: 1500px;
   }
@@ -1044,7 +1040,7 @@ picture {
 
 @media (max-width: 770px) {
   .header {
-    background: rgba(12, 17, 73, 0.5);
+    background: rgba(12, 17, 73, 0.7);
   }
 
   .nav {
@@ -1055,7 +1051,7 @@ picture {
     display: inline-block;
     content: "";
     border-top: 2px solid #FF4747;
-    width: 105%;
+    width: 100%;
   }
 
   .nav.active {
@@ -1138,15 +1134,9 @@ picture {
 
 @media (max-height: 400px) {
   .header__logo {
-    padding: 5px 0;
-    height: auto;
+    margin: 15px 0;
+    height: 50px;
     width: 50px;
-  }
-}
-
-@media (max-height: 2000px) {
-  .intro {
-    min-height: 890px;
   }
 }
 
