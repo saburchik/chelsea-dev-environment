@@ -23,7 +23,7 @@
     width: Min(80%, 800px);
     font-size: clamp(45px, 5vw, 100px);
     line-height: clamp(50px, 5vw, 125px);
-    text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, -1px 0 1px #fff, 0 -1px 1px #fff;
+    // text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, -1px 0 1px #fff, 0 -1px 1px #fff;
     margin-bottom: 35px;
 
     @media (max-width: 560px) {
@@ -48,65 +48,54 @@
     background: url("../img/background-line.jpg") center no-repeat;
     background-size: cover;
     padding: 0 0 70px;
+    text-align: center;
+}
+
+.vertical__body {
+    padding-bottom: 100px;
+    max-width: 990px;
+    margin: 0 auto;
+
+    @media (min-width: 2000px) {
+        max-width: 1290px;
+    }
+}
+
+.vertical__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -22.5px;
+}
+
+.vertical__column {
+    display: flex;
+    flex: 0 1 33.333%;
+    padding: 22.5px;
+}
+
+.vertical__item {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    border: 4px solid #F3B31D;
+    border-radius: 35px;
+    padding: 15px;
+}
+
+.vertical__text {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    margin: 0 0 30px 0;
+
+    @media (min-width: 2000px) {
+        margin: 0 0 60px 0;
+    }
 }
 
 .title__event {
-    text-align: center;
     padding: 70px 0 50px;
-}
-
-.cards__event {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 0 0 50px;
-    margin: 0 auto;
-
-    @media (max-width: 1090px) {
-        justify-content: center;
-    }
-
-
-    @media (max-width: 790px) {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    @media (min-width: 2000px) {
-        max-width: 1500px;
-    }
-}
-
-.card {
-    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    text-align: center;
-    border: 4px solid #F3B31D;
-    border-radius: 35px;
-    margin: 0 0 0 25px;
-
-    &:first-child {
-        margin-left: 0;
-    }
-
-    @media (max-width: 1090px) {
-        width: 33%;
-    }
-
-    @media (max-width: 790px) {
-        width: 50%;
-        min-width: 290px;
-        margin: 0 0 25px 0;
-
-        &:last-child {
-            margin: 0;
-        }
-    }
 }
 
 .logo__event {
@@ -114,8 +103,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
-    margin-bottom: 30px;
+    margin: 40px 0;
 }
 
 .logo__img {
@@ -123,29 +111,29 @@
     height: 64px;
 }
 
-.versus {
+.vs__between {
     color: #fff;
     font-size: 35px;
     font-weight: 700;
     margin: 0 20px;
 
-    @media (max-width: 990px) {
-        font-size: 30px;
+    @media (min-width: 2000px) {
+        margin: 0 50px;
     }
 }
 
 .description__event {
-    display: flex;
-    align-items: center;
-    height: 212px;
     font-size: 30px;
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 2px;
-    margin-bottom: 30px;
 
-    @media (max-width: 990px) {
-        font-size: 27px;
+    @media (max-width: 770px) {
+        font-size: 24px;
+    }
+
+    @media (min-width: 2000px) {
+        font-size: 40px;
     }
 }
 
@@ -312,44 +300,36 @@
 
 // About
 .window {
-    background-color: #fff;
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    max-width: 80%;
-    height: auto;
     margin: 0 auto;
-
-    @media (max-width:900px) {
-        max-width: 100%
-    }
-
-    @media (max-width:790px) {
-        max-width: 70%
-    }
-
-    @media (max-width:530px) {
-        max-width: 100%
-    }
+    max-width: 1200px;
 }
 
-.image {
-    width: 100%;
-}
+.about__img {
+    display: flex;
+    flex: 0 0 450px;
 
-.window__img {
-    width: 100%;
-    height: 580px;
+    img {
+        max-width: 100%;
+    }
+
+    @media (max-width:850px) {
+        display: none;
+    }
 }
 
 .content__about {
-    max-height: 580px;
+    background-color: #fff;
     justify-content: center;
-    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 1 1 auto;
+    padding: 15px;
 
-    @media (max-width:790px) {
-        max-height: 100%;
-        margin-left: -100%;
+    @media (max-width:850px) {
+        background: url("../img/chelsea--white.jpg") center no-repeat;
+        background-size: cover;
         text-align: center;
     }
 }
@@ -357,10 +337,6 @@
 .title__about {
     color: #000000;
     margin-bottom: 30px;
-
-    @media (min-width:990px) {
-        font-weight: 700;
-    }
 }
 
 .description__about {
@@ -370,7 +346,6 @@
     line-height: 35px;
     margin-bottom: 30px;
 }
-
 
 // ========== Sponsors ==========
 .sponsors {

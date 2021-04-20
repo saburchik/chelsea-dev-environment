@@ -11,47 +11,55 @@
 
     <section class="event" id="event">
         <div class="container">
-            <h2 class="title title__event">Next Games</h2>
-            <div class="cards__event">
-
-                <div class="card">
-                    <div class="container">
-                        <div class="logo__event">
-                            <img class="logo__img" src="img/logo-teams/chelsea.png" alt="Chelsea">
-                            <h1 class="versus">VS</h1>
-                            <img class="logo__img" src="img/logo-teams/atletico.png" alt="Atletico Madrid">
+            <div class="vertical__body">
+                <h2 class="title title__event">Next Games</h2>
+                <div class="vertical__row">
+                    <div class="vertical__column">
+                        <div class="vertical__item">
+                            <div class="logo__event">
+                                <img class="logo__img" src="img/logo-teams/chelsea.png" alt="Chelsea">
+                                <h1 class="vs__between">VS</h1>
+                                <img class="logo__img" src="img/logo-teams/atletico.png" alt="Atletico Madrid">
+                            </div>
+                            <div class="vertical__text">
+                                <p class="description description__event">Champions League - Round of 16, 2nd leg</p>
+                            </div>
+                            <a class="btn btn__event modal-link" href="#modal">FORECATS</a>
                         </div>
-                        <p class="description description__event">Champions League - Round of 16, 2nd leg</p>
-                        <a class="btn btn__event modal-link" href="#modal">FORECATS</a>
                     </div>
-                </div>
 
-                <div class="card">
-                    <div class="container">
-                        <div class="logo__event">
-                            <img class="logo__img" src="img/logo-teams/tottenham.png" alt="Tottenham">
-                            <h4 class="versus">VS</h4>
-                            <img class="logo__img" src="img/logo-teams/chelsea.png" alt="Chelsea">
+                    <div class="vertical__column">
+                        <div class="vertical__item">
+                            <div class="logo__event">
+                                <img class="logo__img" src="img/logo-teams/tottenham.png" alt="Tottenham">
+                                <h1 class="vs__between">VS</h1>
+                                <img class="logo__img" src="img/logo-teams/chelsea.png" alt="Chelsea">
+                            </div>
+                            <div class="vertical__text">
+                                <p class="description description__event">Premier League - 22. Matchday <br>
+                                    Thu, Feb 04, 2021 </p>
+                            </div>
+                            <a class="btn btn__event modal-link" href="#modal">FORECATS</a>
                         </div>
-                        <p class="description description__event">Premier League - 22. Matchday <br>
-                            Thu, Feb 04, 2021 </p>
-                        <a class="btn btn__event modal-link" href="#modal">FORECATS</a>
                     </div>
-                </div>
 
-                <div class="card">
-                    <div class="container">
-                        <div class="logo__event">
-                            <img class="logo__img" src="img/logo-teams/sheffield.png" alt="Sheffield United">
-                            <h4 class="versus">VS</h4>
-                            <img class="logo__img" src="img/logo-teams/chelsea.png" alt="Chelsea">
+                    <div class="vertical__column">
+                        <div class="vertical__item">
+                            <div class="logo__event">
+                                <img class="logo__img" src="img/logo-teams/sheffield.png" alt="Sheffield United">
+                                <h1 class="vs__between">VS</h1>
+                                <img class="logo__img" src="img/logo-teams/chelsea.png" alt="Chelsea">
+                            </div>
+                            <div class="vertical__text">
+                                <p class="description description__event">Premier League - 23. Matchday <br>
+                                    Sat, Feb 06, 2021 </p>
+                            </div>
+                            <a class="btn btn__event modal-link" href="#modal">FORECATS</a>
                         </div>
-                        <p class="description description__event">Premier League - 23. Matchday <br>
-                            Sat, Feb 06, 2021 </p>
-                        <a class="btn btn__event modal-link" href="#modal">FORECATS</a>
                     </div>
                 </div>
             </div>
+
 
             <div class="modal" id="modal">
                 <div class="modal__body">
@@ -96,6 +104,31 @@
             <div class="about" id="about">
                 <h2 class="title title__event">About Us</h2>
                 <div class="window">
+                    <div class="about__img">
+                        <img src="img/chelsea.jpg" alt="">
+                    </div>
+                    <div class="content__about">
+                        <div class="title title__about">
+                            Our job is to surprise
+                        </div>
+                        <div class="description description__about">
+                            Lorem ipsum dolor sit amet, consectetuer
+                            adipiscing
+                            elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+                            et
+                            magnis
+                            dis parturient montes, nascetur ridiculus mus.
+                        </div>
+                        <a href="about-us.html">
+                            <button class="btn btn__about" onlick="return false;">READ MORE</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="about" id="about">
+                <h2 class="title title__event">About Us</h2>
+                    <div class="window">
                     <div class="image">
                         <picture>
                             <source srcset="img/chelsea--white.jpg" media="(max-width:790px)">
@@ -112,16 +145,17 @@
                                 magnis
                                 dis parturient montes, nascetur ridiculus mus.
                             </p>
-                            <a class="btn btn__about" href="about-us.html">READ
-                                MORE</a>
+                            <a href="about-us.html">
+                                <button class="btn btn__about" onlick="return false;">READ MORE</button>
+                            </a>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> -->
+        </div>
         </div>
     </section>
 
-    <section class="sponsors">
+    <div class="sponsors">
         <div class="container">
             <ul class="content content__sponsors">
                 <li class="sponsor__item">
@@ -137,14 +171,14 @@
                     <img class="sponsor__img" src="img/sponsors/ea.png" alt="EA">
                 </li>
                 <li class="sponsor__item">
-                    <img class="sponsor__img" src="img/sponsors/MSC.png" alt="MSC">
+                    <img class="sponsor__img" src="img/sponsors/msc.png" alt="MSC">
                 </li>
                 <li class="sponsor__item">
                     <img class="sponsor__img" src="img/sponsors/yokohama.png" alt="Yokohama">
                 </li>
             </ul>
         </div>
-    </section>
+    </div>
 
     <section class="subscription" id="join">
         <div class="container">
