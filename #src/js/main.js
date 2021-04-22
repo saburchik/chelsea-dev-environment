@@ -1,3 +1,9 @@
+// import smoothscroll from 'smoothscroll-polyfill';
+
+// smoothscroll.polyfill();
+
+// window.SVGElement.prototype.scrollIntoView = (window.HTMLElement || window.Element).prototype.scrollIntoView;
+
 @@include('functions/hamburger.js');
 @@include('functions/fixed-header.js');
 @@include('functions/adaptiveWidth.js');

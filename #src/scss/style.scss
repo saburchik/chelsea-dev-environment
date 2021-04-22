@@ -87,6 +87,7 @@ picture {
     font-weight: 700;
 }
 
+@import "animation.scss";
 @import "_button.scss";
 @import "_header.scss";
 @import "_main.scss";
@@ -99,8 +100,9 @@ picture {
 }
 
 .content__about-us {
+    background-color: #fff;
     height: auto;
-    padding: 50px 0;
+    padding: 50px 15px;
 }
 
 .title__about-us {

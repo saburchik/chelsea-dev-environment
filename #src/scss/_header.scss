@@ -115,51 +115,9 @@
     cursor: pointer;
     position: absolute;
     top: 0;
-    right: -15px;
+    right: 0;
 
     @media (max-width:770px) {
         display: block;
     }
-}
-
-.ham {
-    transition: transform 400ms;
-    user-select: none;
-}
-
-.ham-rotate.active {
-    transform: rotate(45deg);
-}
-
-.line {
-    fill: none;
-    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-    stroke: #FF4747;
-    stroke-width: 5.5;
-    stroke-linecap: round;
-}
-
-.effect .top {
-    stroke-dasharray: 40 82;
-}
-
-.effect .middle {
-    stroke-dasharray: 40 111;
-}
-
-.effect .bottom {
-    stroke-dasharray: 40 161;
-}
-
-.effect.active .top {
-    stroke-dasharray: 17 82;
-    stroke-dashoffset: -62px;
-}
-
-.effect.active .middle {
-    stroke-dashoffset: 23px;
-}
-
-.effect.active .bottom {
-    stroke-dashoffset: -83px;
 }

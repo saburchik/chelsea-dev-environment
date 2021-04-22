@@ -65,6 +65,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
     margin: -22.5px;
 }
 
@@ -301,8 +302,7 @@
 // About
 .window {
     display: flex;
-    margin: 0 auto;
-    max-width: 1200px;
+    justify-content: center;
 }
 
 .about__img {
@@ -320,10 +320,11 @@
 
 .content__about {
     background-color: #fff;
-    justify-content: center;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     text-align: left;
+    max-width: 50%;
     flex: 1 1 auto;
     padding: 15px;
 
@@ -331,6 +332,10 @@
         background: url("../img/chelsea--white.jpg") center no-repeat;
         background-size: cover;
         text-align: center;
+    }
+
+    @media (max-width:690px) {
+        max-width: 100%;
     }
 }
 
