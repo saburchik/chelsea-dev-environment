@@ -11,7 +11,7 @@ burger.addEventListener('click', function () {
     nav.classList.toggle('active');
     ham.classList.toggle('active');
 });
-// Fixed header
+// Fixed navigation
 window.addEventListener("scroll", checkScroll);
 function checkScroll() {
     let scrollHeight = window.scrollY;
@@ -158,30 +158,4 @@ document.addEventListener('keydown', function (e) {
         const modalActive = document.querySelector('.modal.open');
         modalClose(modalActive);
     }
-});
-
-// Polyfill for IE11
-(function () {
-    // checking support
-    if (!Element.prototype.closest) {
-        // implement
-        Element.prototype.closest = function (css) {
-            var node = this;
-            while (node) {
-                if (node.matches(css)) return node;
-                else node = node.parentElement;
-            }
-            return null;
-        };
-    }
-})();
-(function () {
-    // checking support
-    if (!Element.prototype.matches) {
-        // send value
-        Element.prototype.matches = Element.prototype.matchesSelector ||
-            Element.prototype.webkitMatchesSelector ||
-            Element.prototype.mozMatchesSelector ||
-            Element.prototype.msMatchesSelector;
-    }
-})();;
+});;

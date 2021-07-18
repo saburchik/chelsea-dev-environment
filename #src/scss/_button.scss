@@ -16,6 +16,8 @@
 }
 
 .btn__intro {
+    display: flex;
+    align-items: center;
     background-color: #0E3AB1;
 
     &:hover {
@@ -40,6 +42,10 @@
 }
 
 .btn__about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
     background-color: #0E3AB1;
     padding: 0 35px;
 

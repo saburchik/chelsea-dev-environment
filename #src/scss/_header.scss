@@ -1,5 +1,5 @@
 // ========== Header ==========
-.header {
+.nav__inner {
     width: 100%;
     position: absolute;
     top: 0;
@@ -11,12 +11,12 @@
     }
 }
 
-.header.active {
+.nav__inner.active {
     position: fixed;
     background: rgba(12, 17, 73, 1);
 }
 
-.header.fixed {
+.nav__inner.fixed {
     background: rgba(12, 17, 73, 1);
     box-shadow: 0 3px 30px #FF4747;
     position: fixed;

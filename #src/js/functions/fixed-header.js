@@ -1,4 +1,4 @@
-// Fixed header
+// Fixed navigation
 window.addEventListener("scroll", checkScroll);
 function checkScroll() {
     let scrollHeight = window.scrollY;

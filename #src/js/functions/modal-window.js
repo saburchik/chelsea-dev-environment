@@ -93,29 +93,3 @@ document.addEventListener('keydown', function (e) {
         modalClose(modalActive);
     }
 });
-
-// Polyfill for IE11
-(function () {
-    // checking support
-    if (!Element.prototype.closest) {
-        // implement
-        Element.prototype.closest = function (css) {
-            var node = this;
-            while (node) {
-                if (node.matches(css)) return node;
-                else node = node.parentElement;
-            }
-            return null;
-        };
-    }
-})();
-(function () {
-    // checking support
-    if (!Element.prototype.matches) {
-        // send value
-        Element.prototype.matches = Element.prototype.matchesSelector ||
-            Element.prototype.webkitMatchesSelector ||
-            Element.prototype.mozMatchesSelector ||
-            Element.prototype.msMatchesSelector;
-    }
-})();
