@@ -1,6 +1,7 @@
 // ========== Header ==========
-.nav__inner {
+.header__inner {
     width: 100%;
+    padding: 0 1rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -11,30 +12,30 @@
     }
 }
 
-.nav__inner.active {
-    position: fixed;
+.header__inner.active {
     background: rgba(12, 17, 73, 1);
+    position: fixed;
 }
 
-.nav__inner.fixed {
+.header__inner.fixed {
     background: rgba(12, 17, 73, 1);
     box-shadow: 0 3px 30px #FF4747;
     position: fixed;
 }
 
-.navbar {
+.nav__menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
 }
 
-.navbar.active {
+.nav__menu.active {
     display: block;
     flex-direction: column;
 }
 
-.header__logo {
+.nav__logo {
     height: 60px;
     width: 60px;
     cursor: pointer;
@@ -52,27 +53,28 @@
     }
 }
 
-.nav {
-    display: block;
+.nav-links {
+    display: flex;
     align-items: center;
+    list-style: none;
 
     @media (max-width: 770px) {
         display: none;
     }
 }
 
-.nav::before {
+.nav-links::before {
+    content: '';
     display: none;
 
     @media (max-width: 770px) {
         display: inline-block;
-        content: "";
         border-top: 2px solid #FF4747;
         width: 100%;
     }
 }
 
-.nav.active {
+.nav-links.active {
     display: flex;
 
     @media (max-width: 770px) {
@@ -80,18 +82,8 @@
     }
 }
 
-.nav__link {
-    color: #FFFFFF;
-    font-size: 18px;
-    font-weight: 700;
-    text-decoration: none;
-    padding: 5px 0;
+.nav-links li {
     margin-left: 30px;
-
-    &:hover {
-        color: #FF4747;
-        transition: all 0.2s;
-    }
 
     &:first-child {
         margin-left: 0;
@@ -99,6 +91,19 @@
 
     @media (max-width: 770px) {
         margin: 10px 0;
+    }
+}
+
+.nav__link {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 5px 0;
+
+    &:hover {
+        color: #FF4747;
+        transition: all 0.2s;
     }
 
     @media (min-width: 2000px) {
@@ -108,11 +113,11 @@
 
 // ========== Hamburger ==========
 .burger {
-    height: 80px;
     display: none;
-    margin: 0;
+    height: 80px;
     overflow: hidden;
     cursor: pointer;
+    margin: 0;
     position: absolute;
     top: 0;
     right: 0;

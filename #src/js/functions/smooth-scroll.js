@@ -14,8 +14,8 @@ for (let link of links) {
 
         // Disable burger menu, when smooth scroll
         header.classList.remove('active');
-        navbar.classList.remove('active');
-        nav.classList.remove('active');
+        menu.classList.remove('active');
+        navLinks.classList.remove('active');
         ham.classList.remove('active');
     })
 }

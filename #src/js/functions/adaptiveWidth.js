@@ -13,8 +13,8 @@ function widthMenu() {
     if (width > 770) {
         document.getElementById('header').classList.remove("active");
         document.getElementById('burger').classList.remove("active");
-        document.getElementById('navbar').classList.remove("active");
-        document.getElementById('nav').classList.remove("active");
+        document.getElementById('menu').classList.remove("active");
+        document.getElementById('navLinks').classList.remove("active");
         document.getElementById('effect').classList.remove("active");
     }
 }

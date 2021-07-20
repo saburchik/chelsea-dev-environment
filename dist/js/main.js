@@ -1,14 +1,14 @@
 // Add classes, when a burger is clicked on
 const burger = document.querySelector('#burger');
 const header = document.querySelector('#header');
-const navbar = document.querySelector('#navbar');
-const nav = document.querySelector('#nav');
+const menu = document.querySelector('#menu');
+const navLinks = document.querySelector('#navLinks');
 const ham = document.querySelector('#effect');
 
 burger.addEventListener('click', function () {
     header.classList.toggle('active');
-    navbar.classList.toggle('active');
-    nav.classList.toggle('active');
+    menu.classList.toggle('active');
+    navLinks.classList.toggle('active');
     ham.classList.toggle('active');
 });
 // Fixed navigation
@@ -37,8 +37,8 @@ function widthMenu() {
     if (width > 770) {
         document.getElementById('header').classList.remove("active");
         document.getElementById('burger').classList.remove("active");
-        document.getElementById('navbar').classList.remove("active");
-        document.getElementById('nav').classList.remove("active");
+        document.getElementById('menu').classList.remove("active");
+        document.getElementById('navLinks').classList.remove("active");
         document.getElementById('effect').classList.remove("active");
     }
 };
@@ -58,8 +58,8 @@ for (let link of links) {
 
         // Disable burger menu, when smooth scroll
         header.classList.remove('active');
-        navbar.classList.remove('active');
-        nav.classList.remove('active');
+        menu.classList.remove('active');
+        navLinks.classList.remove('active');
         ham.classList.remove('active');
     })
 }
