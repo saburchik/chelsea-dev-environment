@@ -1,38 +1,41 @@
 <header class="header">
     <div class="header__inner lock-padding" id="header">
         <nav class="nav">
-            <div class="nav__menu" id="menu">
-                <a class="logo" href="#intro">
-                    <img class="nav__logo" src="img/logo-teams/chelsea.png" alt="logo">
-                </a>
-                <ul class="nav-links" id="navLinks">
-                    <li>
-                        <a class="nav__link" href="#intro">Home</a>
-                    </li>
-                    <li>
-                        <a class="nav__link" href="#event">Events</a>
-                    </li>
-                    <li>
-                        <a class="nav__link" href="#about">About US</a>
-                    </li>
-                    <li>
-                        <a class="nav__link" href="#join">Join US</a>
-                    </li>
-                    <li>
-                        <a class="nav__link" href="#contacts">Contacts</a>
-                    </li>
-                </ul>
+            <div class="container">
+                <div class="nav__menu" id="menu">
+                    <a class="logo" href="#intro">
+                        <img class="nav__logo" src="img/logo-teams/chelsea.png" alt="logo">
+                    </a>
+                    <ul class="nav-links" id="navLinks">
+                        <li>
+                            <a class="nav__link" href="#intro">Home</a>
+                        </li>
+                        <li>
+                            <a class="nav__link" href="#events">Events</a>
+                        </li>
+                        <li>
+                            <a class="nav__link" href="#about">About US</a>
+                        </li>
+                        <li>
+                            <a class="nav__link" href="#join">Join US</a>
+                        </li>
+                        <li>
+                            <a class="nav__link" href="#contacts">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
-
-        <div class="burger" id="burger">
-            <svg class="ham ham-rotate effect" id="effect" viewBox="0 0 100 100" width="80">
-                <path class="line top"
-                    d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013" />
-                <path class="line middle" d="m 70,50 h -40" />
-                <path class="line bottom"
-                    d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40" />
-            </svg>
+        <div class="burger">
+            <div class="burger__inner" id="burger">
+                <svg class="hamburger hamburger__effect hamburger--rotate" id="effect" viewBox="0 0 100 100">
+                    <path class="hamburger__line hamburger__line--top"
+                        d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013" />
+                    <path class="hamburger__line hamburger__line--middle" d="m 70,50 h -40" />
+                    <path class="hamburger__line hamburger__line--bottom"
+                        d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40" />
+                </svg>
+            </div>
         </div>
     </div>
 </header>

@@ -1,14 +1,14 @@
-// Animatin menu for mobile
-.navbar.active {
-    -webkit-animation-name: navbar;
-    animation-name: navbar;
+// Animation burger menu
+.nav__menu.active {
+    -webkit-animation-name: menu;
+    animation-name: menu;
     -webkit-animation-duration: 0.5s;
     animation-duration: .5s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
 
-@-webkit-keyframes navbar {
+@-webkit-keyframes menu {
     0% {
         opacity: 0;
         -webkit-transform: translate3d(-100%, 0, 0);
@@ -36,45 +36,41 @@
     }
 }
 
-// Animation hamburger
-.ham {
-    transition: transform 400ms;
+// Hamburger
+.hamburger {
     user-select: none;
+    transition: transform 400ms;
 }
 
-.ham-rotate.active {
-    transform: rotate(45deg);
-}
+.hamburger--rotate.active {transform: rotate(45deg);}
 
-.line {
+.hamburger__line {
     fill: none;
-    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
     stroke: #FF4747;
     stroke-width: 5.5;
     stroke-linecap: round;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
 }
 
-.effect .top {
-    stroke-dasharray: 40 82;
+.hamburger__effect {
+    .hamburger__line--top {stroke-dasharray: 40 82;}
+
+    .hamburger__line--middle {stroke-dasharray: 40 111;}
+
+    .hamburger__line--bottom {stroke-dasharray: 40 161;}
 }
 
-.effect .middle {
-    stroke-dasharray: 40 111;
-}
-
-.effect .bottom {
-    stroke-dasharray: 40 161;
-}
-
-.effect.active .top {
+.hamburger__effect.active {
+     .hamburger__line--top {
     stroke-dasharray: 17 82;
     stroke-dashoffset: -62px;
-}
+    }
 
-.effect.active .middle {
+    .hamburger__line--middle {
     stroke-dashoffset: 23px;
-}
+    }
 
-.effect.active .bottom {
+    .hamburger__line--bottom {
     stroke-dashoffset: -83px;
+    }
 }
