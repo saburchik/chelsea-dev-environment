@@ -1,19 +1,21 @@
 // ========== Intro ==========
-.intro {
-    width: 100%;
-    height: 100vh;
-    min-height: 580px;
+.intro__inner {
     display: flex;
     align-items: center;
     background: url("../img/backgrounds.jpg") center no-repeat;
     background-size: cover;
+    width: 100%;
+    height: 100vh;
+    min-height: 580px;
 
     @media (min-width:2000px) {
         min-height: 890px;
     }
 }
 
-.content__intro {
+.intro__content {
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
     padding: 30px 0;
 }
@@ -23,7 +25,6 @@
     width: Min(80%, 800px);
     font-size: clamp(45px, 5vw, 100px);
     line-height: clamp(50px, 5vw, 125px);
-    // text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, -1px 0 1px #fff, 0 -1px 1px #fff;
     margin-bottom: 35px;
 
     @media (max-width: 560px) {
@@ -42,17 +43,20 @@
 }
 
 // ========== Event ==========
-.event {
+.events__inner {
     width: 100%;
-    height: auto;
     background: url("../img/background-line.jpg") center no-repeat;
     background-size: cover;
-    padding: 0 0 70px;
+    padding: 50px 0;
     text-align: center;
 }
 
-.vertical__body {
-    padding-bottom: 100px;
+.cards__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -15px;
+    padding: 50px 0 100px;
     max-width: 990px;
     margin: 0 auto;
 
@@ -61,20 +65,13 @@
     }
 }
 
-.vertical__row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: -15px;
-}
-
-.vertical__column {
+.card__item {
     display: flex;
     flex: 0 1 33.333%;
     padding: 15px;
 }
 
-.vertical__item {
+.card__wrapper {
     display: flex;
     flex-direction: column;
     background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
@@ -83,7 +80,7 @@
     padding: 15px;
 }
 
-.vertical__text {
+.card__text {
     display: flex;
     flex: 1 1 auto;
     margin: 0 0 30px 0;
@@ -93,11 +90,11 @@
     }
 }
 
-.title__event {
-    padding: 70px 0 50px;
+.title__cards {
+    padding-top: 20px;
 }
 
-.logo__event {
+.card__header {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -105,12 +102,12 @@
     margin: 40px 0;
 }
 
-.logo__img {
+.card__logo {
     width: 64px;
     height: 64px;
 }
 
-.vs__between {
+.card__vs {
     color: #fff;
     font-size: 35px;
     font-weight: 700;
@@ -121,7 +118,7 @@
     }
 }
 
-.description__event {
+.description__card {
     font-size: 30px;
     font-weight: 400;
     line-height: 150%;

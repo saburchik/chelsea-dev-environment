@@ -42,7 +42,7 @@
     transition: transform 400ms;
 }
 
-.hamburger--rotate.active {transform: rotate(45deg);}
+.hamburger_rotate.active {transform: rotate(45deg);}
 
 .hamburger__line {
     fill: none;
@@ -53,24 +53,24 @@
 }
 
 .hamburger__effect {
-    .hamburger__line--top {stroke-dasharray: 40 82;}
+    .hamburger__line_top {stroke-dasharray: 40 82;}
 
-    .hamburger__line--middle {stroke-dasharray: 40 111;}
+    .hamburger__line_middle {stroke-dasharray: 40 111;}
 
-    .hamburger__line--bottom {stroke-dasharray: 40 161;}
+    .hamburger__line_bottom {stroke-dasharray: 40 161;}
 }
 
 .hamburger__effect.active {
-     .hamburger__line--top {
+     .hamburger__line_top {
     stroke-dasharray: 17 82;
     stroke-dashoffset: -62px;
     }
 
-    .hamburger__line--middle {
+    .hamburger__line_middle {
     stroke-dashoffset: 23px;
     }
 
-    .hamburger__line--bottom {
+    .hamburger__line_bottom {
     stroke-dashoffset: -83px;
     }
 }

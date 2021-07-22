@@ -69,12 +69,8 @@
     }
 }
 
-.nav-links li {
+.nav-links li:not(:first-child) {
     margin-left: 30px;
-
-    &:first-child {
-        margin-left: 0;
-    }
 
     @media (max-width: 770px) {
         margin: 1rem 0;

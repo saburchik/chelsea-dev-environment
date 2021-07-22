@@ -1,127 +1,135 @@
 <main>
-    <header class="intro" id="intro">
-        <div class="container">
-            <div class="content content__intro">
-                <h1 class="title title__intro">CHELSEA <br> As part of life</h1>
-                <p class="description description__intro">Join us and stay up to date with your favorite team!</p>
-                <a class="btn btn__intro" href="#join">JOIN US</a>
+    <section class="intro" id="intro">
+        <div class="intro__inner">
+            <div class="container">
+                <div class="intro__content">
+                    <h1 class="title title__intro">— <br> CHELSEA <br> As part of life <br>—</h1>
+                    <p class="description description__intro">Join us and stay up to date with your favorite team!</p>
+                    <a class="btn btn__intro" href="#join">JOIN US</a>
+                </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <section class="event" id="events">
-        <div class="container">
-            <article class="vertical__body">
-                <h1 class="title title__event">Next Games</h1>
-                <div class="vertical__row">
-                    <div class="vertical__column">
-                        <div class="vertical__item">
-                            <div class="logo__event">
-                                <img class="logo__img" src="img/logo-teams/chelsea.png" alt="Chelsea">
-                                <h1 class="vs__between">VS</h1>
-                                <img class="logo__img" src="img/logo-teams/atletico.png" alt="Atletico Madrid">
+    <section class="events" id="events">
+        <div class="events__inner">
+            <div class="container">
+                <div class="cards">
+                    <h1 class="title title__cards">Next Games</h1>
+                    <div class="cards__inner">
+                        <article class="card__item">
+                            <div class="card__wrapper">
+                                <header class="card__header">
+                                    <img class="card__logo" src="img/cards-logo/chelsea.png" alt="Chelsea">
+                                    <h2 class="card__vs">VS</h2>
+                                    <img class="card__logo" src="img/cards-logo/atletico.png" alt="Atletico Madrid">
+                                </header>
+                                <div class="card__text">
+                                    <p class="description description__card">Champions League - Round of 16, 2nd
+                                        leg
+                                    </p>
+                                </div>
+                                <a class="btn btn__event modal-link" href="#modal">forecasts</a>
                             </div>
-                            <div class="vertical__text">
-                                <p class="description description__event">Champions League - Round of 16, 2nd leg</p>
-                            </div>
-                            <a class="btn btn__event modal-link" href="#modal">forecasts</a>
-                        </div>
-                    </div>
+                        </article>
 
-                    <div class="vertical__column">
-                        <div class="vertical__item">
-                            <div class="logo__event">
-                                <img class="logo__img" src="img/logo-teams/tottenham.png" alt="Tottenham">
-                                <h1 class="vs__between">VS</h1>
-                                <img class="logo__img" src="img/logo-teams/chelsea.png" alt="Chelsea">
+                        <article class="card__item">
+                            <div class="card__wrapper">
+                                <header class="card__header">
+                                    <img class="card__logo" src="img/cards-logo/tottenham.png" alt="Tottenham">
+                                    <h2 class="card__vs">VS</h2>
+                                    <img class="card__logo" src="img/cards-logo/chelsea.png" alt="Chelsea">
+                                </header>
+                                <div class="card__text">
+                                    <p class="description description__card">Premier League - 22. Matchday <br>
+                                        Thu, Feb 04, 2021 </p>
+                                </div>
+                                <a class="btn btn__event modal-link" href="#modal">forecasts</a>
                             </div>
-                            <div class="vertical__text">
-                                <p class="description description__event">Premier League - 22. Matchday <br>
-                                    Thu, Feb 04, 2021 </p>
-                            </div>
-                            <a class="btn btn__event modal-link" href="#modal">forecasts</a>
-                        </div>
-                    </div>
+                        </article>
 
-                    <div class="vertical__column">
-                        <div class="vertical__item">
-                            <div class="logo__event">
-                                <img class="logo__img" src="img/logo-teams/sheffield.png" alt="Sheffield United">
-                                <h1 class="vs__between">VS</h1>
-                                <img class="logo__img" src="img/logo-teams/chelsea.png" alt="Chelsea">
+                        <article class="card__item">
+                            <div class="card__wrapper">
+                                <header class="card__header">
+                                    <img class="card__logo" src="img/cards-logo/sheffield.png" alt="Sheffield United">
+                                    <h2 class="card__vs">VS</h2>
+                                    <img class="card__logo" src="img/cards-logo/chelsea.png" alt="Chelsea">
+                                </header>
+                                <div class="card__text">
+                                    <p class="description description__card">Premier League - 23. Matchday <br>
+                                        Sat, Feb 06, 2021 </p>
+                                </div>
+                                <a class="btn btn__event modal-link" href="#modal">forecasts</a>
                             </div>
-                            <div class="vertical__text">
-                                <p class="description description__event">Premier League - 23. Matchday <br>
-                                    Sat, Feb 06, 2021 </p>
-                            </div>
-                            <a class="btn btn__event modal-link" href="#modal">forecasts</a>
-                        </div>
+                        </article>
                     </div>
                 </div>
-            </article>
-            <article class="modal" id="modal">
-                <div class="modal__body">
-                    <div class="match">
-                        <div class="match__header">
-                            <p class="close-modal">&times;</p>
-                            <strong class="match__title">
-                                <span class="match__icon">
-                                    <img class="match__img" src="img/world.svg" alt="">
-                                </span>
-                                CHAMPIONS LEAGUE
-                            </strong>
-                            <div class="teams">
-                                <div class="teams__main team-left">
-                                    <span class="team__name">CHELSEA</span>
-                                    <div class="team__logo">
-                                        <img class="team__img" src="img/logo-teams/chelsea.png" alt="">
+
+                <article class="modal" id="modal">
+                    <div class="modal__body">
+                        <div class="match">
+                            <div class="match__header">
+                                <p class="close-modal">&times;</p>
+                                <strong class="match__title">
+                                    <span class="match__icon">
+                                        <img class="match__img" src="img/world.svg" alt="">
+                                    </span>
+                                    CHAMPIONS LEAGUE
+                                </strong>
+                                <div class="teams">
+                                    <div class="teams__main team-left">
+                                        <span class="team__name">CHELSEA</span>
+                                        <div class="team__logo">
+                                            <img class="team__img" src="img/logo-teams/chelsea.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="match-information">
+                                        <div class="match__data">
+                                            18th Mar 21, 03:00
+                                        </div>
+                                    </div>
+                                    <div class="teams__main team-right">
+                                        <div class="team__logo">
+                                            <img class="team__img" src="img/logo-teams/atletico.png" alt="">
+                                        </div>
+                                        <span class="team__name">ATLETICO MADRID</span>
                                     </div>
                                 </div>
-                                <div class="match-information">
-                                    <div class="match__data">
-                                        18th Mar 21, 03:00
-                                    </div>
-                                </div>
-                                <div class="teams__main team-right">
-                                    <div class="team__logo">
-                                        <img class="team__img" src="img/logo-teams/atletico.png" alt="">
-                                    </div>
-                                    <span class="team__name">ATLETICO MADRID</span>
+                            </div>
+                            <div class="match__main">
+                                <div class="stats-photo">
+                                    <img class="stats__img" src="img/stats.jpg" alt="">
                                 </div>
                             </div>
                         </div>
-                        <div class="match__main">
-                            <div class="stats-photo">
-                                <img class="stats__img" src="img/stats.jpg" alt="">
+                    </div>
+                </article>
+                <article class="about" id="about">
+                    <h2 class="title title__event">About Us</h2>
+                    <div class="window">
+                        <div class="about__img">
+                            <img src="img/chelsea.jpg" alt="">
+                        </div>
+                        <div class="content__about">
+                            <div class="title title__about">
+                                Our job is to surprise
                             </div>
+                            <div class="description description__about">
+                                Lorem ipsum dolor sit amet, consectetuer
+                                adipiscing
+                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+                                et
+                                magnis
+                                dis parturient montes, nascetur ridiculus mus.
+                            </div>
+                            <a class="btn btn__about" href="about-us.html" target="_blank">READ MORE</a>
                         </div>
                     </div>
-                </div>
-            </article>
-            <article class="about" id="about">
-                <h2 class="title title__event">About Us</h2>
-                <div class="window">
-                    <div class="about__img">
-                        <img src="img/chelsea.jpg" alt="">
-                    </div>
-                    <div class="content__about">
-                        <div class="title title__about">
-                            Our job is to surprise
-                        </div>
-                        <div class="description description__about">
-                            Lorem ipsum dolor sit amet, consectetuer
-                            adipiscing
-                            elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-                            et
-                            magnis
-                            dis parturient montes, nascetur ridiculus mus.
-                        </div>
-                        <a class="btn btn__about" href="about-us.html" target="_blank">READ MORE</a>
-                    </div>
-                </div>
-            </article>
+                </article>
+            </div>
         </div>
     </section>
+
     <div class="sponsors">
         <div class="container">
             <ul class="content content__sponsors">
