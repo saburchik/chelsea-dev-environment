@@ -448,7 +448,7 @@ input[type='text'] {
 
 .description__intro {
   width: Min(80%, 400px);
-  font-size: clamp(18px, 5vw, 25px);
+  font-size: clamp(18px, 2vw, 30px);
   margin-bottom: 30px;
 }
 
@@ -549,28 +549,28 @@ input[type='text'] {
 }
 
 .modal {
-  position: fixed;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  opacity: 0;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  overflow-y: auto;
-  overflow-x: hidden;
   -webkit-transition: all 0.7s ease 0s;
   -o-transition: all 0.7s ease 0s;
   transition: all 0.7s ease 0s;
 }
 
-.modal.open {
+.modal.active {
   opacity: 1;
   visibility: visible;
 }
 
-.modal__body {
+.modal__inner {
   min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -599,7 +599,7 @@ input[type='text'] {
           box-shadow: 0 3px 30px #ff4747;
 }
 
-.modal.open .match {
+.modal.active .match {
   -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
           transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
   opacity: 1;
@@ -613,7 +613,7 @@ input[type='text'] {
   padding: 15px;
 }
 
-.close-modal {
+.modal__disable {
   position: absolute;
   top: -15px;
   right: 0;
@@ -626,7 +626,7 @@ input[type='text'] {
   transition: 0.3s;
 }
 
-.close-modal:hover {
+.modal__disable:hover {
   color: #fff;
 }
 

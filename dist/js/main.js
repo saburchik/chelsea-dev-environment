@@ -64,28 +64,28 @@ for (let link of links) {
     })
 }
 ;
-const modalLinks = document.querySelectorAll('.modal-link');
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll('.lock-padding');
 
 let unlock = true;
-
 const timeout = 700;
-if (modalLinks.length > 0) {
-    for (let i = 0; i < modalLinks.length; i++) {
-        const modalLink = modalLinks[i];
-        modalLink.addEventListener('click', function (e) {
-            const modalName = modalLink.getAttribute('href').replace('#', '');
-            const currentModal = document.getElementById(modalName);
+
+const windowModal = document.querySelectorAll('.window__modal');
+if (windowModal.length > 0) {
+    for (let i = 0; i < windowModal.length; i++) {
+        const openModal = windowModal[i];
+        openModal.addEventListener('click', function (e) {
+            const modalReplace = openModal.getAttribute('href').replace('#', '');
+            const currentModal = document.getElementById(modalReplace);
             modalOpen(currentModal);
             e.preventDefault();
         });
     }
 }
-const modalCloseIcon = document.querySelectorAll('.close-modal');
-if (modalCloseIcon.length > 0) {
-    for (let i = 0; i < modalCloseIcon.length; i++) {
-        const el = modalCloseIcon[i];
+const windowModalDisable = document.querySelectorAll('.modal__disable');
+if (windowModalDisable.length > 0) {
+    for (let i = 0; i < windowModalDisable.length; i++) {
+        const el = windowModalDisable[i];
         el.addEventListener('click', function (e) {
             modalClose(el.closest('.modal'));
             e.preventDefault();
@@ -95,13 +95,13 @@ if (modalCloseIcon.length > 0) {
 
 function modalOpen(currentModal) {
     if (currentModal && unlock) {
-        const modalActive = document.querySelector('.modal.open');
+        const modalActive = document.querySelector('.modal.active');
         if (modalActive) {
             modalClose(modalActive, false);
         } else {
             bodyLock();
         }
-        currentModal.classList.add('open');
+        currentModal.classList.add('active');
         currentModal.addEventListener('click', function (e) {
             if (!e.target.closest('.match')) {
                 modalClose(e.target.closest('.modal'));
@@ -111,7 +111,7 @@ function modalOpen(currentModal) {
 }
 function modalClose(modalActive, doUnlock = true) {
     if (unlock) {
-        modalActive.classList.remove('open');
+        modalActive.classList.remove('active');
         if (doUnlock) {
             bodyUnLock();
         }
@@ -155,7 +155,7 @@ function bodyUnLock() {
 // Close Modal-Window by button ESC
 document.addEventListener('keydown', function (e) {
     if (e.which === 27) {
-        const modalActive = document.querySelector('.modal.open');
+        const modalActive = document.querySelector('.modal.active');
         modalClose(modalActive);
     }
 });;
