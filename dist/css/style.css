@@ -587,6 +587,7 @@ input[type='text'] {
 .match {
   background-color: #fff;
   color: #000;
+  width: 100%;
   max-width: 800px;
   position: relative;
   -webkit-transition: all 0.7s ease 0s;
@@ -605,7 +606,7 @@ input[type='text'] {
   opacity: 1;
 }
 
-.match__header {
+.modal__header {
   color: #fff;
   background: url("../img/modal.jpg") center no-repeat;
   background-size: cover;
@@ -1202,7 +1203,7 @@ input[type='text'] {
 
 .webp .events__inner { background: url(../img/background-line.webp) center no-repeat; }
 
-.webp .match__header { background: url(../img/modal.webp) center no-repeat; }
+.webp .modal__header { background: url(../img/modal.webp) center no-repeat; }
 
 @media (max-width: 850px) {
 
