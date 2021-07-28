@@ -160,84 +160,83 @@ document.addEventListener('keydown', function (e) {
     }
 });;
 
-let ctx = document.getElementById('myChart').getContext('2d');
-let ctx2 = document.getElementById('myChart2').getContext('2d');
+anychart.onDocumentReady(function () {
 
-let labels = ['Chelsea 🍕', 'Atletico Madrid 🌮'];
-let colorHex = ['#FB3640', '#EFCA08'];
-
-let myChart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        datasets: [{
-            data: [58, 42],
-            backgroundColor: colorHex
-        }],
-        labels: labels
-    },
-    options: {
-        responsive: true,
-        legend: {
-            position: 'bottom'
+    // set the data
+    var data = [
+        {
+            x: "Chelsea",
+            value: 58,
+            normal: {
+                fill: "#0400B6"
+            }
         },
-        plugins: {
-            datalabels: {
-                color: '#fff',
-                anchor: 'end',
-                align: 'start',
-                offset: -10,
-                borderWidth: 2,
-                borderColor: '#fff',
-                borderRadius: 25,
-                backgroundColor: (context) => {
-                    return context.dataset.backgroundColor;
-                },
-                font: {
-                    weight: 'bold',
-                    size: '10'
-                },
-                formatter: (value) => {
-                    return value + ' %';
-                }
+        {
+            x: "Atletico Madrid",
+            value: 42,
+            normal: {
+                fill: "#E40E0E"
             }
         }
-    }
-})
+    ];
 
-let myChart2 = new Chart(ctx2, {
-    type: 'pie',
-    data: {
-        datasets: [{
-            data: [58, 42],
-            backgroundColor: colorHex
-        }],
-        labels: labels
-    },
-    options: {
-        responsive: true,
-        legend: {
-            position: 'bottom'
+    // create the chart
+    var chart = anychart.pie();
+
+    // chart.background().stroke("3 #ff4747");
+    chart.background().fill({
+        keys: ["#CECECE"],
+        angle: 130,
+    });
+
+    // set the chart title
+    chart.title("Who is the winner?");
+
+    // add the data
+    chart.data(data);
+
+    // display the chart in the container
+    chart.container('container');
+    chart.draw();
+
+
+
+
+    // set the data
+    var data = [
+        {
+            x: "Yes",
+            value: 17,
+            normal: {
+                fill: "#0400B6"
+            }
         },
-        plugins: {
-            datalabels: {
-                color: '#fff',
-                anchor: 'end',
-                align: 'start',
-                offset: -10,
-                borderWidth: 2,
-                borderColor: '#fff',
-                borderRadius: 25,
-                backgroundColor: (context) => {
-                    return context.dataset.backgroundColor;
-                },
-                font: {
-                    weight: 'bold',
-                    size: '10'
-                },
-                formatter: (value) => {
-                    return value + ' %';
-                }
+        {
+            x: "No",
+            value: 73,
+            normal: {
+                fill: "#E40E0E"
             }
         }
-    }
-})
+    ];
+
+    // create the chart
+    var chart = anychart.pie();
+
+    // chart.background().stroke("3 #ff4747");
+    chart.background().fill({
+        keys: ["#CECECE"],
+        angle: 130,
+    });
+
+    // set the chart title
+    chart.title("Will both score?");
+
+    // add the data
+    chart.data(data);
+
+    // display the chart in the container
+    chart.container('container__two');
+    chart.draw();
+
+});

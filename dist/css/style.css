@@ -600,6 +600,19 @@ input[type='text'] {
           box-shadow: 0 3px 30px #ff4747;
 }
 
+.match__main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  grid-template-rows: repeat(auto-fit, 1fr);
+  background-color: #F4F4F4;
+}
+
+#container,
+#container__two {
+  display: grid;
+  grid-template-rows: 360px 1fr;
+}
+
 .modal.active .match {
   -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
           transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
@@ -719,10 +732,6 @@ input[type='text'] {
 .team__img {
   width: 35px;
   height: 35px;
-}
-
-.match__main {
-  background-color: #F4F4F4;
 }
 
 .stats__img {
