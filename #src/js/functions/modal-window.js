@@ -37,7 +37,7 @@ function modalOpen(currentModal) {
         }
         currentModal.classList.add('active');
         currentModal.addEventListener('click', function (e) {
-            if (!e.target.closest('.match')) {
+            if (!e.target.closest('.modal__body')) {
                 modalClose(e.target.closest('.modal'));
             }
         });

@@ -450,6 +450,7 @@ input[type='text'] {
   width: Min(80%, 400px);
   font-size: clamp(18px, 2vw, 30px);
   margin-bottom: 30px;
+  text-shadow: 2px 2px 8px yellow;
 }
 
 .events__inner {
@@ -559,7 +560,7 @@ input[type='text'] {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 999;
   -webkit-transition: all 0.7s ease 0s;
   -o-transition: all 0.7s ease 0s;
   transition: all 0.7s ease 0s;
@@ -581,10 +582,10 @@ input[type='text'] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 30px 15px;
+  padding: 2rem 1rem;
 }
 
-.match {
+.modal__body {
   background-color: #fff;
   color: #000;
   width: 100%;
@@ -608,12 +609,14 @@ input[type='text'] {
 }
 
 #container,
-#container__two {
+#container__two,
+#container__three,
+#container__four {
   display: grid;
   grid-template-rows: 360px 1fr;
 }
 
-.modal.active .match {
+.modal.active .modal__body {
   -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
           transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
   opacity: 1;
@@ -624,24 +627,26 @@ input[type='text'] {
   background: url("../img/modal.jpg") center no-repeat;
   background-size: cover;
   text-align: center;
+  border: 3px solid #7C868E;
   padding: 15px;
 }
 
 .modal__disable {
   position: absolute;
-  top: -15px;
+  top: 0;
   right: 0;
-  font-size: 55px;
+  font-size: 2rem;
   font-weight: 700;
   color: #ff4747;
   cursor: pointer;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  background-color: #fff;
 }
 
 .modal__disable:hover {
-  color: #fff;
+  color: #0c1149;
 }
 
 .match__title {
