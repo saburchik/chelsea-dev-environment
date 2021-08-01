@@ -66,21 +66,56 @@
                 </div>
 
                 <section class="modal" id="modal">
-                    <article class="modal__inner">
-                        <div class="modal__body">
+                    <article class="modal__body">
+                        <div class="modal__inner">
                             <div class="modal__header">
-                                <button class="modal__disable">X</button>
+                                <button class="modal__disable">&times;</button>
+                                <img class="preview__img" src="img/liga.png" alt="world-icon">
+                                <div class="teams">
+                                    <div class="teams__main team__left">
+                                        <i class="team__name">Tottenham Hotspur</i>
+                                        <a class="team__link" href="https://www.tottenhamhotspur.com/" target="_blank">
+                                            <img class="team__icon tott" src="img/cards-logo/tottenham.png"
+                                                alt="Tottenham">
+                                        </a>
+                                    </div>
+                                    <div class="match-information">
+                                        <p class="match__data">18th Mar 21, 03:00</p>
+                                    </div>
+                                    <div class="teams__main team__right">
+                                        <a class="team__link" href="https://www.chelseafc.com/" target="_blank">
+                                            <img class="team__icon chel" src="img/cards-logo/chelsea.png" alt="Chelsea">
+                                        </a>
+                                        <i class="team__name">Chelsea</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal__charts">
+                                <div class="chart__item" id="winner"></div>
+                                <div class="chart__item" id="score"></div>
+                                <div class="chart__item" id="total"></div>
+                                <div class="chart__item" id="goals"></div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- <section class="modal" id="modal">
+                    <article class="modal__body">
+                        <div class="modal__inner">
+                            <div class="modal__header">
+                                <button class="modal__disable">&times;</button>
                                 <h3 class="match__title">
                                     <span class="match__icon">
-                                        <img class="match__img" src="img/world.svg" alt="">
+                                        <img class="match__img" src="img/premier-league.png" alt="world-icon">
                                     </span>
-                                    CHAMPIONS LEAGUE
+                                    Premier League
                                 </h3>
                                 <div class="teams">
                                     <div class="teams__main team-left">
-                                        <p class="team__name">CHELSEA</p>
+                                        <i class="team__name">Chelsea</i>
                                         <div class="team__logo">
-                                            <img class="team__img" src="img/cards-logo/chelsea.png" alt="">
+                                            <img class="team__icon" src="img/cards-logo/chelsea.png" alt="">
                                         </div>
                                     </div>
                                     <div class="match-information">
@@ -88,21 +123,21 @@
                                     </div>
                                     <div class="teams__main team-right">
                                         <div class="team__logo">
-                                            <img class="team__img" src="img/cards-logo/atletico.png" alt="">
+                                            <img class="team__icon" src="img/cards-logo/tottenham.png" alt="">
                                         </div>
-                                        <p class="team__name">ATLETICO MADRID</p>
+                                        <i class="team__name">Atletico Madrid</i>
                                     </div>
                                 </div>
                             </div>
-                            <div class="match__main">
-                                <div id="container"></div>
-                                <div id="container__two"></div>
-                                <div id="container__three"></div>
-                                <div id="container__four"></div>
+                            <div class="modal__charts">
+                                <div class="chart__item" id="winner"></div>
+                                <div class="chart__item" id="score"></div>
+                                <div class="chart__item" id="total"></div>
+                                <div class="chart__item" id="final-score"></div>
                             </div>
                         </div>
                     </article>
-                </section>
+                </section> -->
 
                 <article class="about" id="about">
                     <h2 class="title title__event">About Us</h2>
@@ -170,7 +205,7 @@
             <div class="modal" id="modal-2">
                 <div class="modal__body">
                     <div class="match">
-                        <div class="match__main">
+                        <div class="modal__charts">
                             <div class="modal__disable">&times;</div>
                             <picture>
                                 <img class="terms__bg" src="img/terms&privacy.jpg" alt="">

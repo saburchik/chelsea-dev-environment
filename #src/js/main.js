@@ -27,7 +27,7 @@ anychart.onDocumentReady(function () {
     // create the chart
     var chart = anychart.pie();
 
-    chart.background().stroke("3 #7C868E");
+    chart.background().stroke("3 #0c1149");
     chart.background().fill({
         keys: ["#fff"],
         angle: 130,
@@ -40,7 +40,7 @@ anychart.onDocumentReady(function () {
     chart.data(data);
 
     // display the chart in the container
-    chart.container('container');
+    chart.container('winner');
     chart.draw();
 
 
@@ -67,7 +67,7 @@ anychart.onDocumentReady(function () {
     // create the chart
     var chart = anychart.pie();
 
-    chart.background().stroke("3 #7C868E");
+    chart.background().stroke("3 #0c1149");
     chart.background().fill({
         keys: ["#fff"],
         angle: 130,
@@ -80,7 +80,7 @@ anychart.onDocumentReady(function () {
     chart.data(data);
 
     // display the chart in the container
-    chart.container('container__two');
+    chart.container('score');
     chart.draw();
 
 
@@ -106,7 +106,7 @@ anychart.onDocumentReady(function () {
     // create the chart
     var chart = anychart.pie();
 
-    chart.background().stroke("3 #7C868E");
+    chart.background().stroke("3 #0c1149");
     chart.background().fill({
         keys: ["#fff"],
         angle: 130,
@@ -119,7 +119,7 @@ anychart.onDocumentReady(function () {
     chart.data(data);
 
     // display the chart in the container
-    chart.container('container__three');
+    chart.container('total');
     chart.draw();
 
 
@@ -168,7 +168,7 @@ anychart.onDocumentReady(function () {
     // create the chart
     var chart = anychart.pie();
 
-    chart.background().stroke("3 #7C868E");
+    chart.background().stroke("3 #0c1149");
     chart.background().fill({
         keys: ["#fff"],
         angle: 130,
@@ -181,7 +181,20 @@ anychart.onDocumentReady(function () {
     chart.data(data);
 
     // display the chart in the container
-    chart.container('container__four');
+    chart.container('goals');
     chart.draw();
 
 });
+
+
+const icon = document.querySelector('.team__icon')
+const team = document.querySelector('.team__name')
+
+icon.onmouseover = function (e) {
+    team.style.color = '#000'
+    team.style.transition = '.3s'
+}
+
+icon.onmouseout = function (e) {
+    team.style.color = ''
+}

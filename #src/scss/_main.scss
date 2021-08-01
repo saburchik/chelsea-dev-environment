@@ -157,7 +157,7 @@
     visibility: visible;
 }
 
-.modal__inner {
+.modal__body {
     min-height: 100%;
     display: flex;
     align-items: center;
@@ -165,7 +165,7 @@
     padding: 2rem 1rem;
 }
 
-.modal__body {
+.modal__inner {
     background-color: #fff;
     color: #000;
     width: 100%;
@@ -177,82 +177,89 @@
     box-shadow: 0 3px 30px #ff4747;
 }
 
-.match__main {
+.modal__charts {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
-    grid-template-rows: repeat(auto-fit, 1fr);
-    background-color: #F4F4F4;
 }
 
-#container,
-#container__two,
-#container__three,
-#container__four {
+.chart__item {
     display: grid;
     grid-template-rows: 360px 1fr;
   }
 
 
 // animation for modal-window
-.modal.active .modal__body {
+.modal.active .modal__inner {
     transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
     opacity: 1;
 }
 
 .modal__header {
     color: #fff;
-    background: url("../img/modal.jpg") center no-repeat;
-    background-size: cover;
-    text-align: center;
-    border: 3px solid #7C868E;
+    background-color: #ff4747;
+    // background: url("../img/light.jpg") center no-repeat;
+    // background-size: cover;
+    // text-align: center;
+    border: 3px solid #0c1149;
     padding: 15px;
 }
 
+.preview__img {
+    max-width: 100%;
+}
+
 .modal__disable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 2px;
+    right: 2px;
     font-size: 2rem;
     font-weight: 700;
-    color: #ff4747;
+    color: #0c1149;
     cursor: pointer;
     transition: 0.3s;
     background-color: #fff;
+    border: none;
+    border-radius: 0 0 0 32rem;
+    transition: all .2s;
 }
 
 .modal__disable:hover {
-    color: #0c1149;
+    background-color: #0c1149;
+    color: #fff;
 }
 
 .match__title {
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 30px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
 }
 
-.match__icon {
-    margin-right: 15px;
-}
+// .match__icon {
+//     margin-right: 15px;
+// }
 
 .match__img {
     width: 25px;
     height: 25px;
+    margin: 1rem;
 }
 
 .teams {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 20px;
 }
 
 .team__name {
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 500;
+    text-transform: uppercase;
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
 
     @media (max-width:490px) {
+        text-align: center;
         order: 2;
-        font-size: 14px;
     }
 }
 
@@ -269,17 +276,9 @@
     }
 }
 
-.team-left {
+.team__left {
     text-align: right;
     justify-content: flex-end;
-
-    .team__logo {
-        margin-left: 15px;
-
-        @media (max-width: 490px) {
-            margin: 0 0 10px 0;
-        }
-    }
 }
 
 .match-information {
@@ -287,31 +286,36 @@
     display: flex;
 
     .match__data {
+        font-size: 1rem;
         margin: 0 10px;
     }
 }
 
-.team-right {
+.team__right {
     text-align: left;
     justify-content: flex-start;
+}
 
-    .team__logo {
-        margin-right: 15px;
-
-        @media (max-width: 490px) {
-            margin: 0 0 10px 0;
-        }
-    }
-
+.team__left,
+.team__right {
     @media (max-width: 490px) {
         text-align: center;
     }
 }
 
-.team__img {
+.team__link {
+    margin: 1rem;
+}
+
+.team__icon {
     width: 35px;
     height: 35px;
 }
+
+// .team__link:hover + .team__name {
+//     color: #0c1149;
+// }
+
 
 .stats__img {
     width: 100%;
