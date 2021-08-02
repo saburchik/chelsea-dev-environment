@@ -20,52 +20,91 @@
                         <section class="card__item">
                             <article class="card__wrapper">
                                 <header class="card__header">
-                                    <img class="card__logo" src="img/cards-logo/chelsea.png" alt="Chelsea">
-                                    <h3 class="card__vs">VS</h3>
                                     <img class="card__logo" src="img/cards-logo/atletico.png" alt="Atletico Madrid">
+                                    <h3 class="card__vs">VS</h3>
+                                    <img class="card__logo" src="img/cards-logo/chelsea.png" alt="Chelsea">
                                 </header>
                                 <div class="card__text">
                                     <p class="description description__card">
-                                        Champions League - Round of 16, 2nd leg
+                                        Champions League - Round of 16, 2nd leg <br>
+                                        Wed, Feb 24, 2021
                                     </p>
                                 </div>
-                                <a class="btn btn__event window__modal" href="#modal">forecasts</a>
+                                <a class="btn btn__event window__modal" href="#modal_first">forecasts</a>
                             </article>
                         </section>
 
                         <section class="card__item">
                             <article class="card__wrapper">
                                 <header class="card__header">
-                                    <img class="card__logo" src="img/cards-logo/tottenham.png" alt="Tottenham">
-                                    <h3 class="card__vs">VS</h3>
                                     <img class="card__logo" src="img/cards-logo/chelsea.png" alt="Chelsea">
+                                    <h3 class="card__vs">VS</h3>
+                                    <img class="card__logo" src="img/cards-logo/manchester.png" alt="Manchester United">
                                 </header>
                                 <div class="card__text">
                                     <p class="description description__card">Premier League - 22. Matchday <br>
-                                        Thu, Feb 04, 2021 </p>
+                                        Sun, Feb 28, 2021</p>
                                 </div>
-                                <a class="btn btn__event window__modal" href="#modal">forecasts</a>
+                                <a class="btn btn__event window__modal" href="#modal_middle">forecasts</a>
                             </article>
                         </section>
 
                         <section class="card__item">
                             <article class="card__wrapper">
                                 <header class="card__header">
-                                    <img class="card__logo" src="img/cards-logo/sheffield.png" alt="Sheffield United">
+                                    <img class="card__logo" src="img/cards-logo/liverpool.png" alt="Liverpool">
                                     <h3 class="card__vs">VS</h3>
                                     <img class="card__logo" src="img/cards-logo/chelsea.png" alt="Chelsea">
                                 </header>
                                 <div class="card__text">
                                     <p class="description description__card">Premier League - 23. Matchday <br>
-                                        Sat, Feb 06, 2021 </p>
+                                        Thu, Mar 04, 2021 </p>
                                 </div>
-                                <a class="btn btn__event window__modal" href="#modal">forecasts</a>
+                                <a class="btn btn__event window__modal" href="#modal_last">forecasts</a>
                             </article>
                         </section>
                     </div>
                 </div>
 
-                <section class="modal" id="modal">
+                <section class="modal" id="modal_first">
+                    <article class="modal__body">
+                        <div class="modal__inner">
+                            <div class="modal__header modal__header_bg">
+                                <button class="modal__disable">&times;</button>
+                                <h3 class="match__title">
+                                    <span class="match__icon">
+                                        <img class="match__img" src="img/world.svg" alt="world-icon">
+                                    </span>
+                                    Champions League
+                                </h3>
+                                <div class="teams">
+                                    <div class="teams__main team__left">
+                                        <i class="team__name">Chelsea</i>
+                                        <a class="team__link" href="https://www.chelseafc.com/" target="_blank">
+                                            <img class="team__icon" src="img/cards-logo/chelsea.png" alt="Chelsea">
+                                        </a>
+                                    </div>
+                                    <div class="match-information">
+                                        <p class="match__data">24th Feb 21, 22:00</p>
+                                    </div>
+                                    <div class="teams__main team__right">
+                                        <a class="team__link" href="https://www.tottenhamhotspur.com/" target="_blank">
+                                            <img class="team__icon" src="img/cards-logo/atletico.png" alt="Tottenham">
+                                        </a>
+                                        <i class="team__name">Atletico Madrid</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal__charts">
+                                <div class="chart__item" id="atl-che_winner"></div>
+                                <div class="chart__item" id="atl-che_score"></div>
+                                <div class="chart__item" id="atl-che_total"></div>
+                                <div class="chart__item" id="atl-che_goals"></div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section class="modal" id="modal_middle">
                     <article class="modal__body">
                         <div class="modal__inner">
                             <div class="modal__header">
@@ -73,28 +112,60 @@
                                 <img class="preview__img" src="img/liga.png" alt="world-icon">
                                 <div class="teams">
                                     <div class="teams__main team__left">
-                                        <i class="team__name">Tottenham Hotspur</i>
-                                        <a class="team__link" href="https://www.tottenhamhotspur.com/" target="_blank">
-                                            <img class="team__icon tott" src="img/cards-logo/tottenham.png"
-                                                alt="Tottenham">
+                                        <i class="team__name">Chelsea</i>
+                                        <a class="team__link" href="https://www.chelseafc.com/" target="_blank">
+                                            <img class="team__icon" src="img/cards-logo/chelsea.png" alt="Chelsea">
                                         </a>
                                     </div>
                                     <div class="match-information">
-                                        <p class="match__data">18th Mar 21, 03:00</p>
+                                        <p class="match__data">04th Feb 21, 03:00</p>
                                     </div>
                                     <div class="teams__main team__right">
                                         <a class="team__link" href="https://www.chelseafc.com/" target="_blank">
-                                            <img class="team__icon chel" src="img/cards-logo/chelsea.png" alt="Chelsea">
+                                            <img class="team__icon" src="img/cards-logo/manchester.png" alt="ManUnited">
+                                        </a>
+                                        <i class="team__name">Manchester United</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal__charts">
+                                <div class="chart__item" id="che-mu_winner"></div>
+                                <div class="chart__item" id="che-mu_score"></div>
+                                <div class="chart__item" id="che-mu_total"></div>
+                                <div class="chart__item" id="che-mu_goals"></div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section class="modal" id="modal_last">
+                    <article class="modal__body">
+                        <div class="modal__inner">
+                            <div class="modal__header modal__header_bg-color">
+                                <button class="modal__disable">&times;</button>
+                                <img class="preview__img" src="img/liga.png" alt="world-icon">
+                                <div class="teams">
+                                    <div class="teams__main team__left">
+                                        <i class="team__name">Liverpool</i>
+                                        <a class="team__link" href="https://www.chelseafc.com/" target="_blank">
+                                            <img class="team__icon" src="img/cards-logo/liverpool.png" alt="Liverpool">
+                                        </a>
+                                    </div>
+                                    <div class="match-information">
+                                        <p class="match__data">04th Mar 21, 21:00</p>
+                                    </div>
+                                    <div class="teams__main team__right">
+                                        <a class="team__link" href="https://www.chelseafc.com/" target="_blank">
+                                            <img class="team__icon" src="img/cards-logo/chelsea.png" alt="Chelsea">
                                         </a>
                                         <i class="team__name">Chelsea</i>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal__charts">
-                                <div class="chart__item" id="winner"></div>
-                                <div class="chart__item" id="score"></div>
-                                <div class="chart__item" id="total"></div>
-                                <div class="chart__item" id="goals"></div>
+                                <div class="chart__item" id="liv-che_winner"></div>
+                                <div class="chart__item" id="liv-che_score"></div>
+                                <div class="chart__item" id="liv-che_total"></div>
+                                <div class="chart__item" id="liv-che_goals"></div>
                             </div>
                         </div>
                     </article>

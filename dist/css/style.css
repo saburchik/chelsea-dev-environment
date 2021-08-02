@@ -619,9 +619,19 @@ input[type='text'] {
 
 .modal__header {
   color: #fff;
-  background-color: #ff4747;
+  background-color: #fe005a;
   border: 3px solid #0c1149;
   padding: 15px;
+}
+
+.modal__header_bg-color {
+  background-color: #ff4747;
+}
+
+.modal__header_bg {
+  background: url("../img/modal.jpg") center no-repeat;
+  background-size: cover;
+  text-align: center;
 }
 
 .preview__img {
@@ -1210,6 +1220,8 @@ input[type='text'] {
 .webp .intro__inner { background: url(../img/backgrounds.webp) center no-repeat; }
 
 .webp .events__inner { background: url(../img/background-line.webp) center no-repeat; }
+
+.webp .modal__header_bg { background: url(../img/modal.webp) center no-repeat; }
 
 @media (max-width: 850px) {
 

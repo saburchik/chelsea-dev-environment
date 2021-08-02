@@ -196,12 +196,19 @@
 
 .modal__header {
     color: #fff;
-    background-color: #ff4747;
-    // background: url("../img/light.jpg") center no-repeat;
-    // background-size: cover;
-    // text-align: center;
+    background-color: #fe005a;
     border: 3px solid #0c1149;
     padding: 15px;
+}
+
+.modal__header_bg-color {
+    background-color: #ff4747;
+}
+
+.modal__header_bg {
+    background: url("../img/modal.jpg") center no-repeat;
+    background-size: cover;
+    text-align: center;
 }
 
 .preview__img {
