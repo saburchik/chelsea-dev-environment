@@ -32,6 +32,7 @@ body.lock {
 
 ul,
 li {
+    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -52,11 +53,18 @@ a {
 
 picture {
     display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: flex-start;
     justify-content: center;
 }
 
 input[type='text'] {
     font-size: 16px;
+}
+
+address {
+    font-style: initial;
 }
 
 .container {
@@ -81,12 +89,14 @@ input[type='text'] {
 }
 
 .title {
+    text-align: center;
     font-size: clamp(40px, 5vw, 72px);
     color: #FFFFFF;
     font-weight: 800;
 }
 
 .description {
+    text-align: center;
     color: #FFFFFF;
     font-weight: 700;
 }

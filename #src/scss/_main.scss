@@ -16,8 +16,11 @@
 .intro__content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 30px 0;
+    justify-content: space-around;
+    padding: 2rem 0;
+    height: 480px;
+    // align-items: flex-start;
+    // padding: 30px 0;
 }
 
 .title__intro {
@@ -25,7 +28,9 @@
     width: Min(80%, 800px);
     font-size: clamp(45px, 5vw, 100px);
     line-height: clamp(50px, 5vw, 125px);
-    margin-bottom: 35px;
+    text-align: left;
+    text-shadow: 2px 2px 8px white;
+
 
     @media (max-width: 560px) {
         width: Min(80%, 330px);
@@ -35,8 +40,9 @@
 .description__intro {
     width: Min(80%, 400px);
     font-size: clamp(18px,2vw,30px);
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 8px yellow;
+    text-shadow: 2px 2px 8px darkgray;
+    text-align: left;
+
 
     @media (max-width: 640px) {
         width: Min(80%, 350px);
@@ -49,7 +55,6 @@
     background: url("../img/background-line.jpg") center no-repeat;
     background-size: cover;
     padding: 50px 0;
-    text-align: center;
 }
 
 .cards__inner {
@@ -57,7 +62,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: -15px;
-    padding: 50px 0 100px;
+    padding: 3rem 0 7rem;
     max-width: 990px;
     margin: 0 auto;
 
@@ -91,10 +96,6 @@
     }
 }
 
-.title__cards {
-    padding-top: 20px;
-}
-
 .card__header {
     width: 100%;
     display: flex;
@@ -120,9 +121,11 @@
 }
 
 .description__card {
+    display: flex;
+    align-items: center;
     font-size: 30px;
     font-weight: 400;
-    line-height: 150%;
+    line-height: 50px;
     letter-spacing: 2px;
 
     @media (max-width: 770px) {
@@ -332,15 +335,18 @@
 .window {
     display: flex;
     justify-content: center;
+    max-width: 990px;
+    margin: 0 auto;
+    padding-top: 3rem;
 }
 
 .about__img {
     display: flex;
     flex: 0 0 450px;
 
-    img {
-        max-width: 100%;
-    }
+    // img {
+    //     max-width: 100%;
+    // }
 
     @media (max-width:850px) {
         display: none;
@@ -353,7 +359,8 @@
     justify-content: center;
     flex-direction: column;
     text-align: left;
-    max-width: 50%;
+    max-width: 100%;
+    min-width: 50%;
     flex: 1 1 auto;
     padding: 15px;
 
@@ -362,23 +369,29 @@
         background-size: cover;
         text-align: center;
     }
-
-    @media (max-width:690px) {
-        max-width: 100%;
-    }
 }
 
 .title__about {
+    text-align: left;
     color: #000000;
     margin-bottom: 30px;
+
+    @media (max-width:850px) {
+        text-align: inherit;
+    }
 }
 
 .description__about {
+    text-align: left;
     color: #000;
     font-size: 24px;
     font-weight: 400;
     line-height: 35px;
     margin-bottom: 30px;
+
+    @media (max-width:850px) {
+        text-align: center;
+    }
 }
 
 // ========== Sponsors ==========
@@ -459,4 +472,21 @@
 
 .terms__bg {
     width: 100%;
+}
+
+
+.modal__inner_small {
+    max-width: 490px;
+}
+
+.modal__disable_dark {
+    background-color: #0c1149;
+    background-color: #FF4747;
+    color: #fff;
+}
+
+.modal__disable_dark:hover {
+    background-color: #0c1149;
+    color: #fff;
+    transition: all .2s;
 }

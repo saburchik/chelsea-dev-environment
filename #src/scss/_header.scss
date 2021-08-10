@@ -69,7 +69,7 @@
     }
 }
 
-.nav-links li:not(:first-child) {
+.nav-links li  {
     margin-left: 30px;
 
     @media (max-width: 770px) {

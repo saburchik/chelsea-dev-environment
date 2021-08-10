@@ -1,9 +1,4 @@
 // ========== Footer ==========
-.footer {
-    background: #0c1149;
-    padding: 15px 0;
-}
-
 .footer__logo {
     width: 100px;
     height: 100px;
@@ -12,21 +7,15 @@
 .content__footer {
     flex-direction: row;
     align-items: initial;
-    padding: 50px 0 25px;
-
-    @media (max-width:900px) {
-        justify-content: center;
-        padding-bottom: 0;
-    }
+    padding: 4rem 0 2rem;
 }
 
 .footer__item {
-    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
     text-align: center;
+    margin-bottom: 4rem;
 
     @media (max-width:900px) {
         width: 50%;
@@ -44,8 +33,6 @@
 }
 
 .footer__item.social-media {
-
-
     @media (max-width:900px) {
         order: 3;
     }
@@ -64,9 +51,9 @@
 }
 
 .title__footer {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 
     @media (max-width:900px) {
         text-align: center;
@@ -74,29 +61,29 @@
 }
 
 .description__footer {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
-    line-height: 25px;
-    letter-spacing: 2px;
+    line-height: 2rem;
+    letter-spacing: .125rem;
     text-align: left;
 }
 
 .footer__link {
-    color: #FFFFFF;
-    font-size: 18px;
-    font-weight: 400;
-    text-decoration: none;
-    line-height: 35px;
-    letter-spacing: 2px;
+    font-size: clamp(1.1rem,1vw,2rem);
+    margin: 1rem 0;
+    letter-spacing: .125rem;
 
-    &:hover {
-        color: #FF4747;
-        text-decoration: underline;
-        transition: all 0.1;
+    a {
+        color: #fff;
+
+        &:hover {
+            color: #FF4747;
+            text-decoration: underline;
+        }
     }
 }
 
-.icon {
+.footer__media {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -104,14 +91,21 @@
 }
 
 .footer__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    background-color: #fff;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    margin: .5rem;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+
+        &:hover {
+            background-color: #FF4747;
+        }
+    }
 
     &:first-child {
         margin-left: 0;
@@ -120,16 +114,13 @@
     &:last-child {
         margin-right: 0;
     }
-
-    &:hover {
-        background-color: #FF4747;
-    }
 }
 
 .footer__rights {
-    font-size: 14px;
+    color: #fff;
+    font-size: .9rem;
     font-weight: 400;
-    color: #FFFFFF;
     text-align: center;
     letter-spacing: 1px;
+    padding-bottom: 1rem;
 }
