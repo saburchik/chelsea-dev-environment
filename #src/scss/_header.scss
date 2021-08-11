@@ -23,15 +23,28 @@
 }
 
 .nav__menu {
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding: 0 1rem;
+    margin: 0 auto;
+
+    @media (min-width: 1900px) {
+        max-width: 1700px;
+    }
 }
 
 .nav__menu.active {
     display: block;
     flex-direction: column;
+}
+
+.logo {
+    &:focus {
+        outline: none;
+    }
 }
 
 .nav__logo {
@@ -83,10 +96,12 @@
     color: #FFFFFF;
     text-decoration: none;
     padding: 0.3rem 0;
-    transition: all 0.2s;
+    transition: .1s;
 
-    &:hover {
+    &:hover,
+    &:focus {
         color: #FF4747;
+        outline: none;
     }
 }
 

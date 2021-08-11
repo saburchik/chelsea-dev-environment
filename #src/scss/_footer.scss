@@ -76,9 +76,11 @@
     a {
         color: #fff;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: #FF4747;
             text-decoration: underline;
+            outline: none;
         }
     }
 }
@@ -102,8 +104,10 @@
         width: 50px;
         height: 50px;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: #FF4747;
+            outline: none;
         }
     }
 

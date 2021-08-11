@@ -47,7 +47,7 @@ let { src, dest } = require('gulp'),
     svgSprite = require("gulp-svg-sprite"), // ??
     ttf2woff = require('gulp-ttf2woff'),
     ttf2woff2 = require('gulp-ttf2woff2'),
-    fonter = require('gulp-fonter');
+    fonter = require('gulp-fonter')
 
 
 function browserSync(params) {
@@ -168,7 +168,8 @@ gulp.task('svgSprite', function () {
         .pipe(dest(path.build.img));
 })
 
-function fontsStyle(params) {
+function fontsStyle() {
+
     let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
     if (file_content == '') {
         fs.writeFile(source_folder + '/scss/fonts.scss', '', cb);

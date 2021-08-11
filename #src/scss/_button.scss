@@ -10,6 +10,12 @@
     cursor: pointer;
     padding: 0 70px;
 
+    &:focus {
+        color: #FFFFFF;
+        background-color: #0c1149;
+        border: 4px solid #FF4747;
+    }
+
     @media (min-width: 2000px) {
         font-size: 35px;
     }
