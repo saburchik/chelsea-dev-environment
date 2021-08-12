@@ -17,19 +17,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 2rem 0;
     height: 480px;
-    // align-items: flex-start;
-    // padding: 30px 0;
+    padding: 2rem 0;
 }
 
 .title__intro {
     color: #0E3AB1;
     width: Min(80%, 800px);
-    font-size: clamp(45px, 5vw, 100px);
-    line-height: clamp(50px, 5vw, 125px);
+    font-size: clamp(3rem, 5vw, 6rem);
     text-align: left;
-    // text-shadow: 2px 2px 8px white;
 
     @media (max-width: 560px) {
         width: Min(80%, 330px);
@@ -38,8 +34,7 @@
 
 .description__intro {
     width: Min(80%, 400px);
-    font-size: clamp(18px,2vw,30px);
-    // text-shadow: 2px 2px 8px darkgray;
+    font-size: clamp(1rem, 2vw, 2rem);
     text-align: left;
 
 
@@ -50,7 +45,6 @@
 
 // ========== Event ==========
 .events__inner {
-    width: 100%;
     background: url("../img/background-line.jpg") center no-repeat;
     background-size: cover;
 }
@@ -59,20 +53,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: -15px;
+    max-width: clamp(990px, 55vw, 1190px);
     padding: 2rem 0 0;
-    max-width: 990px;
     margin: 0 auto;
-
-    @media (min-width: 2000px) {
-        max-width: 1290px;
-    }
 }
 
 .card__item {
     display: flex;
     flex: 0 1 33.333%;
-    padding: 15px;
+    padding: 1rem;
 }
 
 .card__wrapper {
@@ -80,64 +69,49 @@
     flex-direction: column;
     background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
     border: 4px solid #F3B31D;
-    border-radius: 35px;
-    padding: 15px;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+.card__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2.5rem 0;
+}
+
+.card__logo {
+    width: 66px;
+    height: 66px;
+}
+
+.card__vs {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 1.5rem;
+
+    @media (min-width: 2000px) {
+        margin: 0 3rem;
+    }
 }
 
 .card__text {
     display: flex;
     flex: 1 1 auto;
-    margin: 0 0 30px 0;
-
-    @media (min-width: 2000px) {
-        margin: 0 0 60px 0;
-    }
-}
-
-.card__header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0;
-}
-
-.card__logo {
-    width: 64px;
-    height: 64px;
-}
-
-.card__vs {
-    color: #fff;
-    font-size: 35px;
-    font-weight: 700;
-    margin: 0 20px;
-
-    @media (min-width: 2000px) {
-        margin: 0 50px;
-    }
+    margin-bottom: clamp(2rem, 2vw, 4rem);
 }
 
 .description__card {
     display: flex;
     align-items: center;
-    font-size: 30px;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
     font-weight: 400;
-    line-height: 50px;
+    line-height: clamp(2rem, 3vw, 4rem);
     letter-spacing: 2px;
-
-    @media (max-width: 770px) {
-        font-size: 24px;
-    }
-
-    @media (min-width: 2000px) {
-        font-size: 40px;
-    }
 }
 
 // ========== Window modal ==========  
-
-
 .modal {
     width: 100%;
     height: 100%;
@@ -158,82 +132,60 @@
     visibility: visible;
 }
 
+.modal.active .modal__inner {
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+    opacity: 1;
+}
+
 .modal__body {
-    min-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100%;
     padding: 2rem 1rem;
 }
 
 .modal__inner {
-    background-color: #fff;
-    color: #000;
     width: 100%;
     max-width: 800px;
-    position: relative;
-    transition: all 0.7s ease 0s;
     opacity: 0;
     transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
-    box-shadow: 0 3px 30px #ff4747;
-}
-
-.modal__charts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
-}
-
-.chart__item {
-    display: grid;
-    grid-template-rows: 360px 1fr;
-  }
-
-
-// animation for modal-window
-.modal.active .modal__inner {
-    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
-    opacity: 1;
+    box-shadow: 0 0 3rem #ff4747;
+    transition: all 0.7s ease 0s;
 }
 
 .modal__header {
     color: #fff;
     background-color: #fe005a;
     border: 3px solid #0c1149;
-    padding: 15px;
+    padding: 1rem;
+}
+
+.modal__header_bg-img {
+    background: url("../img/modal.jpg") center no-repeat;
+    background-size: cover;
+    text-align: center;
 }
 
 .modal__header_bg-color {
     background-color: #ff4747;
 }
 
-.modal__header_bg {
-    background: url("../img/modal.jpg") center no-repeat;
-    background-size: cover;
-    text-align: center;
-}
-
-.preview__img {
-    max-width: 100%;
-}
-
 .modal__disable {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-start;
     width: 40px;
     height: 40px;
+    font-size: 2rem;
+    color: #0c1149;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 0 0 32rem;
     position: absolute;
     top: 2px;
     right: 2px;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #0c1149;
-    cursor: pointer;
-    transition: 0.3s;
-    background-color: #fff;
-    border: none;
-    border-radius: 0 0 0 32rem;
-    transition: all .2s;
+    transition: .2s;
 }
 
 .modal__disable:hover {
@@ -241,34 +193,20 @@
     color: #fff;
 }
 
-.match__title {
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-}
-
-// .match__icon {
-//     margin-right: 15px;
-// }
-
-.match__img {
+.modal__icon {
     width: 25px;
     height: 25px;
     margin: 1rem;
 }
 
+.modal__title {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
 .teams {
     display: flex;
     justify-content: space-evenly;
-}
-
-.team__name {
-    text-transform: uppercase;
-    font-size: clamp(0.8rem, 1vw, 1.2rem);
-
-    @media (max-width:490px) {
-        text-align: center;
-        order: 2;
-    }
 }
 
 .teams__main {
@@ -279,7 +217,6 @@
 
     @media (max-width:490px) {
         flex-direction: column;
-        height: auto;
         justify-content: flex-start;
     }
 }
@@ -289,25 +226,12 @@
     justify-content: flex-end;
 }
 
-.match-information {
-    align-items: center;
-    display: flex;
+.team__name {
+    text-transform: uppercase;
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
 
-    .match__data {
-        font-size: 1rem;
-        margin: 0 10px;
-    }
-}
-
-.team__right {
-    text-align: left;
-    justify-content: flex-start;
-}
-
-.team__left,
-.team__right {
-    @media (max-width: 490px) {
-        text-align: center;
+    @media (max-width:490px) {
+        order: 2;
     }
 }
 
@@ -320,22 +244,45 @@
     height: 35px;
 }
 
-
-.stats__img {
-    width: 100%;
+ .modal__date {
+    align-items: center;
+    display: flex;
+    margin: 0 1rem;
 }
 
-// About
+.team__right {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.team__left,
+.team__right {
+    @media (max-width: 490px) {
+        text-align: center;
+    }
+}
+
+.modal__charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+}
+
+.chart__item {
+    display: grid;
+    grid-template-rows: 360px 1fr;
+}
+
+// ========== About ==========
 .about__inner {
     padding: 6rem 0;
 }
 
-.window {
+.about__window {
     display: flex;
     justify-content: center;
     max-width: 990px;
-    margin: 0 auto;
     padding-top: 3rem;
+    margin: 0 auto;
 }
 
 .about__img {
@@ -345,14 +292,9 @@
 }
 
 .content__about {
-    background-color: #fff;
-    display: flex;
     justify-content: center;
-    flex-direction: column;
-    text-align: left;
-    max-width: 100%;
-    flex: 1 1 auto;
-    padding: 15px;
+    background-color: #fff;
+    padding: 1rem;
 
     @media (max-width:850px) {
         background: url("../img/chelsea--white.jpg") center no-repeat;
@@ -362,22 +304,18 @@
 }
 
 .title__about {
+    color: #000;
     text-align: left;
-    color: #000000;
-    margin-bottom: 30px;
-
-    @media (max-width:850px) {
-        text-align: inherit;
-    }
+    margin-bottom: 2rem;
 }
 
 .description__about {
-    text-align: left;
     color: #000;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
-    line-height: 35px;
-    margin-bottom: 30px;
+    text-align: left;
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
 
     @media (max-width:850px) {
         text-align: center;
@@ -388,22 +326,15 @@
 .sponsors__inner {
     background-color: #fff;
     padding: 3rem 1rem;
-
 }
 
 .content__sponsors {
-    display: flex;
-    justify-content: space-between;
     flex-direction: row;
-    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .sponsor__item {
-    width: auto;
-    list-style-type: none;
-
     @media (max-width:1150px) {
         width: 30%;
     }
@@ -418,17 +349,12 @@
 }
 
 // ========== Subscription ==========
-
-.title__sub {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
 .form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 4rem;
 }
 
 .input {
@@ -436,26 +362,15 @@
     width: 100%;
     max-width: 430px;
     height: 55px;
-    margin-bottom: 30px;
-    outline: none;
-    border-radius: 28px;
-    padding: 0 15px;
     border: 4px solid white;
+    border-radius: 2rem;
+    outline: none;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    transition: .3s;
 
     &:focus {
-        border: 4px solid #FF4747;
-    }
-}
-
-.description__terms {
-    font-size: 18px;
-    font-weight: 400;
-    max-width: 30%;
-    text-align: center;
-    line-height: 30px;
-
-    @media (max-width:990px) {
-        max-width: 100%;
+        border-color: #FF4747;
     }
 }
 
@@ -468,23 +383,12 @@
     }
 }
 
-.terms__bg {
-    width: 100%;
-}
-
-
-.modal__inner_small {
-    max-width: 490px;
-}
-
 .modal__disable_dark {
-    background-color: #0c1149;
-    background-color: #FF4747;
     color: #fff;
+    background-color: #0c1149;
+    transition: .2s;
 }
 
 .modal__disable_dark:hover {
-    background-color: #0c1149;
-    color: #fff;
-    transition: all .2s;
+    background-color: #FF4747;
 }

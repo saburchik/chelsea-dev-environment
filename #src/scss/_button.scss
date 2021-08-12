@@ -1,69 +1,46 @@
 .btn {
-    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
     height: 55px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
-    border-radius: 35px;
-    border: 4px solid #F3B31D;
-    transition: all 0.2s;
+    border-radius: 3rem;
+    border: .25rem solid #F3B31D;
+    text-transform: uppercase;
     outline: none;
     cursor: pointer;
     padding: 0 70px;
+    transition: 0.2s;
+
 
     &:focus {
-        color: #FFFFFF;
+        color: #fff;
         background-color: #0c1149;
         border: 4px solid #FF4747;
-    }
-
-    @media (min-width: 2000px) {
-        font-size: 35px;
     }
 }
 
 .btn__intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    font-weight: 700;
     width: Min(290px, 360px);
     background-color: #0E3AB1;
-
-    &:hover {
-        background-color: #FF4747;
-        border: 4px solid #FFFFFF;
-    }
 }
 
 .btn__event {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: #000000;
-    background-color: #FFFFFF;
-    padding: 0 30px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-
-    &:hover {
-        color: #FFFFFF;
-        background-color: #FF4747;
-        border: 4px solid #FFFFFF;
-    }
+    background-color: #fff;
+    padding: 0 2rem;
 }
 
 .btn__about {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     max-width: 300px;
     background-color: #0E3AB1;
-    padding: 0 35px;
+    padding: 0 2rem;
 
     &:hover {
         background-color: #FF4747;
-        border: 4px solid #000000;
+        border: .25rem solid #FF4747;
     }
 
     @media (max-width:850px) {
@@ -71,12 +48,17 @@
     }
 }
 
-.btn__sub {
+.btn__join {
     background-color: #0E3AB1;
-    margin: 0 0 15px;
+    margin: 0 0 1rem;
+}
 
+.btn__intro,
+.btn__event,
+.btn__join {
     &:hover {
+        color: #fff;
         background-color: #FF4747;
-        border: 4px solid #FFFFFF;
+        border: 4px solid #fff;
     }
 }
