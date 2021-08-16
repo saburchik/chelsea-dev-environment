@@ -1,5 +1,3 @@
-
-
 let project_folder = "dist";
 let source_folder = "#src";
 
@@ -44,7 +42,6 @@ let { src, dest } = require('gulp'),
     webp = require("gulp-webp"),
     webphtml = require("gulp-webp-html"),
     webpcss = require("gulp-webpcss"),
-    svgSprite = require("gulp-svg-sprite"), // ??
     ttf2woff = require('gulp-ttf2woff'),
     ttf2woff2 = require('gulp-ttf2woff2'),
     fonter = require('gulp-fonter')
@@ -124,11 +121,7 @@ function images() {
         .pipe(
             imagemin({
                 progressive: true,
-                svgoPlugins: [
-                    {
-                        removeViewBox: false
-                    }
-                ],
+                svgoPlugins: [{ removeViewBox: false }],
                 interlaced: true,
                 optimizationLevel: 4 // 0 to 7
             })
@@ -154,22 +147,7 @@ gulp.task('otf2ttf', function () {
         .pipe(dest(source_folder + '/fonts/'));
 })
 
-gulp.task('svgSprite', function () {
-    return gulp.src([source_folder + '/iconsprite/*.svg'])
-        .pipe(svgSprite({
-            mode: {
-                stack: {
-                    sprite: "../icons/icons.svg",
-                    // example: true
-                }
-            },
-        }
-        ))
-        .pipe(dest(path.build.img));
-})
-
 function fontsStyle() {
-
     let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
     if (file_content == '') {
         fs.writeFile(source_folder + '/scss/fonts.scss', '', cb);
@@ -191,14 +169,14 @@ function fontsStyle() {
 
 function cb() { }
 
-function watchFiles(params) {
+function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.img], images);
 }
 
-function clean(params) {
+function clean() {
     return del(path.clean);
 }
 

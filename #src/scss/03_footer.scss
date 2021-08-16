@@ -1,0 +1,135 @@
+// ========== Footer ==========
+.footer__logo {
+    width: clamp(100px,5vw,200px);
+    height: clamp(100px,5vw,200px);
+    transition: 0.5s;
+}
+
+.footer__logo:hover {
+    transform: scale(1.3);
+}
+
+.content__footer {
+    flex-direction: row;
+    align-items: initial;
+    padding: 4rem 0 2rem;
+}
+
+.footer__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 4rem;
+
+    @media (max-width:900px) {
+        width: 50%;
+    }
+
+    @media (max-width:690px) {
+        width: 100%;
+    }
+}
+
+.footer__item.address {
+    @media (max-width:900px) {
+        order: 4;
+    }
+}
+
+.footer__item.social-media {
+    @media (max-width:900px) {
+        order: 3;
+    }
+}
+
+.footer__item.services {
+    @media (max-width:900px) {
+        order: 2
+    }
+}
+
+.footer__item.about {
+    @media (max-width:900px) {
+        order: 1;
+    }
+}
+
+.title__footer {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+    @media (max-width:900px) {
+        text-align: center;
+    }
+}
+
+.description__footer {
+    font-size: clamp(1.1rem,1vw,2rem);
+    font-weight: 400;
+    line-height: clamp(2rem,2vw,3rem);
+    letter-spacing: .125rem;
+    text-align: left;
+}
+
+.footer__link {
+    font-size: clamp(1.1rem,1vw,2rem);
+    margin: 1rem 0;
+    letter-spacing: .125rem;
+
+    a {
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            color: #FF4747;
+            text-decoration: underline;
+            outline: none;
+        }
+    }
+}
+
+.footer__media {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer__icon {
+    margin: .5rem;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+
+        &:hover,
+        &:focus {
+            background-color: #FF4747;
+            outline: none;
+        }
+    }
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.footer__rights {
+    color: #fff;
+    font-size: clamp(0.9rem,1vw,1.5rem);
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}

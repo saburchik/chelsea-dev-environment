@@ -9,6 +9,7 @@
     }
 @import "fonts";
 
+// Basic installations
 body {
     height: 100%;
     padding: 0;
@@ -52,8 +53,8 @@ picture {
     display: flex;
     flex-grow: 0;
     flex-shrink: 0;
-    align-items: flex-start;
     justify-content: center;
+    align-items: flex-start;
 }
 
 input[type='text'] {
@@ -89,42 +90,53 @@ address {
 
 .title {
     text-align: center;
-    font-size: clamp(40px, 5vw, 72px);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     color: #FFFFFF;
     font-weight: 700;
 }
 
 .description {
-    font-size: 1rem;
+    font-size: clamp(1rem, 1vw, 1.5rem);
     text-align: center;
     color: #FFFFFF;
     font-weight: 700;
 }
 
-@import "animation.scss";
-@import "_button.scss";
-@import "_header.scss";
-@import "_main.scss";
-@import "_footer.scss";
+@import "button.scss";
+@import "01_header.scss";
+@import "02_main.scss";
+@import "03_footer.scss";
 
-// Page About-Us
-
-.about-us {
-    background: #0c1149;
-}
-
-.content__about-us {
+// ========== Page About-Us ==========
+.about-us__window {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
-    height: auto;
-    padding: 50px 15px;
+    padding: 3rem 1rem;
+    margin-top: 3rem;
 }
 
-.title__about-us {
-    text-align: center;
-    padding: 50px 0;
-}
-
-.official-logo {
-    width: 100%;
+.about-us__logo {
+    width: 150px;
+    height: 150px;
     margin-bottom: 50px;
+}
+
+.about-us__description {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    width: 100%;
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-us__link {
+    &:hover,
+    &:focus {
+        color: #ff4747;
+        text-decoration: underline;
+        outline: none;
+        transition: .1s;
+    }
 }
