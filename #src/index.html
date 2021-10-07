@@ -13,14 +13,17 @@
 
 <body>
     <div class="wrapper">
-        @@include('01_header.html')
-        @@include('02_main.html')
-        @@include('03_footer.html')
+        @@include('_01_header.html')
+        @@include('_02_main.html')
+        @@include('_03_footer.html')
     </div>
     <script defer src="js/main.min.js"></script>
     <!-- amCharts javascript sources -->
     <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
     <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
+    <!-- Polyfill for iOS - smooth scrolling -->
+    <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@1.0.0/dist/es5/seamless.auto-polyfill.min.js"
+        data-seamless></script>
 </body>
 
 </html>

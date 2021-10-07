@@ -159,6 +159,7 @@
 
 .modal__header {
     color: #fff;
+    text-align: center;
     background-color: #fe005a;
     border: 3px solid #0c1149;
     padding: 1rem;
@@ -166,33 +167,10 @@
 
 .modal__header_bg-img {
     background: url("../img/champions-league.jpg") center / cover no-repeat;
-    text-align: center;
 }
 
 .modal__header_bg-color {
     background-color: #ff4747;
-}
-
-.modal__disable {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    width: 40px;
-    height: 40px;
-    font-size: 2rem;
-    color: #0c1149;
-    cursor: pointer;
-    border: none;
-    border-radius: 0 0 0 32rem;
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    transition: .2s;
-}
-
-.modal__disable:hover {
-    background-color: #0c1149;
-    color: #fff;
 }
 
 .modal__icon {
@@ -390,12 +368,12 @@
     }
 }
 
-.modal__disable_dark {
-    color: #fff;
-    background-color: #0c1149;
-    transition: .2s;
-}
+// .modal__disable_dark {
+//     color: #fff;
+//     background-color: #0c1149;
+//     transition: .2s;
+// }
 
-.modal__disable_dark:hover {
-    background-color: #FF4747;
-}
+// .modal__disable_dark:hover {
+//     background-color: #FF4747;
+// }
