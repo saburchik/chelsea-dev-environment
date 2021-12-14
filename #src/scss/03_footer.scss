@@ -1,7 +1,7 @@
 // ========== Footer ==========
 .footer__logo {
-    width: clamp(100px,5vw,200px);
-    height: clamp(100px,5vw,200px);
+    width: clamp(100px, 5vw, 200px);
+    height: clamp(100px, 5vw, 200px);
     transition: 0.5s;
 }
 
@@ -62,20 +62,21 @@
 }
 
 .description__footer {
-    font-size: clamp(1.1rem,1vw,2rem);
+    font-size: clamp(1.1rem, 1vw, 2rem);
     font-weight: 400;
-    line-height: clamp(2rem,2vw,3rem);
+    line-height: clamp(2rem, 2vw, 3rem);
     letter-spacing: .125rem;
     text-align: left;
 }
 
 .footer__link {
-    font-size: clamp(1.1rem,1vw,2rem);
+    font-size: clamp(1.1rem, 1vw, 2rem);
     margin: 1rem 0;
     letter-spacing: .125rem;
 
     a {
         color: #fff;
+        transition: 0.2s;
 
         &:hover,
         &:focus {
@@ -104,6 +105,7 @@
         border-radius: 50%;
         width: 50px;
         height: 50px;
+        transition: 0.2s;
 
         &:hover,
         &:focus {
@@ -123,7 +125,7 @@
 
 .footer__rights {
     color: #fff;
-    font-size: clamp(0.9rem,1vw,1.5rem);
+    font-size: clamp(0.9rem, 1vw, 1.5rem);
     font-weight: 400;
     text-align: center;
     letter-spacing: 1px;

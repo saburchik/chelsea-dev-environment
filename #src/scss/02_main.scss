@@ -64,7 +64,7 @@
 }
 
 .card__item:hover {
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 
 .card__wrapper {
@@ -224,7 +224,7 @@
     height: 35px;
 }
 
- .modal__date {
+.modal__date {
     display: flex;
     align-items: center;
     margin: 0 1rem;
@@ -316,10 +316,11 @@
 .sponsor__item {
     transition: 0.5s;
     cursor: pointer;
-    
+
     &:hover {
         transform: scale(1.2);
     }
+
     @media (max-width:1150px) {
         width: 30%;
     }
@@ -360,6 +361,7 @@
 }
 
 .terms__link {
+
     &:hover,
     &:focus {
         color: #ff4747;
