@@ -1,6 +1,7 @@
+
 anychart.onDocumentReady(function () {
     // ----- The first pie -----
-    // set the data
+    // == Set the data:
     var data = [{
         x: "Chelsea",
         value: 58,
@@ -15,24 +16,23 @@ anychart.onDocumentReady(function () {
             fill: "#E40E0E"
         }
     }]
-    // create the chart
+    // == Create the chart:
     var chart = anychart.pie()
     chart.background().stroke("3 #0c1149")
     chart.background().fill({
         keys: ["#fff"],
         angle: 130,
     })
-    // set the chart title
+    // == Set the chart title:
     chart.title("Who is the winner?")
-    // add the data
+    // == Add the data:
     chart.data(data)
-    // display the chart in the container
+    // == Display the chart in the container:
     chart.container('atl-che_winner')
     chart.draw()
 
-
     // ----- The second pie -----
-    // set the data
+    // == Set the data:
     var data = [{
         x: "Yes",
         value: 17,
@@ -47,24 +47,23 @@ anychart.onDocumentReady(function () {
             fill: "#E40E0E"
         }
     }]
-    // create the chart
+    // == Create the chart:
     var chart = anychart.pie()
     chart.background().stroke("3 #0c1149")
     chart.background().fill({
         keys: ["#fff"],
         angle: 130,
     })
-    // set the chart title
+    // == Set the chart title:
     chart.title("Will both score?")
-    // add the data
+    // == Add the data:
     chart.data(data)
-    // display the chart in the container
+    // == Display the chart in the container:
     chart.container('atl-che_score');
     chart.draw();
 
-
     // ----- The third pie -----
-    // set the data
+    // == Set the data:
     var data = [{
         x: "Yes",
         value: 43,
@@ -79,24 +78,23 @@ anychart.onDocumentReady(function () {
             fill: "#E40E0E"
         }
     }]
-    // create the chart
+    // == Create the chart:
     var chart = anychart.pie()
     chart.background().stroke("3 #0c1149")
     chart.background().fill({
         keys: ["#fff"],
         angle: 130,
     })
-    // set the chart title
+    // == Set the chart title:
     chart.title("The total is more 2.5")
-    // add the data
+    // == Add the data:
     chart.data(data)
-    // display the chart in the container
+    // == Display the chart in the container:
     chart.container('atl-che_total')
     chart.draw()
 
-
     // ----- The fourth pie -----
-    // set the data
+    // == Set the data:
     var data = [{
         x: "2:1",
         value: 35,
@@ -132,25 +130,25 @@ anychart.onDocumentReady(function () {
             fill: "#FBFE67"
         }
     }]
-    // create the chart
+    // == Create the chart:
     var chart = anychart.pie()
     chart.background().stroke("3 #0c1149")
     chart.background().fill({
         keys: ["#fff"],
         angle: 130,
     })
-    // set the chart title
+    // == Set the chart title:
     chart.title("Final score")
-    // add the data
+    // == Add the data:
     chart.data(data)
-    // display the chart in the container
+    // == Display the chart in the container:
     chart.container('atl-che_goals')
     chart.draw()
 })
 
 anychart.onDocumentReady(function () {
     // ----- The first pie -----
-    // set the data
+    // == Set the data:
     var data = [{
         x: "Chelsea",
         value: 58,
@@ -165,24 +163,23 @@ anychart.onDocumentReady(function () {
             fill: "#E40E0E"
         }
     }]
-    // create the chart
+    // == Create the chart:
     var chart = anychart.pie()
     chart.background().stroke("3 #0c1149")
     chart.background().fill({
         keys: ["#fff"],
         angle: 130,
     })
-    // set the chart title
+    // == Set the chart title:
     chart.title("Who is the winner?")
-    // add the data
+    // == Add the data:
     chart.data(data)
-    // display the chart in the container
+    // == Display the chart in the container:
     chart.container('che-mu_winner')
     chart.draw()
 
-
     // ----- The second pie -----
-    // set the data
+    // == Set the data:
     var data = [{
         x: "Yes",
         value: 17,
@@ -197,24 +194,23 @@ anychart.onDocumentReady(function () {
             fill: "#E40E0E"
         }
     }]
-    // create the chart
+    // == Create the chart:
     var chart = anychart.pie()
     chart.background().stroke("3 #0c1149")
     chart.background().fill({
         keys: ["#fff"],
         angle: 130,
     })
-    // set the chart title
+    // == Set the chart title:
     chart.title("Will both score?")
-    // add the data
+    // == Add the data:
     chart.data(data)
-    // display the chart in the container
+    // == Display the chart in the container:
     chart.container('che-mu_score');
     chart.draw();
 
-
     // ----- The third pie -----
-    // set the data
+    // == Set the data:
     var data = [{
         x: "Yes",
         value: 43,
@@ -229,24 +225,23 @@ anychart.onDocumentReady(function () {
             fill: "#E40E0E"
         }
     }]
-    // create the chart
+    // == Create the chart:
     var chart = anychart.pie()
     chart.background().stroke("3 #0c1149")
     chart.background().fill({
         keys: ["#fff"],
         angle: 130,
     })
-    // set the chart title
+    // == Set the chart title:
     chart.title("The total is more 2.5")
-    // add the data
+    // == Add the data:
     chart.data(data)
-    // display the chart in the container
+    // == Display the chart in the container:
     chart.container('che-mu_total')
     chart.draw()
 
-
     // ----- The fourth pie -----
-    // set the data
+    // == Set the data:
     var data = [{
         x: "2:1",
         value: 35,
@@ -282,25 +277,25 @@ anychart.onDocumentReady(function () {
             fill: "#FBFE67"
         }
     }]
-    // create the chart
+    // == Create the chart:
     var chart = anychart.pie()
     chart.background().stroke("3 #0c1149")
     chart.background().fill({
         keys: ["#fff"],
         angle: 130,
     })
-    // set the chart title
+    // == Set the chart title:
     chart.title("Final score")
-    // add the data
+    // == Add the data:
     chart.data(data)
-    // display the chart in the container
+    // == Display the chart in the container:
     chart.container('che-mu_goals')
     chart.draw()
 })
 
 anychart.onDocumentReady(function () {
     // ----- The first pie -----
-    // set the data
+    // == Set the data:
     var data = [{
         x: "Chelsea",
         value: 58,
@@ -315,24 +310,23 @@ anychart.onDocumentReady(function () {
             fill: "#E40E0E"
         }
     }]
-    // create the chart
+    // == Create the chart:
     var chart = anychart.pie()
     chart.background().stroke("3 #0c1149")
     chart.background().fill({
         keys: ["#fff"],
         angle: 130,
     })
-    // set the chart title
+    // == Set the chart title:
     chart.title("Who is the winner?")
-    // add the data
+    // == Add the data:
     chart.data(data)
-    // display the chart in the container
+    // == Display the chart in the container:
     chart.container('liv-che_winner')
     chart.draw()
 
-
     // ----- The second pie -----
-    // set the data
+    // == Set the data:
     var data = [{
         x: "Yes",
         value: 17,
@@ -347,24 +341,23 @@ anychart.onDocumentReady(function () {
             fill: "#E40E0E"
         }
     }]
-    // create the chart
+    // == Create the chart:
     var chart = anychart.pie()
     chart.background().stroke("3 #0c1149")
     chart.background().fill({
         keys: ["#fff"],
         angle: 130,
     })
-    // set the chart title
+    // == Set the chart title:
     chart.title("Will both score?")
-    // add the data
+    // == Add the data:
     chart.data(data)
-    // display the chart in the container
+    // == Display the chart in the container:
     chart.container('liv-che_score');
     chart.draw();
 
-
     // ----- The third pie -----
-    // set the data
+    // == Set the data:
     var data = [{
         x: "Yes",
         value: 43,
@@ -379,24 +372,23 @@ anychart.onDocumentReady(function () {
             fill: "#E40E0E"
         }
     }]
-    // create the chart
+    // == Create the chart:
     var chart = anychart.pie()
     chart.background().stroke("3 #0c1149")
     chart.background().fill({
         keys: ["#fff"],
         angle: 130,
     })
-    // set the chart title
+    // == Set the chart title:
     chart.title("The total is more 2.5")
-    // add the data
+    // == Add the data:
     chart.data(data)
-    // display the chart in the container
+    // == Display the chart in the container:
     chart.container('liv-che_total')
     chart.draw()
 
-
     // ----- The fourth pie -----
-    // set the data
+    // == Set the data:
     var data = [{
         x: "2:1",
         value: 35,
@@ -432,18 +424,18 @@ anychart.onDocumentReady(function () {
             fill: "#FBFE67"
         }
     }]
-    // create the chart
+    // == Create the chart:
     var chart = anychart.pie()
     chart.background().stroke("3 #0c1149")
     chart.background().fill({
         keys: ["#fff"],
         angle: 130,
     })
-    // set the chart title
+    // == Set the chart title:
     chart.title("Final score")
-    // add the data
+    // == Add the data:
     chart.data(data)
-    // display the chart in the container
+    // == Display the chart in the container:
     chart.container('liv-che_goals')
     chart.draw()
 })

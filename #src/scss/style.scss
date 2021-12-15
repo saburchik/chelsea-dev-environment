@@ -2,14 +2,16 @@
     @font-face {
         font-family: $font_name;
         font-display: swap;
-        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+        src: url("../fonts/#{$file_name}.woff") format("woff"),
+        url("../fonts/#{$file_name}.woff2") format("woff2");
         font-weight: #{$weight};
         font-style: #{$style};
-        }
     }
+}
+
 @import "fonts";
 
-// Basic installations
+// == Basic installations:
 body {
     width: 100%;
     height: 100%;
@@ -23,9 +25,7 @@ body.lock {
     overflow: hidden;
 }
 
-*,
-*:before,
-*:after {
+* {
     box-sizing: border-box;
 }
 
@@ -80,27 +80,27 @@ address {
 }
 
 .content {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     text-align: left;
 }
 
 .title {
-    text-align: center;
     font-size: clamp(2.5rem, 5vw, 4.5rem);
-    color: #FFFFFF;
     font-weight: 700;
+    text-align: center;
+    color: #fff;
 }
 
 .description {
     font-size: clamp(1rem, 1vw, 1.5rem);
-    text-align: center;
-    color: #FFFFFF;
     font-weight: 700;
+    text-align: center;
+    color: #fff;
 }
 
 @import "button.scss";
@@ -108,13 +108,13 @@ address {
 @import "02_main.scss";
 @import "03_footer.scss";
 
-// ========== Page About-Us ==========
+// == Page About-Us:
 .about-us__window {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background: #fff;
     padding: 3rem 1rem;
     margin-top: 3rem;
 }
@@ -133,11 +133,12 @@ address {
 }
 
 .about-us__link {
+
     &:hover,
     &:focus {
         color: #ff4747;
         text-decoration: underline;
         outline: none;
-        transition: .1s;
+        transition: 0.2s;
     }
 }

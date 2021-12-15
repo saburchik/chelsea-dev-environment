@@ -1,3 +1,4 @@
+// == Testing on webp format:
 function testWebP(callback) {
     var webP = new Image()
     webP.onload = webP.onerror = function () {
@@ -20,3 +21,7 @@ testWebP(function (support) {
 @@include('components/SmoothScroll.js');
 @@include('components/ModalWindow.js');
 @@include('components/Charts.js');
+
+// == Stopping page reloading:
+const btnJoin = document.querySelector('#btnJoin')
+btnJoin.addEventListener('click', () => event.preventDefault())

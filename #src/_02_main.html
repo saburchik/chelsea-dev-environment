@@ -2,15 +2,19 @@
     <section class="intro" id="intro">
         <div class="intro__inner">
             <div class="container">
-                <div class="intro__content">
+                <article class="intro__content">
                     <h1 class="title title__intro">
                         CHELSEA
                         <br>
                         As part of life
                     </h1>
-                    <p class="description description__intro">Join us and stay up to date with your favorite team!</p>
+                    <p class="description description__intro">
+                        Join us and stay up to date
+                        <br>
+                        with your favorite team!
+                    </p>
                     <a class="btn btn__intro" href="#join">JOIN US</a>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -18,78 +22,72 @@
     <section class="events" id="events">
         <div class="events__inner">
             <div class="container">
-                <div class="cards">
+                <article class="cards">
                     <h2 class="title">Next Games</h2>
                     <div class="cards__inner">
-                        <section class="card__item card__item_one">
-                            <div class="card__wrapper">
-                                <header class="card__header">
-                                    <img class="card__logo" src="img/clubs/atletico.png" alt="Atletico Madrid">
-                                    <h3 class="card__vs">VS</h3>
-                                    <img class="card__logo" src="img/clubs/chelsea.png" alt="Chelsea">
-                                </header>
-                                <div class="card__text">
-                                    <p class="description description__card">
-                                        Champions League - Round of 16, 2nd leg
-                                        <br>
-                                        Wed, Feb 24, 2021
-                                    </p>
-                                </div>
-                                <a class="btn btn__event window__modal" href="#modal-first">forecasts</a>
-                            </div>
+                        <section class="card__item">
+                            <header class="card__header">
+                                <img class="card__logo" src="img/clubs/atletico.png" alt="Atletico Madrid">
+                                <h3 class="card__vs">VS</h3>
+                                <img class="card__logo" src="img/clubs/chelsea.png" alt="Chelsea">
+                            </header>
+                            <article class="card__text">
+                                <h3 class="description description__card">
+                                    Champions League - Round of 16, 2nd leg
+                                    <br>
+                                    Wed, Feb 24, 2021
+                                </h3>
+                            </article>
+                            <a class="btn btn__event btn__modal" href="#modal-left">forecasts</a>
                         </section>
 
-                        <section class="card__item card__item_two">
-                            <div class="card__wrapper">
-                                <header class="card__header">
-                                    <img class="card__logo" src="img/clubs/chelsea.png" alt="Chelsea">
-                                    <h3 class="card__vs">VS</h3>
-                                    <img class="card__logo" src="img/clubs/manchester.png" alt="Manchester United">
-                                </header>
-                                <div class="card__text">
-                                    <p class="description description__card">
-                                        Premier League - 26. Matchday
-                                        <br>
-                                        Sun, Feb 28, 2021
-                                    </p>
-                                </div>
-                                <a class="btn btn__event window__modal" href="#modal-middle">forecasts</a>
-                            </div>
+                        <section class="card__item">
+                            <header class="card__header">
+                                <img class="card__logo" src="img/clubs/chelsea.png" alt="Chelsea">
+                                <h3 class="card__vs">VS</h3>
+                                <img class="card__logo" src="img/clubs/manchester.png" alt="Manchester United">
+                            </header>
+                            <article class="card__text">
+                                <h3 class="description description__card">
+                                    Premier League - 26. Matchday
+                                    <br>
+                                    Sun, Feb 28, 2021
+                                </h3>
+                            </article>
+                            <a class="btn btn__event btn__modal" href="#modal-middle">forecasts</a>
                         </section>
 
-                        <section class="card__item card__item_three">
-                            <div class="card__wrapper">
-                                <header class="card__header">
-                                    <img class="card__logo" src="img/clubs/liverpool.png" alt="Liverpool">
-                                    <h3 class="card__vs">VS</h3>
-                                    <img class="card__logo" src="img/clubs/chelsea.png" alt="Chelsea">
-                                </header>
-                                <div class="card__text">
-                                    <p class="description description__card">
-                                        Premier League - 29. Matchday
-                                        <br>
-                                        Thu, Mar 05, 2021
-                                    </p>
-                                </div>
-                                <a class="btn btn__event window__modal" href="#modal-last">forecasts</a>
-                            </div>
+                        <section class="card__item">
+                            <header class="card__header">
+                                <img class="card__logo" src="img/clubs/liverpool.png" alt="Liverpool">
+                                <h3 class="card__vs">VS</h3>
+                                <img class="card__logo" src="img/clubs/chelsea.png" alt="Chelsea">
+                            </header>
+                            <article class="card__text">
+                                <h3 class="description description__card">
+                                    Premier League - 29. Matchday
+                                    <br>
+                                    Thu, Mar 05, 2021
+                                </h3>
+                            </article>
+                            <a class="btn btn__event btn__modal" href="#modal-right">forecasts</a>
                         </section>
                     </div>
-                </div>
+                </article>
 
-                <div class="modal" id="modal-first">
+                <div class="modal" id="modal-left">
                     <div class="modal__body">
                         <div class="modal__inner">
                             <div class="modal__header modal__header_bg-img">
-                                <div class="modal__disable">
-                                    <span class="left" style="background: #ff4747;"></span>
-                                    <span class="right" style="background: #ff4747;"></span>
+                                <div class="modal__close">
+                                    <span class="arrow__left" style="background: #ff4747;"></span>
+                                    <span class="arrow__right" style="background: #ff4747;"></span>
                                 </div>
                                 <img class="modal__icon" src="img/icons/world.svg" alt="world icon">
                                 <h3 class="modal__title">Champions League</h3>
                                 <div class="teams">
                                     <div class="teams__main team__left">
-                                        <i class="team__name">Chelsea</i>
+                                        <em class="team__name">Chelsea</em>
                                         <a class="team__link" href="https://www.chelseafc.com/" target="_blank">
                                             <img class="team__icon" src="img/clubs/chelsea.png" alt="Chelsea">
                                         </a>
@@ -99,7 +97,7 @@
                                         <a class="team__link" href="https://www.atleticodemadrid.com/" target="_blank">
                                             <img class="team__icon" src="img/clubs/atletico.png" alt="Atletico">
                                         </a>
-                                        <i class="team__name">Atletico Madrid</i>
+                                        <em class="team__name">Atletico Madrid</em>
                                     </div>
                                 </div>
                             </div>
@@ -112,18 +110,18 @@
                         </div>
                     </div>
                 </div>
-                <section class="modal" id="modal-middle">
-                    <article class="modal__body">
+                <div class="modal" id="modal-middle">
+                    <div class="modal__body">
                         <div class="modal__inner">
                             <div class="modal__header">
-                                <div class="modal__disable">
-                                    <span class="left"></span>
-                                    <span class="right"></span>
+                                <div class="modal__close">
+                                    <span class="arrow__left"></span>
+                                    <span class="arrow__right"></span>
                                 </div>
                                 <img src="img/league.png" style="max-width: 100%;" alt="Premier League">
                                 <div class="teams">
                                     <div class="teams__main team__left">
-                                        <i class="team__name">Chelsea</i>
+                                        <em class="team__name">Chelsea</em>
                                         <a class="team__link" href="https://www.chelseafc.com/" target="_blank">
                                             <img class="team__icon" src="img/clubs/chelsea.png" alt="Chelsea">
                                         </a>
@@ -133,7 +131,7 @@
                                         <a class="team__link" href="https://www.manutd.com/en" target="_blank">
                                             <img class="team__icon" src="img/clubs/manchester.png" alt="ManUnited">
                                         </a>
-                                        <i class="team__name">Manchester United</i>
+                                        <em class="team__name">Manchester United</em>
                                     </div>
                                 </div>
                             </div>
@@ -144,20 +142,20 @@
                                 <div class="chart__item" id="che-mu_goals"></div>
                             </div>
                         </div>
-                    </article>
-                </section>
-                <section class="modal" id="modal-last">
-                    <article class="modal__body">
+                    </div>
+                </div>
+                <div class="modal" id="modal-right">
+                    <div class="modal__body">
                         <div class="modal__inner">
                             <div class="modal__header modal__header_bg-color">
-                                <div class="modal__disable">
-                                    <span class="left"></span>
-                                    <span class="right"></span>
+                                <div class="modal__close">
+                                    <span class="arrow__left"></span>
+                                    <span class="arrow__right"></span>
                                 </div>
                                 <img src="img/league.png" style="max-width: 100%;" alt="Premier League">
                                 <div class="teams">
                                     <div class="teams__main team__left">
-                                        <i class="team__name">Liverpool</i>
+                                        <em class="team__name">Liverpool</em>
                                         <a class="team__link" href="https://www.liverpoolfc.com/" target="_blank">
                                             <img class="team__icon" src="img/clubs/liverpool.png" alt="Liverpool">
                                         </a>
@@ -167,7 +165,7 @@
                                         <a class="team__link" href="https://www.chelseafc.com/" target="_blank">
                                             <img class="team__icon" src="img/clubs/chelsea.png" alt="Chelsea">
                                         </a>
-                                        <i class="team__name">Chelsea</i>
+                                        <em class="team__name">Chelsea</em>
                                     </div>
                                 </div>
                             </div>
@@ -178,19 +176,17 @@
                                 <div class="chart__item" id="liv-che_goals"></div>
                             </div>
                         </div>
-                    </article>
-                </section>
+                    </div>
+                </div>
 
-                <article class="about" id="about">
-                    <div class="about__inner">
+                <section class="about" id="about">
+                    <article class="about__inner">
                         <h2 class="title">About Us</h2>
                         <div class="about__window">
-                            <img class="about__img" src="img/chelsea.jpg" alt="logo chelsea">
-                            <div class="content content__about">
-                                <h3 class="title title__about">
-                                    Our job is to surprise
-                                </h3>
-                                <div class="description description__about">
+                            <img src="img/chelsea.jpg" alt="logo chelsea">
+                            <article class="content content__about">
+                                <h3 class="title" style="color: #000;">Our job is to surprise</h3>
+                                <p class="description description__about">
                                     Lorem ipsum dolor sit amet, consectetuer
                                     adipiscing
                                     elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
@@ -198,17 +194,17 @@
                                     et
                                     magnis
                                     dis parturient montes, nascetur ridiculus mus.
-                                </div>
+                                </p>
                                 <a class="btn btn__about" href="about-us.html" target="_blank">READ MORE</a>
-                            </div>
+                            </article>
                         </div>
-                    </div>
-                </article>
+                    </article>
+                </section>
             </div>
         </div>
     </section>
 
-    <div class="sponsors">
+    <section class="sponsors">
         <div class="sponsors__inner">
             <ul class="content content__sponsors">
                 <li class="sponsor__item">
@@ -243,7 +239,7 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </section>
 
     <section class="join" id="join">
         <div class="container">
@@ -252,23 +248,24 @@
                 <input class="input" type="text" placeholder="YOUR NAME">
                 <input class="input" type="text" placeholder="YOUR AGE">
                 <input class="input" type="text" placeholder="YOUR EMAIL">
-                <button class="btn btn__join">JOIN US</button>
-                <p class="description" style="font-weight: 400;">By Signing up you agree to our
-                    <a class="terms__link window__modal" href="#modal-terms">terms & Services</a>.
+                <button class="btn btn__join" id="btnJoin">JOIN US</button>
+                <p class="description" style="font-weight: 400;">
+                    By Signing up you agree to our
+                    <a class="terms__link btn__modal" href="#modal-terms">terms & Services</a>.
                 </p>
             </form>
 
-            <section class="modal" id="modal-terms">
-                <article class="modal__body">
+            <div class="modal" id="modal-terms">
+                <div class="modal__body">
                     <div class="modal__inner" style="max-width: 490px;">
-                        <div class="modal__disable">
-                            <span class="left"></span>
-                            <span class="right"></span>
+                        <div class="modal__close">
+                            <span class="arrow__left"></span>
+                            <span class="arrow__right"></span>
                         </div>
                         <img src="img/terms&privacy.jpg" style="width: 100%;" alt="terms & privacy">
                     </div>
-                </article>
-            </section>
+                </div>
+            </div>
         </div>
     </section>
 </main>

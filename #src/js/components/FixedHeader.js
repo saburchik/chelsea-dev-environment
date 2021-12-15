@@ -1,11 +1,11 @@
 // Fixed navigation
-window.addEventListener("scroll", checkScroll);
+window.addEventListener("scroll", checkScroll)
 function checkScroll() {
-    let scrollHeight = window.scrollY;
+    let scrollHeight = window.scrollY
 
     if (scrollHeight > 490) {
-        header.classList.add("fixed");
+        header.classList.add("fixed")
     } else {
-        header.classList.remove("fixed");
-    };
-};
+        header.classList.remove("fixed")
+    }
+}

@@ -1,95 +1,95 @@
-const body = document.querySelector('body');
-const lockPadding = document.querySelectorAll('.lock-padding');
+const body = document.querySelector('body')
+const lockPadding = document.querySelectorAll('.lock-padding')
 
-let unlock = true;
-const timeout = 700;
+let unlock = true
+const timeout = 700
 
-const windowModal = document.querySelectorAll('.window__modal');
+const windowModal = document.querySelectorAll('.btn__modal')
 if (windowModal.length > 0) {
     for (let i = 0; i < windowModal.length; i++) {
-        const openModal = windowModal[i];
+        const openModal = windowModal[i]
         openModal.addEventListener('click', function (e) {
-            const modalReplace = openModal.getAttribute('href').replace('#', '');
-            const currentModal = document.getElementById(modalReplace);
-            modalOpen(currentModal);
-            e.preventDefault();
-        });
+            const modalReplace = openModal.getAttribute('href').replace('#', '')
+            const currentModal = document.getElementById(modalReplace)
+            modalOpen(currentModal)
+            e.preventDefault()
+        })
     }
 }
-const windowModalDisable = document.querySelectorAll('.modal__disable');
+const windowModalDisable = document.querySelectorAll('.modal__close')
 if (windowModalDisable.length > 0) {
     for (let i = 0; i < windowModalDisable.length; i++) {
-        const el = windowModalDisable[i];
+        const el = windowModalDisable[i]
         el.addEventListener('click', function (e) {
-            modalClose(el.closest('.modal'));
-            e.preventDefault();
-        });
+            modalClose(el.closest('.modal'))
+            e.preventDefault()
+        })
     }
 }
 
 function modalOpen(currentModal) {
     if (currentModal && unlock) {
-        const modalActive = document.querySelector('.modal.active');
+        const modalActive = document.querySelector('.modal.active')
         if (modalActive) {
-            modalClose(modalActive, false);
+            modalClose(modalActive, false)
         } else {
-            bodyLock();
+            bodyLock()
         }
-        currentModal.classList.add('active');
+        currentModal.classList.add('active')
         currentModal.addEventListener('click', function (e) {
             if (!e.target.closest('.modal__inner')) {
-                modalClose(e.target.closest('.modal'));
+                modalClose(e.target.closest('.modal'))
             }
-        });
+        })
     }
 }
 function modalClose(modalActive, doUnlock = true) {
     if (unlock) {
-        modalActive.classList.remove('active');
+        modalActive.classList.remove('active')
         if (doUnlock) {
-            bodyUnLock();
+            bodyUnLock()
         }
     }
 }
 
 function bodyLock() {
-    const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+    const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px'
 
     for (let i = 0; i < lockPadding.length; i++) {
-        const el = lockPadding[i];
-        el.style.paddingRight = lockPaddingValue;
+        const el = lockPadding[i]
+        el.style.paddingRight = lockPaddingValue
     }
-    body.style.paddingRight = lockPaddingValue;
-    body.classList.add('lock');
+    body.style.paddingRight = lockPaddingValue
+    body.classList.add('lock')
 
-    unlock = false;
+    unlock = false
     setTimeout(function () {
-        unlock = true;
-    }, timeout);
+        unlock = true
+    }, timeout)
 }
 
 function bodyUnLock() {
     setTimeout(function () {
         if (lockPadding.length > 0) {
             for (let i = 0; i < lockPadding.length; i++) {
-                const el = lockPadding[i];
-                el.style.paddingRight = '0px';
+                const el = lockPadding[i]
+                el.style.paddingRight = '0px'
             }
         }
-        body.style.paddingRight = '0';
-        body.classList.remove('lock');
-    }, timeout);
+        body.style.paddingRight = '0'
+        body.classList.remove('lock')
+    }, timeout)
 
-    unlock = false;
+    unlock = false
     setTimeout(function () {
-        unlock = true;
-    }, timeout);
+        unlock = true
+    }, timeout)
 }
 
-// Close Modal-Window by button ESC
+// == Close modal-window by ESC:
 document.addEventListener('keydown', function (e) {
     if (e.which === 27) {
-        const modalActive = document.querySelector('.modal.active');
-        modalClose(modalActive);
+        const modalActive = document.querySelector('.modal.active')
+        modalClose(modalActive)
     }
-});
+})
