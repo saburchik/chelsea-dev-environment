@@ -25,7 +25,7 @@
 .nav__menu {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: clamp(1200px, 66vw, 1700px);
     position: relative;
     padding: 0 1rem;
     margin: 0 auto;
@@ -48,10 +48,6 @@
             opacity: 1;
             transform: none;
         }
-    }
-
-    @media (min-width: 1900px) {
-        max-width: 1700px;
     }
 }
 
@@ -111,6 +107,7 @@
 // ========== Burger ==========
 .burger__inner {
     display: none;
+    width: 82px;
     height: 82px;
     overflow: hidden;
     cursor: pointer;
@@ -118,39 +115,39 @@
     top: 0;
     right: 0;
 
-    @media (max-width:770px) {
-        display: flex;
+    @media (max-width: 770px) {
+        display: block;
     }
 }
 
 .hamburger__effect {
     transition: transform 400ms;
 
-    .hamburger__line_top {
+    .hamburger__line--top {
         stroke-dasharray: 40 82;
     }
 
-    .hamburger__line_middle {
+    .hamburger__line--middle {
         stroke-dasharray: 40 111;
     }
 
-    .hamburger__line_bottom {
+    .hamburger__line--bottom {
         stroke-dasharray: 40 161;
     }
 
     &.active {
         transform: rotate(45deg);
 
-        .hamburger__line_top {
+        .hamburger__line--top {
             stroke-dasharray: 17 82;
             stroke-dashoffset: -62px;
         }
 
-        .hamburger__line_middle {
+        .hamburger__line--middle {
             stroke-dashoffset: 23px;
         }
 
-        .hamburger__line_bottom {
+        .hamburger__line--bottom {
             stroke-dashoffset: -83px;
         }
     }

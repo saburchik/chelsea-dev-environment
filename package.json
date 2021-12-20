@@ -1,7 +1,6 @@
 {
-  "name": "chelsea",
+  "name": "chelsea-dev-environment",
   "version": "1.0.1",
-  "description": "website develop",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -29,8 +28,6 @@
     "sass": "^1.45.0"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1",
-    "smoothscroll-polyfill": "^0.4.4",
-    "webp-converter": "2.2.3"
+    "normalize.css": "^8.0.1"
   }
 }

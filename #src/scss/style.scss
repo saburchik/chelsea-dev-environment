@@ -59,7 +59,7 @@ picture {
 }
 
 input[type='text'] {
-    font-size: 1rem;
+    font-size: clamp(1rem, 1vw, 1.3rem);
     font-family: 'Lato', sans-serif;
 
 }
@@ -70,13 +70,9 @@ address {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: clamp(1200px, 66vw, 1700px);
     margin: 0 auto;
     padding: 6rem 1rem 0;
-
-    @media (min-width: 1900px) {
-        max-width: 1700px;
-    }
 }
 
 .content {
